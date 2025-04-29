@@ -1,3 +1,6 @@
+---
+title: "Blog"
+---
 # Blog
 
-Our latest posts.
+Latest updates and thoughts.

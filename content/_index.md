@@ -1,3 +1,6 @@
+---
+title: "Home"
+---
 # Welcome to Methodical Cloud
 
-This is the homepage.
+Building clarity through systems that don't suck.
