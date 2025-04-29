@@ -4696,31 +4696,33 @@ html {
 	  }
 /* Hero Section Custom Styling */
 #hero {
-  color: #ffffff;
-  text-align: center;
-  padding: 8rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6); /* fallback if no background image */
-}
-
-#hero h1 {
-  font-size: 4rem;
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-#hero p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  font-style: italic;
-  color: #f0f0f0;
-}
-
-#hero .actions {
-  margin-top: 2rem;
-}
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	text-align: center;
+	padding: 4rem 2rem;
+	background-color: #1e252d;
+	color: #ffffff;
+  }
+  
+  #hero h1 {
+	font-size: 4rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 1rem;
+  }
+  
+  #hero p {
+	font-size: 1.25rem;
+	font-style: italic;
+	color: #f0f0f0;
+	max-width: 720px;
+	margin-bottom: 2rem;
+  }
+  
+  #hero .actions {
+	margin-top: 1rem;
+  }
