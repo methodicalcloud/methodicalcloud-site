@@ -123,21 +123,23 @@
 	// Panel.
 	$navPanel = $(
 		'<div id="navPanel">' +
-			'<nav></nav>' +
-			'<a href="#navPanel" class="close"></a>' +
+			'<div class="inner">' +
+				'<nav></nav>' +
+				'<a href="#navPanel" class="close">Close</a>' +
+			'</div>' +
 		'</div>'
 	)
-		.appendTo($body)
-		.panel({
-			delay: 500,
-			hideOnClick: true,
-			hideOnSwipe: true,
-			resetScroll: true,
-			resetForms: true,
-			side: 'right',
-			target: $body,
-			visibleClass: 'is-navPanel-visible'
-		});
+	.appendTo($body)
+	.panel({
+		delay: 500,
+		hideOnClick: true,
+		hideOnSwipe: true,
+		resetScroll: true,
+		resetForms: true,
+		side: 'right',
+		target: $body,
+		visibleClass: 'is-navPanel-visible'
+	});
 
 	// Get inner.
 	$navPanelInner = $navPanel.children('nav');
