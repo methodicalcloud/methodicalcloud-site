@@ -1,11 +1,61 @@
 {{ define "main" }}
-<section id="banner">
-  <h1>Welcome to Methodical Cloud</h1>
-  <p>Automation, Clarity, and Systems that Don't Suck</p>
-</section>
-<section id="main">
-  <div class="inner">
-    <!-- Latest blog posts or highlights could go here -->
-  </div>
-</section>
+<div id="wrapper" class="fade-in">
+
+    <!-- Intro -->
+    <div id="intro">
+        <h1>Methodical Cloud</h1>
+        <p>Visualizing systems, designing better automation, and building workflows that actually work.<br />
+        Stay tuned for insightful podcasts, blogs, and educational content around automation and systems design.</p>
+        <ul class="actions">
+            <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <a href="/" class="logo">Methodical Cloud</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="links">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/podcast/">Podcast</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <section>
+            <p>Methodical Cloud builds on the foundation of Everything Should Be Virtual, evolving into a content-driven platform dedicated to clarity in automation, workflow design, and scalable systems management. Our mission remains the same — bringing thoughtful, intentional design to complex systems.</p>
+        </section>
+
+        <!-- Featured Section -->
+        <section class="post featured">
+            <header class="major">
+                <h2>Featured Project:<br />Diagram the Damn Thing</h2>
+                <p>A podcast and visual-first series exploring automation, clarity, and systems design without the noise.</p>
+            </header>
+            <a href="/podcast/" class="button large">Visit Podcast</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <section class="split contact">
+            <section>
+                <h3>Email</h3>
+                <p><a href="mailto:hello@methodicalcloud.com">hello@methodicalcloud.com</a></p>
+            </section>
+        </section>
+    </footer>
+
+    <div id="copyright">
+        <ul><li>&copy; {{ now.Year }} Methodical Cloud</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+    </div>
+
+</div>
 {{ end }}
