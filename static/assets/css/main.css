@@ -116,32 +116,38 @@ input, select, textarea {
 /* Type */
 
 html {
-	font-size: 14pt;
+  font-size: 13pt;
 }
 
-		@media screen and (max-width: 1680px) {
+@media screen and (max-width: 1680px) {
+  html {
+    font-size: 11pt;
+  }
+}
 
-			html {
-				font-size: 11pt;
-			}
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 10pt;
+  }
+}
 
-		}
+@media screen and (max-width: 980px) {
+  html {
+    font-size: 9pt;
+  }
+}
 
-		@media screen and (max-width: 1280px) {
+@media screen and (max-width: 736px) {
+  html {
+    font-size: 9pt;
+  }
+}
 
-			html {
-				font-size: 10pt;
-			}
-
-		}
-
-		@media screen and (max-width: 360px) {
-
-			html {
-				font-size: 9pt;
-			}
-
-		}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 8pt;
+  }
+}
 
 	body {
 		color: #212931;

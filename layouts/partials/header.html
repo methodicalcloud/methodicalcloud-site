@@ -1,9 +1,13 @@
-<header>
-  <nav>
-    <a href="/">Home</a> |
-    <a href="/about/">About</a> |
-    <a href="/blog/">Blog</a> |
-    <a href="/podcast/">Podcast</a> |
-    <a href="/contact/">Contact</a>
-  </nav>
+<header id="header">
+  <div class="inner">
+    <nav>
+      <ul>
+        <li><a href="{{ "/" | relURL }}">Home</a></li>
+        <li><a href="{{ "/about/" | relURL }}">About</a></li>
+        <li><a href="{{ "/blog/" | relURL }}">Blog</a></li>
+        <li><a href="{{ "/podcast/" | relURL }}">Podcast</a></li>
+        <li><a href="{{ "/contact/" | relURL }}">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
