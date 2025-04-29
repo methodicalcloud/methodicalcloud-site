@@ -1,6 +1,21 @@
 <meta charset="utf-8" />
-<title>{{ .Title }}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>{{ if .Title }}{{ .Title }} | {{ end }}Methodical Cloud</title>
+<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}Visualizing systems, designing better automation, and building workflows that actually work.{{ end }}" />
+<meta name="author" content="Methodical Cloud" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}Visualizing systems, designing better automation, and building workflows that actually work.{{ end }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ .Site.BaseURL }}images/og-default.jpg" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ else }}Visualizing systems, designing better automation, and building workflows that actually work.{{ end }}" />
+<meta name="twitter:image" content="{{ .Site.BaseURL }}images/og-default.jpg" />
 <link rel="stylesheet" href="/css/main.css" />
 <noscript><link rel="stylesheet" href="/css/noscript.css" /></noscript>
 
