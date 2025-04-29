@@ -4694,7 +4694,7 @@ html {
 	  #menu ul.links li a:hover {
 		color: #50c5b7; /* highlight color on hover (bright teal like Massively) */
 	  }
-/* Hero Section Custom Styling */
+/* Hero Section - Light Background */
 #hero {
 	display: flex;
 	flex-direction: column;
@@ -4703,12 +4703,8 @@ html {
 	min-height: 100vh;
 	text-align: center;
 	padding: 4rem 2rem;
-	background: 
-	  linear-gradient(to bottom, rgba(30, 37, 45, 0.85), rgba(30, 37, 45, 0.85)),
-	  url('/images/bg.jpg');
-	background-size: cover;
-	background-position: center;
-	color: #ffffff;
+	background-color: #ffffff;
+	color: #1e252d;
   }
   
   #hero h1 {
@@ -4717,16 +4713,14 @@ html {
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	margin-bottom: 1rem;
-	color: #ffffff;
-	opacity: 1 !important;
-	z-index: 10;
+	color: #1e252d;
   }
   
   #hero p {
 	font-size: 1.25rem;
 	font-style: normal;
 	line-height: 1.6;
-	color: #f0f0f0;
+	color: #333333;
 	max-width: 720px;
 	margin-bottom: 2rem;
   }
