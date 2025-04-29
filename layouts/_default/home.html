@@ -11,4 +11,27 @@
     </ul>
   </div>
 </section>
+
+<section id="latest-posts" class="main">
+  <div class="inner">
+    <header class="major">
+      <h2>Latest Posts</h2>
+    </header>
+    <section class="posts">
+      {{ $posts := first 3 (where .Site.RegularPages "Section" "blog") }}
+      {{ range $posts }}
+      <article>
+        <header>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p><small>{{ .Date.Format "January 2, 2006" }}</small></p>
+        </header>
+        <p>{{ .Summary }}</p>
+        <ul class="actions">
+          <li><a href="{{ .RelPermalink }}" class="button small">Read More</a></li>
+        </ul>
+      </article>
+      {{ end }}
+    </section>
+  </div>
+</section>
 {{ end }}

@@ -4,12 +4,13 @@
     <header class="major">
       <h1>Blog: Clarity, Systems, and Practicality</h1>
     </header>
-    <p>Our writing focuses on clarity, automation, leadership in technical environments,  
-    and lessons learned from designing systems that don't suck.</p>
+    <p>Our writing focuses on clarity, automation, leadership in technical environments,
+      and lessons learned from designing systems that don't suck.</p>
     <p>We believe in sharing ideas that are methodical, actionable, and sustainable.</p>
 
+    <h2>Latest Posts</h2>
     <section class="posts">
-      {{ range .Pages }}
+      {{ range .Pages.ByDate.Reverse }}
       <article>
         <header>
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
@@ -17,7 +18,7 @@
         </header>
         <p>{{ .Summary }}</p>
         <ul class="actions">
-          <li><a href="{{ .RelPermalink }}" class="button">Read More</a></li>
+          <li><a href="{{ .RelPermalink }}" class="button small">Read More</a></li>
         </ul>
       </article>
       {{ end }}
