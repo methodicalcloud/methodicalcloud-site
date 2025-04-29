@@ -1,13 +1,17 @@
 <header id="header">
-  <a href="/" class="logo">Methodical Cloud</a>
+  <a href="/" class="logo"><strong>Methodical Cloud</strong></a>
   <nav>
     <a href="#menu">Menu</a>
   </nav>
 </header>
+
+<!-- Nav Menu (hidden by default, toggled via JS) -->
 <nav id="menu">
-  <ul>
-    {{ range .Site.Menus.main }}
-    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-    {{ end }}
+  <ul class="links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/podcast/">Podcast</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/contact/">Contact</a></li>
   </ul>
 </nav>
