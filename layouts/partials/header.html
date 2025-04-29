@@ -1,0 +1,13 @@
+<header id="header">
+  <a href="/" class="logo">Methodical Cloud</a>
+  <nav>
+    <a href="#menu">Menu</a>
+  </nav>
+</header>
+<nav id="menu">
+  <ul>
+    {{ range .Site.Menus.main }}
+    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</nav>
