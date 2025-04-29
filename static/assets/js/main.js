@@ -10,9 +10,7 @@
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
 		$header = $('#header'),
-		$nav = $('#nav'),
-		$main = $('#main'),
-		$navPanelToggle, $navPanel, $navPanelInner;
+		$main = $('#main');
 
 	// Breakpoints.
 	breakpoints({
@@ -88,75 +86,10 @@
 	// Scrolly (restricted to .home-scroll only).
 	$('.scrolly.home-scroll').scrolly();
 
-	// Background parallax.
+	// Background parallax effect.
 	$wrapper._parallax(0.925);
 
-	// Nav Panel setup.
-
-	// Toggle button.
-	$navPanelToggle = $('<a href="#navPanel" id="navPanelToggle">Menu</a>')
-		.appendTo($wrapper);
-
-	$header.scrollex({
-		bottom: '5vh',
-		enter: function() { $navPanelToggle.removeClass('alt'); },
-		leave: function() { $navPanelToggle.addClass('alt'); }
-	});
-
-	// Nav panel.
-	$navPanel = $(
-		'<div id="navPanel">' +
-			'<div class="inner">' +
-				'<nav></nav>' +
-				'<a href="#navPanel" class="close">Close</a>' +
-			'</div>' +
-		'</div>'
-	)
-	.appendTo($body)
-	.panel({
-		delay: 500,
-		hideOnClick: true,
-		hideOnSwipe: true,
-		resetScroll: true,
-		resetForms: true,
-		side: 'right',
-		target: $body,
-		visibleClass: 'is-navPanel-visible'
-	});
-
-	// Get inner nav.
-	$navPanelInner = $navPanel.children('div.inner').children('nav');
-
-	// Move nav content depending on breakpoint.
-	var $navContent = $nav.children();
-
-	breakpoints.on('>medium', function() {
-		$navContent.appendTo($nav);
-		$nav.find('.icons, .icon').removeClass('alt');
-	});
-
-	breakpoints.on('<=medium', function() {
-		$navContent.appendTo($navPanelInner);
-		$navPanelInner.find('.icons, .icon').addClass('alt');
-	});
-
-	// Fix mobile nav links: close panel before navigating.
-	$body.on('click', '#navPanel a', function(e) {
-		var href = $(this).attr('href');
-		if (href && href.charAt(0) === '/') {
-			e.preventDefault();
-			$body.removeClass('is-navPanel-visible');
-			setTimeout(function() {
-				window.location.href = href;
-			}, 250);
-		}
-	});
-
-	// Disable transitions on older WP browsers.
-	if (browser.os == 'wp' && browser.osVersion < 10)
-		$navPanel.css('transition', 'none');
-
-	// Hide intro on scroll (optional if intro section exists).
+	// Hide intro on scroll if intro section exists.
 	var $intro = $('#intro');
 
 	if ($intro.length > 0) {
