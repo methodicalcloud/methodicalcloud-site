@@ -152,6 +152,18 @@
 
 	breakpoints.on('<=medium', function() {
 		$navContent.appendTo($navPanelInner);
+		// Fix navPanel links after they're appended
+		setTimeout(function () {
+			$('#navPanel a').each(function () {
+			var $link = $(this);
+			$link.off('click').on('click', function (e) {
+				var href = $(this).attr('href');
+				if (href && href.charAt(0) === '/') {
+				window.location.href = href;
+				}
+			});
+			});
+		}, 100);
 		$navPanelInner.find('.icons, .icon').addClass('alt');
 	});
 
