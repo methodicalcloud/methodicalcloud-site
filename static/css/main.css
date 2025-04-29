@@ -4912,3 +4912,20 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 	color: #ffffff !important;
 	border: 2px solid #1e252d;
 }
+
+#latest-posts {
+	background-color: #1e252d;
+}
+
+#latest-posts h2,
+#latest-posts .posts article,
+#latest-posts .posts article h3,
+#latest-posts .posts article h3 a,
+#latest-posts .posts article p,
+#latest-posts .posts article small {
+	color: #ffffff;
+}
+
+#latest-posts .posts article a:hover {
+	color: #18bfef;
+}
