@@ -6,14 +6,59 @@
     <p>Visualizing systems, designing better automation, and building workflows that actually work.<br />
     Stay tuned for insightful podcasts, blogs, and educational content around automation and systems design.</p>
     <ul class="actions special">
-      <li><a href="#main" class="button primary">Explore</a></li>
+      <li><a href="#one" class="button primary">Explore</a></li>
     </ul>
   </div>
-  <a href="#main" class="more scrolly">Learn More</a>
+  <a href="#one" class="more scrolly">Learn More</a>
 </section>
 
-<!-- Main Content Below -->
-<section id="main">
-  {{ .Content }}
+<!-- Welcome Section -->
+<section id="one" class="wrapper style1 special">
+  <div class="inner">
+    <header class="major">
+      <h2>Welcome to Methodical Cloud</h2>
+      <p>Building clarity through systems that don't suck.</p>
+    </header>
+  </div>
+</section>
+
+<!-- Podcast Feature -->
+<section id="two" class="wrapper alt style2">
+  <section class="spotlight">
+    <div class="image"><img src="{{ "assets/images/pic01.jpg" | relURL }}" alt="" /></div>
+    <div class="content">
+      <h2>Podcast: Diagram the Damn Thing</h2>
+      <p>A podcast series exploring automation, clarity, and systems design without the noise.</p>
+      <ul class="actions special">
+        <li><a href="{{ "/podcast/" | relURL }}" class="button">Visit Podcast</a></li>
+      </ul>
+    </div>
+  </section>
+</section>
+
+<!-- Blog Feature -->
+<section id="three" class="wrapper style1 special">
+  <div class="inner">
+    <header class="major">
+      <h2>Latest Blog Posts</h2>
+      <p>Insights, workflows, diagrams, and clarity published regularly.</p>
+      <ul class="actions special">
+        <li><a href="{{ "/blog/" | relURL }}" class="button">Visit Blog</a></li>
+      </ul>
+    </header>
+  </div>
+</section>
+
+<!-- Contact Teaser (Optional) -->
+<section id="four" class="wrapper style3 special">
+  <div class="inner">
+    <header class="major">
+      <h2>Get in Touch</h2>
+      <p>Interested in working together? Reach out and let's talk.</p>
+    </header>
+    <ul class="actions special">
+      <li><a href="{{ "/contact/" | relURL }}" class="button primary">Contact Us</a></li>
+    </ul>
+  </div>
 </section>
 {{ end }}
