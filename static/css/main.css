@@ -4694,3 +4694,33 @@ html {
 	  #menu ul.links li a:hover {
 		color: #50c5b7; /* highlight color on hover (bright teal like Massively) */
 	  }
+/* Hero Section Custom Styling */
+#hero {
+  color: #ffffff;
+  text-align: center;
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* fallback if no background image */
+}
+
+#hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  color: #f0f0f0;
+}
+
+#hero .actions {
+  margin-top: 2rem;
+}
