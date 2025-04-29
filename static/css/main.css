@@ -4703,7 +4703,11 @@ html {
 	min-height: 100vh;
 	text-align: center;
 	padding: 4rem 2rem;
-	background-color: #1e252d;
+	background: 
+	  linear-gradient(to bottom, rgba(30, 37, 45, 0.85), rgba(30, 37, 45, 0.85)),
+	  url('/images/bg.jpg');
+	background-size: cover;
+	background-position: center;
 	color: #ffffff;
   }
   
@@ -4713,11 +4717,15 @@ html {
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	margin-bottom: 1rem;
+	color: #ffffff;
+	opacity: 1 !important;
+	z-index: 10;
   }
   
   #hero p {
 	font-size: 1.25rem;
-	font-style: italic;
+	font-style: normal;
+	line-height: 1.6;
 	color: #f0f0f0;
 	max-width: 720px;
 	margin-bottom: 2rem;
