@@ -4687,3 +4687,10 @@ html {
 		}
 
 	}
+	#menu ul.links li a {
+		color: #ffffff; /* white text by default */
+	  }
+	  
+	  #menu ul.links li a:hover {
+		color: #50c5b7; /* highlight color on hover (bright teal like Massively) */
+	  }
