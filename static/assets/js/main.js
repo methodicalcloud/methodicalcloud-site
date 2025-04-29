@@ -6,7 +6,7 @@
 
 (function($) {
 
-	var	$window = $(window),
+	var $window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
 		$header = $('#header'),
@@ -27,11 +27,9 @@
 
 	/**
 	 * Applies parallax scrolling to an element's background image.
-	 * @return {jQuery} jQuery object.
 	 */
 	$.fn._parallax = function(intensity) {
-
-		var	$window = $(window),
+		var $window = $(window),
 			$this = $(this);
 
 		if (this.length == 0 || intensity === 0)
@@ -64,12 +62,7 @@
 				$window.off('scroll._parallax');
 			};
 
-			if (
-				browser.name == 'ie' ||
-				browser.name == 'edge' ||
-				window.devicePixelRatio > 1 ||
-				browser.mobile
-			)
+			if (browser.name == 'ie' || browser.name == 'edge' || window.devicePixelRatio > 1 || browser.mobile)
 				off();
 			else {
 				breakpoints.on('>large', on);
@@ -92,25 +85,15 @@
 		}, 100);
 	});
 
-	// Scrolly.
-	// $('.scrolly').scrolly(); // disabled global scroll hijack
-	$('.scrolly.home-scroll').scrolly(); // allow only for splash CTA
+	// Scrolly (restricted to .home-scroll only).
+	$('.scrolly.home-scroll').scrolly();
 
-	// Ensure nav and navPanel links trigger real navigation
-	$('#nav a, #navPanel a').off('click');
-	$body.on('click', '#navPanel a', function(e) {
-		var href = $(this).attr('href');
-		if (href && href.charAt(0) === '/') {
-			window.location.href = href;
-		}
-	});
-
-	// Background.
+	// Background parallax.
 	$wrapper._parallax(0.925);
 
-	// Nav Panel.
+	// Nav Panel setup.
 
-	// Toggle.
+	// Toggle button.
 	$navPanelToggle = $('<a href="#navPanel" id="navPanelToggle">Menu</a>')
 		.appendTo($wrapper);
 
@@ -120,7 +103,7 @@
 		leave: function() { $navPanelToggle.addClass('alt'); }
 	});
 
-	// Panel.
+	// Nav panel.
 	$navPanel = $(
 		'<div id="navPanel">' +
 			'<div class="inner">' +
@@ -141,10 +124,10 @@
 		visibleClass: 'is-navPanel-visible'
 	});
 
-	// Get inner.
-	$navPanelInner = $navPanel.children('nav');
+	// Get inner nav.
+	$navPanelInner = $navPanel.children('div.inner').children('nav');
 
-	// Move nav content on breakpoint change.
+	// Move nav content depending on breakpoint.
 	var $navContent = $nav.children();
 
 	breakpoints.on('>medium', function() {
@@ -154,26 +137,26 @@
 
 	breakpoints.on('<=medium', function() {
 		$navContent.appendTo($navPanelInner);
-		// Fix navPanel links after they're appended
-		setTimeout(function () {
-			$('#navPanel a').each(function () {
-			var $link = $(this);
-			$link.off('click').on('click', function (e) {
-				var href = $(this).attr('href');
-				if (href && href.charAt(0) === '/') {
-				window.location.href = href;
-				}
-			});
-			});
-		}, 100);
 		$navPanelInner.find('.icons, .icon').addClass('alt');
 	});
 
-	// Hack: Disable transitions on WP.
+	// Fix mobile nav links: close panel before navigating.
+	$body.on('click', '#navPanel a', function(e) {
+		var href = $(this).attr('href');
+		if (href && href.charAt(0) === '/') {
+			e.preventDefault();
+			$body.removeClass('is-navPanel-visible');
+			setTimeout(function() {
+				window.location.href = href;
+			}, 250);
+		}
+	});
+
+	// Disable transitions on older WP browsers.
 	if (browser.os == 'wp' && browser.osVersion < 10)
 		$navPanel.css('transition', 'none');
 
-	// Intro.
+	// Hide intro on scroll (optional if intro section exists).
 	var $intro = $('#intro');
 
 	if ($intro.length > 0) {
