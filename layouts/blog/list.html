@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section id="main">
+  <div class="inner">
+    <header class="major">
+      <h1>Blog: Clarity, Systems, and Practicality</h1>
+    </header>
+    <p>Our writing focuses on clarity, automation, leadership in technical environments,  
+    and lessons learned from designing systems that don't suck.</p>
+    <p>We believe in sharing ideas that are methodical, actionable, and sustainable.</p>
+
+    <ul>
+      {{ range .Pages }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}
