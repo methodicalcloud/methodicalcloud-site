@@ -1,8 +1,23 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-<ul>
-  {{ range .Pages }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-  {{ end }}
-</ul>
+<section class="wrapper style1">
+  <div class="inner">
+    <header class="major">
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="posts">
+      {{ range .Pages }}
+      <article>
+        <header>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <p>{{ .Date.Format "January 2, 2006" }}</p>
+        </header>
+        <p>{{ .Summary }}</p>
+        <ul class="actions">
+          <li><a href="{{ .RelPermalink }}" class="button">Read More</a></li>
+        </ul>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
 {{ end }}
