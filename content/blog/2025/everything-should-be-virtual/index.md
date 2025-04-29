@@ -11,12 +11,12 @@ Today, that journey continues — but with a new, sharper focus.
 
 **Methodical Cloud** builds on that foundation, evolving into a content-driven platform dedicated to:
 
-- Clear automation strategies  
-- Scalable system design  
-- Visual workflows and educational resources
+- Clear automation strategies.  
+- Scalable system design.  
+- Visual workflows and educational resources.
 
 While the name has changed, the core mission remains: bringing clarity to complex systems through thoughtful, intentional design.
 
-If you followed Everything Should Be Virtual, you’re already part of the Methodical Cloud story — and there’s a lot more to come.
+If you followed Everything Should Be Virtual, you’re already part of the Methodical Cloud story — and there’s so much more to come.
 
 👉 [Explore Methodical Cloud](/)
