@@ -4693,3 +4693,39 @@ html {
 		}
 
 	}
+/* =====================================================
+   Additional Fixes for Methodical Cloud Navigation
+   ===================================================== */
+
+/* Ensure nav links inside the header are clickable */
+#header #nav {
+	pointer-events: auto;
+  }
+  
+  /* Basic nav styling to match Massively layout */
+  #nav {
+	text-align: center;
+	margin-top: 1.5em;
+  }
+  
+  #nav ul.links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  #nav ul.links li {
+	display: inline-block;
+	margin: 0 1em;
+  }
+  
+  #nav ul.links li a {
+	text-decoration: none;
+	border-bottom: none;
+	font-weight: bold;
+	color: #ffffff;
+  }
+  
+  #nav ul.links li a:hover {
+	text-decoration: underline;
+  }
