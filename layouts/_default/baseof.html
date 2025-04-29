@@ -2,12 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ .Title }}</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <title>{{ .Title }} | Methodical Cloud</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  
+  <!-- Link to your real static assets (HTML5UP) -->
+  <link rel="stylesheet" href="{{ "assets/css/main.css" | relURL }}" />
+  <noscript><link rel="stylesheet" href="{{ "assets/css/noscript.css" | relURL }}" /></noscript>
 </head>
-<body>
-  {{ partial "header.html" . }}
+
+<body class="is-preload">
+
+<!-- Header -->
+<header id="header">
+  <h1><a href="{{ "/" | relURL }}">Methodical Cloud</a></h1>
+  <nav>
+    <a href="{{ "/about/" | relURL }}">About</a>
+    <a href="{{ "/blog/" | relURL }}">Blog</a>
+    <a href="{{ "/podcast/" | relURL }}">Podcast</a>
+    <a href="{{ "/contact/" | relURL }}">Contact</a>
+  </nav>
+</header>
+
+<!-- Main -->
+<div id="main">
   {{ block "main" . }}{{ end }}
-  {{ partial "footer.html" . }}
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+  <p>&copy; 2025 Methodical Cloud. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="{{ "assets/js/jquery.min.js" | relURL }}"></script>
+<script src="{{ "assets/js/browser.min.js" | relURL }}"></script>
+<script src="{{ "assets/js/breakpoints.min.js" | relURL }}"></script>
+<script src="{{ "assets/js/util.js" | relURL }}"></script>
+<script src="{{ "assets/js/main.js" | relURL }}"></script>
+
 </body>
 </html>
