@@ -8,11 +8,20 @@
     and lessons learned from designing systems that don't suck.</p>
     <p>We believe in sharing ideas that are methodical, actionable, and sustainable.</p>
 
-    <ul>
+    <section class="posts">
       {{ range .Pages }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      <article>
+        <header>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <p><small>{{ .Date.Format "January 2, 2006" }}</small></p>
+        </header>
+        <p>{{ .Summary }}</p>
+        <ul class="actions">
+          <li><a href="{{ .RelPermalink }}" class="button">Read More</a></li>
+        </ul>
+      </article>
       {{ end }}
-    </ul>
+    </section>
   </div>
 </section>
 {{ end }}

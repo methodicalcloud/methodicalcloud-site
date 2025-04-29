@@ -2,6 +2,9 @@ baseURL = "https://methodicalcloud.com/"
 title = "Methodical Cloud"
 languageCode = "en-us"
 
+[permalinks]
+  blog = "/blog/:slug/"
+
 [menu]
   [[menu.main]]
     identifier = "about"
