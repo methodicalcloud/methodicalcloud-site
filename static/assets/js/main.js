@@ -118,8 +118,8 @@
 		});
 
 	// Scrolly.
-		$('.scrolly').scrolly();
-
+		// $('.scrolly').scrolly();
+		$('.scrolly.home-scroll').scrolly();
 	// Background.
 		$wrapper._parallax(0.925);
 
