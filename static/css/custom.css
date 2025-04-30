@@ -9,6 +9,7 @@ body,
     background-color: #1e252d !important;
 }
 
+/* Fix for all text in the main content area */
 #main h1,
 #main h2,
 #main h3,
@@ -19,15 +20,42 @@ body,
 #main li,
 #main a,
 #main blockquote,
-#main span {
+#main span,
+#main .date,
+#main header.major h1,
+#main header.major h2 {
     color: rgba(255, 255, 255, 0.9) !important;
 }
 
+/* Fix for post title that appears too light */
+.post header.major h1,
+.featured article h1,
+#intro h1,
+header.major h1 {
+    color: rgba(255, 255, 255, 1) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Fix for post descriptions */
+.post header.major .description,
+header.major p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Fix for navigation items */
+#nav a,
+#header a,
+.button {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Fix for post navigation */
 .post-footer,
 .post-nav a {
     color: rgba(255, 255, 255, 0.9) !important;
 }
 
+/* Fix for quotes */
 .highlight-quote p,
 blockquote p {
     color: rgba(255, 255, 255, 0.9) !important;
