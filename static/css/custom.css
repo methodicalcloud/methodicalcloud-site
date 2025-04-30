@@ -384,6 +384,10 @@ img {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+#latest-posts p {
+    max-width: 70ch;
+}
+
 /* Ensure bold text is visible on dark backgrounds inside .content */
 .content strong,
 .content b {
