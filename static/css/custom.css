@@ -9,6 +9,64 @@ body,
     background-color: #1e252d !important;
 }
 
+/* Comprehensive text contrast fixes */
+
+/* Section headings (like "Latest from the Blog") */
+section h1,
+section h2,
+section h3,
+.post-title,
+.section-title,
+.page-heading,
+.major h1,
+.major h2,
+.title {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Fix blue backgrounds with dark text */
+.blue-bg,
+.blue-background,
+.highlight-bg,
+.alt-bg,
+.accent-bg {
+    background-color: rgba(24, 191, 239, 0.7) !important;
+}
+
+.blue-bg *,
+.blue-background *,
+.highlight-bg *,
+.alt-bg *,
+.accent-bg * {
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Make all headings in any background visible */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Ensure all text in colored backgrounds is visible */
+[style*="background"],
+[class*="bg-"],
+[class*="background"] {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Force white text on any darker backgrounds */
+.dark-bg *,
+.accent-color,
+[style*="background-color"] * {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
 /* Fix for all text in the main content area */
 #main h1,
 #main h2,
@@ -313,4 +371,15 @@ img {
 .tag-cloud .tag {
     font-weight: 500;
     line-height: 1.4;
+}
+
+. #latest-posts h2,
+#latest-posts h3,
+#latest-posts p,
+#latest-posts a,
+#latest-posts .description,
+#latest-posts .reading-time,
+#latest-posts small {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
