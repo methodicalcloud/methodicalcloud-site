@@ -2,24 +2,23 @@
 <title>{{ if .Title }}{{ .Title }} | {{ end }}Methodical Cloud</title>
 <meta name="description"
     content="{{ with .Params.description }}{{ . }}{{ else }}Visualizing systems, designing better automation, and building workflows that actually work.{{ end }}" />
-<meta name="author" content="Methodical Cloud" />
+<meta name="author" content="Larry Smith Jr." />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- Open Graph -->
-<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}Methodical Cloud{{ end }}" />
 <meta property="og:description"
     content="{{ with .Params.description }}{{ . }}{{ else }}Visualizing systems, designing better automation, and building workflows that actually work.{{ end }}" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:image" content="{{ .Site.BaseURL }}images/og-default.jpg" />
+<meta property="og:image" content="{{ .Site.Params.seo.og_image | absURL }}" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{{ .Title }}" />
-<meta name="twitter:description"
-    content="{{ with .Params.description }}{{ . }}{{ else }}Visualizing systems, designing better automation, and building workflows that actually work.{{ end }}" />
-<meta name="twitter:image" content="{{ .Site.BaseURL }}images/og-default.jpg" />
-<link rel="alternate" type="application/rss+xml" title="Methodical Cloud RSS Feed" href="/index.xml" />
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="Methodical Cloud RSS Feed" href="{{ " feed.xml" | absURL }}" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}" />
+
 <link rel="stylesheet" href="/css/main.css" />
 <noscript>
     <link rel="stylesheet" href="/css/noscript.css" />

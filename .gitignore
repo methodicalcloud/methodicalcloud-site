@@ -1,0 +1,43 @@
+# Hugo build output
+/public/
+/resources/_gen/
+
+# Backup files
+*.bak
+*.swp
+*.swo
+*.tmp
+*.DS_Store
+*.log
+
+# Archives and zips
+*.zip
+*.tar.gz
+*.rar
+
+# OS-specific files
+Thumbs.db
+ehthumbs.db
+.DS_Store
+.DS_Store?
+Icon?
+.Trashes
+.Spotlight-V100
+._*
+
+# VS Code / JetBrains
+.vscode/
+.idea/
+
+# Hugo environment files (if used)
+.env
+.env.*
+
+# Netlify deploy previews
+.netlify/
+
+# Node modules (if using JS tooling)
+node_modules/
+
+# Site versions archive folder (optional if you want to exclude version backups)
+site_versions/archives/
