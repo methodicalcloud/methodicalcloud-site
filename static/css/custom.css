@@ -27,6 +27,31 @@ body,
     color: rgba(255, 255, 255, 0.9) !important;
 }
 
+/* Fix for Latest from the Blog section */
+#main article h1,
+#main article h2,
+#main article .meta,
+#main article .date,
+#main article p,
+#main article .button,
+#main article .posted {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Fix for article titles on home page */
+.posts article header h2 a,
+.posts article h2 a {
+    color: rgba(255, 255, 255, 1) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Fix for post meta info */
+article .meta,
+article .posted,
+article .date {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
 /* Fix for post title that appears too light */
 .post header.major h1,
 .featured article h1,
