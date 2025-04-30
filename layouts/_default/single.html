@@ -5,6 +5,7 @@
       <header class="major">
         <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
         <p class="reading-time">{{ .ReadingTime }} min read</p>
+        <p class="author">By {{ .Params.author | default "Methodical Cloud" }}</p>
         <h1>{{ .Title }}</h1>
         <p class="description">{{ .Params.description }}</p>
         {{ if .Params.tags }}
@@ -15,6 +16,12 @@
         </div>
         {{ end }}
       </header>
+
+      {{ if .Params.featured_image }}
+      <div class="image main">
+        <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
+      </div>
+      {{ end }}
 
       <div class="content">
         {{ .Content }}

@@ -39,15 +39,6 @@ pre code {
     padding: 0;
 }
 
-/* Blockquote styling */
-blockquote {
-    border-left: 4px solid #18bfef;
-    padding-left: 1.5rem;
-    font-style: italic;
-    margin: 2rem 0;
-    color: rgba(255, 255, 255, 0.75);
-}
-
 /* Post styling */
 .post header.major .date {
     display: block;
@@ -120,8 +111,118 @@ blockquote {
     }
 }
 
+/* Phase 3: Visual Enhancements */
+
+/* Fix for blockquote styling */
+blockquote {
+    border-left: 4px solid #18bfef;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    background: rgba(24, 191, 239, 0.1);
+}
+
+blockquote p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    /* Force readable text color */
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+/* Special quote styling for the blue highlight */
+.highlight-quote {
+    background: rgba(24, 191, 239, 0.2);
+    border-left: 4px solid #18bfef;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+}
+
+.highlight-quote p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+/* Diagram styling */
+.diagram {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.diagram img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.diagram-caption {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Homepage enhancements */
+.featured-content {
+    margin-bottom: 3rem;
+}
+
+.featured-content .post {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-content .post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* General visual improvements */
+hr {
+    border: 0;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.15);
+    margin: 2rem 0;
+}
+
+a {
+    transition: color 0.2s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure all content has good contrast */
+.content p,
+.content li,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .reading-time {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
+    opacity: 0.65;
     margin-bottom: 0.5rem;
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag-cloud .tag {
+    font-weight: 500;
+    line-height: 1.4;
 }

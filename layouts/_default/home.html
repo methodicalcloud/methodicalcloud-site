@@ -1,37 +1,58 @@
 {{ define "main" }}
-<section id="hero" class="major">
-  <div class="inner">
-    <header class="major">
-      <h1>Methodical Cloud</h1>
+<header class="major">
+  <h1>Methodical Cloud</h1>
+  <p>Clarity in automation, visual system design, and sustainable technical storytelling.</p>
+</header>
+
+<section class="featured-post">
+  <h2>Latest from the Blog</h2>
+  {{ range first 1 (where .Site.RegularPages "Section" "blog") }}
+  <article class="post">
+    <header>
+      <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <p>{{ .Params.description }}</p>
     </header>
-    <p>Visualizing systems, designing better automation, and building workflows that actually work.</p>
-    <p>Explore podcasts, blog posts, and visual design for modern automation thinking.</p>
+    {{ if .Params.featured_image }}
+    <a href="{{ .Permalink }}" class="image"><img src="{{ .Params.featured_image }}" alt="{{ .Title }}" /></a>
+    {{ end }}
+    <p>{{ .Summary }}</p>
     <ul class="actions">
-      <li><a href="/blog/" class="button primary">Visit the Blog</a></li>
+      <li><a href="{{ .Permalink }}" class="button">Read More</a></li>
+    </ul>
+  </article>
+  {{ end }}
+</section>
+
+<section class="promo-podcast">
+  <div class="box">
+    <h2>Diagram the Damn Thing</h2>
+    <p>The Methodical Cloud podcast is coming soon. Each episode will revolve around one diagram—15 minutes or less, no
+      fluff, just clear thinking to help you build better systems.</p>
+    <ul class="actions">
+      <li><a href="/podcast/" class="button primary">Learn More</a></li>
     </ul>
   </div>
 </section>
 
-<section id="latest-posts" class="main">
-  <div class="inner">
-    <header class="major">
-      <h2>Latest Posts</h2>
-    </header>
-    <section class="posts">
-      {{ $posts := first 3 (where .Site.RegularPages "Section" "blog") }}
-      {{ range $posts }}
-      <article>
-        <header>
-          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <p><small>{{ .Date.Format "January 2, 2006" }}</small></p>
-        </header>
-        <p>{{ .Summary }}</p>
-        <ul class="actions">
-          <li><a href="{{ .RelPermalink }}" class="button small">Read More</a></li>
-        </ul>
-      </article>
-      {{ end }}
-    </section>
+<section class="recent-posts">
+  <h2>Recent Posts</h2>
+  <div class="posts">
+    {{ range first 4 (after 1 (where .Site.RegularPages "Section" "blog")) }}
+    <article>
+      <header>
+        <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      </header>
+      <p>{{ .Params.description | default .Summary }}</p>
+      <ul class="actions">
+        <li><a href="{{ .Permalink }}" class="button">Read More</a></li>
+      </ul>
+    </article>
+    {{ end }}
   </div>
+  <ul class="actions">
+    <li><a href="/blog/" class="button">View All Posts</a></li>
+  </ul>
 </section>
 {{ end }}

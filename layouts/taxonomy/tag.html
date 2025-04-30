@@ -1,0 +1,25 @@
+{{ define "main" }}
+<section id="main">
+    <div class="inner">
+        <header class="major">
+            <h1>Tag: {{ .Title }}</h1>
+        </header>
+
+        <div class="posts">
+            {{ range .Pages.ByDate.Reverse }}
+            <article>
+                <header>
+                    <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                </header>
+                <p>{{ .Params.description | default .Summary }}</p>
+                <ul class="actions">
+                    <li><a href="{{ .Permalink }}" class="button">Read More</a></li>
+                </ul>
+            </article>
+            {{ end }}
+        </div>
+        <p><a href="/blog/" class="button small">View All Posts</a></p>
+    </div>
+</section>
+{{ end }}
