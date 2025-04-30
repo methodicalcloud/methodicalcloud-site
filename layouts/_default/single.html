@@ -1,12 +1,36 @@
 {{ define "main" }}
 <section id="main">
   <div class="inner">
-    <header class="major">
-      <h1>{{ .Title }}</h1>
-    </header>
-    <div>
-      {{ .Content }}
-    </div>
+    <article class="post">
+      <header class="major">
+        <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+        <p class="reading-time">{{ .ReadingTime }} min read</p>
+        <h1>{{ .Title }}</h1>
+        <p class="description">{{ .Params.description }}</p>
+        {{ if .Params.tags }}
+        <div class="tags">
+          {{ range .Params.tags }}
+          <a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </header>
+
+      <div class="content">
+        {{ .Content }}
+      </div>
+
+      <div class="post-footer">
+        <div class="post-nav">
+          {{ with .PrevInSection }}
+          <a class="prev" href="{{ .Permalink }}"><i class="fa fa-arrow-left"></i> Previous Post</a>
+          {{ end }}
+          {{ with .NextInSection }}
+          <a class="next" href="{{ .Permalink }}">Next Post <i class="fa fa-arrow-right"></i></a>
+          {{ end }}
+        </div>
+      </div>
+    </article>
   </div>
 </section>
 {{ end }}

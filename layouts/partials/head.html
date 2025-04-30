@@ -14,12 +14,14 @@
 <meta property="og:image" content="{{ .Site.Params.seo.og_image | absURL }}" />
 
 <!-- RSS -->
-<link rel="alternate" type="application/rss+xml" title="Methodical Cloud RSS Feed" href="{{ " feed.xml" | absURL }}" />
+{{ $rss := "feed.xml" | relURL }}
+<link rel="alternate" type="application/rss+xml" title="Methodical Cloud RSS Feed" href="{{ $rss | absURL }}" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ .Permalink }}" />
 
 <link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" href="/css/custom.css" />
 <noscript>
     <link rel="stylesheet" href="/css/noscript.css" />
 </noscript>
