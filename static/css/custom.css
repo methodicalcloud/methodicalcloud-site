@@ -1,3 +1,38 @@
+/* Emergency fix for white text on white background */
+body,
+#main {
+    background-color: #1e252d;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#main {
+    background-color: #1e252d !important;
+}
+
+#main h1,
+#main h2,
+#main h3,
+#main h4,
+#main h5,
+#main h6,
+#main p,
+#main li,
+#main a,
+#main blockquote,
+#main span {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.post-footer,
+.post-nav a {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.highlight-quote p,
+blockquote p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
 /* Phase 2: Content Presentation & Readability */
 
 /* Typography Improvements */
