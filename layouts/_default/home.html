@@ -24,9 +24,10 @@
 </section>
 
 <section class="featured-post">
-  <h2>Latest from the Blog</h2>
+  <h2>Featured Post</h2>
   <div class="blog-card-grid">
-    {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+    {{ with first 1 (where .Site.RegularPages "Params.featured" true) }}
+    {{ range . }}
     <article class="blog-card">
       <header>
         <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
@@ -35,6 +36,18 @@
       <p>{{ .Params.description | default .Summary }}</p>
       <a href="{{ .Permalink }}" class="button">Read More</a>
     </article>
+    {{ end }}
+    {{ else }}
+    {{ range first 1 (where .Site.RegularPages "Section" "blog") }}
+    <article class="blog-card">
+      <header>
+        <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      </header>
+      <p>{{ .Params.description | default .Summary }}</p>
+      <a href="{{ .Permalink }}" class="button">Read More</a>
+    </article>
+    {{ end }}
     {{ end }}
   </div>
 </section>
