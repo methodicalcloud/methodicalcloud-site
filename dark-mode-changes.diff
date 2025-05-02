@@ -1,0 +1,736 @@
+diff --git a/config.toml b/config.toml
+index 60af483..742db46 100644
+--- a/config.toml
++++ b/config.toml
+@@ -14,6 +14,9 @@ email = "hello@methodicalcloud.com"
+ # Open Graph
+ og_image = "/images/og-default.jpg"
+ 
++[params.theme]
++primary_color = "#1e252d"
++
+ [permalinks]
+ blog = "/blog/:slug/"
+ podcast = "/podcast/:slug/"
+diff --git a/layouts/_default/baseof.html b/layouts/_default/baseof.html
+index e32e271..5a114bb 100644
+--- a/layouts/_default/baseof.html
++++ b/layouts/_default/baseof.html
+@@ -11,6 +11,7 @@
+     {{ block "main" . }}{{ end }}
+   </main>
+   {{ partial "footer.html" . }}
++  <script src="/js/theme-toggle.js"></script>
+ </body>
+ 
+ </html>
+\ No newline at end of file
+diff --git a/layouts/_default/home.html b/layouts/_default/home.html
+index 26e2d4c..9471366 100644
+--- a/layouts/_default/home.html
++++ b/layouts/_default/home.html
+@@ -1,58 +1,62 @@
+ {{ define "main" }}
+-<header class="major">
+-  <h1>Methodical Cloud</h1>
+-  <p>Clarity in automation, visual system design, and sustainable technical storytelling.</p>
+-</header>
++<div class="content-wrapper"
++  style="background-color: var(--background-alt); color: var(--text-color); min-height: 100vh;">
++  <header class="major">
++    <h1>Methodical Cloud</h1>
++    <p>Clarity in automation, visual system design, and sustainable technical storytelling.</p>
++  </header>
+ 
+-<section class="featured-post">
+-  <h2>Latest from the Blog</h2>
+-  {{ range first 1 (where .Site.RegularPages "Section" "blog") }}
+-  <article class="post">
+-    <header>
+-      <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+-      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+-      <p>{{ .Params.description }}</p>
+-    </header>
+-    {{ if .Params.featured_image }}
+-    <a href="{{ .Permalink }}" class="image"><img src="{{ .Params.featured_image }}" alt="{{ .Title }}" /></a>
+-    {{ end }}
+-    <p>{{ .Summary }}</p>
+-    <ul class="actions">
+-      <li><a href="{{ .Permalink }}" class="button">Read More</a></li>
+-    </ul>
+-  </article>
+-  {{ end }}
+-</section>
+-
+-<section class="promo-podcast">
+-  <div class="box">
+-    <h2>Diagram the Damn Thing</h2>
+-    <p>The Methodical Cloud podcast is coming soon. Each episode will revolve around one diagram—15 minutes or less, no
+-      fluff, just clear thinking to help you build better systems.</p>
+-    <ul class="actions">
+-      <li><a href="/podcast/" class="button primary">Learn More</a></li>
+-    </ul>
+-  </div>
+-</section>
+-
+-<section class="recent-posts">
+-  <h2>Recent Posts</h2>
+-  <div class="posts">
+-    {{ range first 4 (after 1 (where .Site.RegularPages "Section" "blog")) }}
+-    <article>
++  <section class="featured-post">
++    <h2>Latest from the Blog</h2>
++    {{ range first 1 (where .Site.RegularPages "Section" "blog") }}
++    <article class="post">
+       <header>
+         <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
++        <p>{{ .Params.description }}</p>
+       </header>
+-      <p>{{ .Params.description | default .Summary }}</p>
++      {{ if .Params.featured_image }}
++      <a href="{{ .Permalink }}" class="image"><img src="{{ .Params.featured_image }}" alt="{{ .Title }}" /></a>
++      {{ end }}
++      <p>{{ .Summary }}</p>
+       <ul class="actions">
+         <li><a href="{{ .Permalink }}" class="button">Read More</a></li>
+       </ul>
+     </article>
+     {{ end }}
+-  </div>
+-  <ul class="actions">
+-    <li><a href="/blog/" class="button">View All Posts</a></li>
+-  </ul>
+-</section>
++  </section>
++
++  <section class="promo-podcast">
++    <div class="box">
++      <h2>Diagram the Damn Thing</h2>
++      <p>The Methodical Cloud podcast is coming soon. Each episode will revolve around one diagram—15 minutes or less,
++        no
++        fluff, just clear thinking to help you build better systems.</p>
++      <ul class="actions">
++        <li><a href="/podcast/" class="button primary">Learn More</a></li>
++      </ul>
++    </div>
++  </section>
++
++  <section class="recent-posts">
++    <h2>Recent Posts</h2>
++    <div class="posts">
++      {{ range first 4 (after 1 (where .Site.RegularPages "Section" "blog")) }}
++      <article>
++        <header>
++          <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
++          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
++        </header>
++        <p>{{ .Params.description | default .Summary }}</p>
++        <ul class="actions">
++          <li><a href="{{ .Permalink }}" class="button">Read More</a></li>
++        </ul>
++      </article>
++      {{ end }}
++    </div>
++    <ul class="actions">
++      <li><a href="/blog/" class="button">View All Posts</a></li>
++    </ul>
++  </section>
++</div>
+ {{ end }}
+\ No newline at end of file
+diff --git a/layouts/_default/list.html b/layouts/_default/list.html
+index 9d09115..a9aa5ff 100644
+--- a/layouts/_default/list.html
++++ b/layouts/_default/list.html
+@@ -1,14 +1,16 @@
+ {{ define "main" }}
+-<section id="main">
+-  <div class="inner">
+-    <header class="major">
+-      <h1>{{ .Title }}</h1>
+-    </header>
+-    <ul>
+-      {{ range .Pages }}
+-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+-      {{ end }}
+-    </ul>
+-  </div>
+-</section>
++<div class="content-wrapper" style="background-color: var(--bg-color); color: var(--text-color);">
++  <section id="main">
++    <div class="inner">
++      <header class="major">
++        <h1>{{ .Title }}</h1>
++      </header>
++      <ul>
++        {{ range .Pages }}
++        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
++        {{ end }}
++      </ul>
++    </div>
++  </section>
++</div>
+ {{ end }}
+\ No newline at end of file
+diff --git a/layouts/_default/single.html b/layouts/_default/single.html
+index 81d9136..b78f27a 100644
+--- a/layouts/_default/single.html
++++ b/layouts/_default/single.html
+@@ -1,43 +1,45 @@
+ {{ define "main" }}
+-<section id="main">
+-  <div class="inner">
+-    <article class="post">
+-      <header class="major">
+-        <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+-        <p class="reading-time">{{ .ReadingTime }} min read</p>
+-        <p class="author">By {{ .Params.author | default "Methodical Cloud" }}</p>
+-        <h1>{{ .Title }}</h1>
+-        <p class="description">{{ .Params.description }}</p>
+-        {{ if .Params.tags }}
+-        <div class="tags">
+-          {{ range .Params.tags }}
+-          <a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
++<div class="content-wrapper" style="background-color: var(--bg-color); color: var(--text-color);">
++  <section id="main">
++    <div class="inner">
++      <article class="post">
++        <header class="major">
++          <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
++          <p class="reading-time">{{ .ReadingTime }} min read</p>
++          <p class="author">By {{ .Params.author | default "Methodical Cloud" }}</p>
++          <h1>{{ .Title }}</h1>
++          <p class="description">{{ .Params.description }}</p>
++          {{ if .Params.tags }}
++          <div class="tags">
++            {{ range .Params.tags }}
++            <a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
++            {{ end }}
++          </div>
+           {{ end }}
++        </header>
++
++        {{ if .Params.featured_image }}
++        <div class="image main">
++          <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
+         </div>
+         {{ end }}
+-      </header>
+-
+-      {{ if .Params.featured_image }}
+-      <div class="image main">
+-        <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
+-      </div>
+-      {{ end }}
+ 
+-      <div class="content">
+-        {{ .Content }}
+-      </div>
++        <div class="content">
++          {{ .Content }}
++        </div>
+ 
+-      <div class="post-footer">
+-        <div class="post-nav">
+-          {{ with .PrevInSection }}
+-          <a class="prev" href="{{ .Permalink }}"><i class="fa fa-arrow-left"></i> Previous Post</a>
+-          {{ end }}
+-          {{ with .NextInSection }}
+-          <a class="next" href="{{ .Permalink }}">Next Post <i class="fa fa-arrow-right"></i></a>
+-          {{ end }}
++        <div class="post-footer">
++          <div class="post-nav">
++            {{ with .PrevInSection }}
++            <a class="prev" href="{{ .Permalink }}"><i class="fa fa-arrow-left"></i> Previous Post</a>
++            {{ end }}
++            {{ with .NextInSection }}
++            <a class="next" href="{{ .Permalink }}">Next Post <i class="fa fa-arrow-right"></i></a>
++            {{ end }}
++          </div>
+         </div>
+-      </div>
+-    </article>
+-  </div>
+-</section>
++      </article>
++    </div>
++  </section>
++</div>
+ {{ end }}
+\ No newline at end of file
+diff --git a/layouts/partials/footer.html b/layouts/partials/footer.html
+index 1f12f4a..8c1a91f 100644
+--- a/layouts/partials/footer.html
++++ b/layouts/partials/footer.html
+@@ -1,12 +1,14 @@
+-<footer id="footer">
+-  <section class="split contact">
+-    <section>
+-      <h3>Email</h3>
+-      <p><a href="mailto:hello@methodicalcloud.com">hello@methodicalcloud.com</a></p>
++<div class="content-wrapper" style="background-color: var(--bg-color); color: var(--text-color);">
++  <footer id="footer">
++    <section class="split contact">
++      <section>
++        <h3>Email</h3>
++        <p><a href="mailto:hello@methodicalcloud.com">hello@methodicalcloud.com</a></p>
++      </section>
+     </section>
+-  </section>
+ 
+-  <div class="copyright">
+-    <p>&copy; {{ now.Format "2006" }} Methodical Cloud. All rights reserved.</p>
+-  </div>
+-</footer>
+\ No newline at end of file
++    <div class="copyright">
++      <p>&copy; {{ now.Format "2006" }} Methodical Cloud. All rights reserved.</p>
++    </div>
++  </footer>
++</div>
+\ No newline at end of file
+diff --git a/layouts/partials/head.html b/layouts/partials/head.html
+index 50f5415..1bc6737 100644
+--- a/layouts/partials/head.html
++++ b/layouts/partials/head.html
+@@ -1,9 +1,26 @@
++<script>
++    (function () {
++        const savedTheme = localStorage.getItem('theme');
++        if (savedTheme) {
++            document.documentElement.setAttribute('data-theme', savedTheme);
++        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
++            document.documentElement.setAttribute('data-theme', 'dark');
++        }
++    })();
++</script>
++<style>
++    html:not([data-theme]) {
++        background-color: var(--bg-color);
++        color: var(--text-color);
++    }
++</style>
+ <meta charset="utf-8" />
+ <title>{{ if .Title }}{{ .Title }} | {{ end }}Methodical Cloud</title>
+ <meta name="description"
+     content="{{ with .Params.description }}{{ . }}{{ else }}Visualizing systems, designing better automation, and building workflows that actually work.{{ end }}" />
+ <meta name="author" content="Larry Smith Jr." />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
++<meta name="theme-color" content="{{ .Site.Params.theme.primary_color }}">
+ 
+ <!-- Open Graph -->
+ <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}Methodical Cloud{{ end }}" />
+@@ -21,7 +38,8 @@
+ <link rel="canonical" href="{{ .Permalink }}" />
+ 
+ <link rel="stylesheet" href="/css/main.css" />
+-<link rel="stylesheet" href="/css/custom.css" />
++{{ $style := resources.Get "scss/style.scss" | toCSS | minify }}
++<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+ <noscript>
+     <link rel="stylesheet" href="/css/noscript.css" />
+ </noscript>
+diff --git a/layouts/partials/header.html b/layouts/partials/header.html
+index c540774..c0cfe17 100644
+--- a/layouts/partials/header.html
++++ b/layouts/partials/header.html
+@@ -1,6 +1,7 @@
+ <header id="header" class="alt">
+   <div class="inner">
+     <a href="/" class="logo"><strong>Methodical Cloud</strong></a>
++    {{ partial "theme-toggle.html" . }}
+   </div>
+ </header>
+ 
+diff --git a/static/css/custom.css b/static/css/custom.css
+index 245b78a..f1b1d18 100644
+--- a/static/css/custom.css
++++ b/static/css/custom.css
+@@ -1,8 +1,20 @@
++/* Fallback to neutralize automatic dark mode styling by browsers */
++html:not([data-theme]) {
++    background-color: #ffffff;
++    color: #000000;
++}
++
++/* Ensure body colors always derive from theme variables */
++body {
++    background-color: var(--bg-color);
++    color: var(--text-color);
++}
++
+ /* Emergency fix for white text on white background */
+ body,
+ #main {
+-    background-color: #1e252d;
+-    color: rgba(255, 255, 255, 0.75);
++    background-color: var(--bg-color);
++    color: var(--text-color);
+ }
+ 
+ #main {
+@@ -20,9 +32,54 @@ section h3,
+ .page-heading,
+ .major h1,
+ .major h2,
+-.title {
+-    color: rgba(255, 255, 255, 0.95) !important;
+-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
++.title,
++h1,
++h2,
++h3,
++h4,
++h5,
++h6,
++#main h1,
++#main h2,
++#main h3,
++#main h4,
++#main h5,
++#main h6,
++#main p,
++#main li,
++#main a,
++#main blockquote,
++#main span,
++#main .date,
++#main header.major h1,
++#main header.major h2,
++article .meta,
++article .posted,
++article .date,
++.post header.major h1,
++.featured article h1,
++#intro h1,
++header.major h1,
++header.major .description,
++header.major p,
++#nav a,
++#header a,
++.button,
++.post-footer,
++.post-nav a,
++.highlight-quote p,
++blockquote p,
++.content p,
++.content li,
++.content h1,
++.content h2,
++.content h3,
++.content h4,
++.content h5,
++.content h6,
++.content strong,
++.content b {
++    color: var(--text-color) !important;
+ }
+ 
+ /* Fix blue backgrounds with dark text */
+@@ -337,6 +394,7 @@ hr {
+ 
+ a {
+     transition: color 0.2s ease;
++    color: var(--link-color);
+ }
+ 
+ img {
+@@ -392,4 +450,109 @@ img {
+ .content strong,
+ .content b {
+     color: rgba(255, 255, 255, 0.95) !important;
++}
++
++
++/* Stronger dark theme text overrides for #main and posts */
++[data-theme="dark"] #main h1,
++[data-theme="dark"] #main h2,
++[data-theme="dark"] #main h3,
++[data-theme="dark"] #main h4,
++[data-theme="dark"] #main h5,
++[data-theme="dark"] #main h6,
++[data-theme="dark"] #main p,
++[data-theme="dark"] #main li,
++[data-theme="dark"] #main a,
++[data-theme="dark"] #main blockquote,
++[data-theme="dark"] #main span,
++[data-theme="dark"] #main .date,
++[data-theme="dark"] #main header.major h1,
++[data-theme="dark"] #main header.major h2,
++[data-theme="dark"] .posts article h2,
++[data-theme="dark"] .posts article h3,
++[data-theme="dark"] .posts article h3 a,
++[data-theme="dark"] .posts article .meta,
++[data-theme="dark"] .posts article .date,
++[data-theme="dark"] .posts article p,
++[data-theme="dark"] .posts article .button,
++[data-theme="dark"] .posts article .posted {
++    color: #ffffff !important;
++    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
++}
++
++[data-theme="dark"] h1,
++[data-theme="dark"] h2,
++[data-theme="dark"] h3,
++[data-theme="dark"] h4,
++[data-theme="dark"] h5,
++[data-theme="dark"] h6,
++[data-theme="dark"] .major h1,
++[data-theme="dark"] .section-title,
++[data-theme="dark"] .page-heading,
++[data-theme="dark"] .post-title,
++[data-theme="dark"] .posts header h2,
++[data-theme="dark"] .posts header h3,
++[data-theme="dark"] header.major h2 {
++    color: #ffffff !important;
++    opacity: 1 !important;
++    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
++}
++
++[data-theme="dark"] .button,
++[data-theme="dark"] a.button {
++    color: #ffffff !important;
++    border-color: rgba(255, 255, 255, 0.7) !important;
++    background: transparent;
++    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
++}
++
++[data-theme="dark"] .button:hover,
++[data-theme="dark"] a.button:hover {
++    background: rgba(255, 255, 255, 0.1);
++}
++
++[data-theme="dark"] .section-title,
++[data-theme="dark"] .featured-content .post h2,
++[data-theme="dark"] .post header h2,
++[data-theme="dark"] .post header h3,
++[data-theme="dark"] .post header .description,
++[data-theme="dark"] .featured-content .post header h2,
++[data-theme="dark"] .featured-content .post header h3,
++[data-theme="dark"] .featured-content .post header .description,
++[data-theme="dark"] .post .read-more,
++[data-theme="dark"] .post a.button,
++[data-theme="dark"] .posts article h2,
++[data-theme="dark"] .posts article h2 a,
++[data-theme="dark"] .posts article h3,
++[data-theme="dark"] .posts article h3 a,
++[data-theme="dark"] .posts article .description,
++[data-theme="dark"] .posts article .meta,
++[data-theme="dark"] .posts article .date,
++[data-theme="dark"] .posts article .posted,
++[data-theme="dark"] .reading-time,
++[data-theme="dark"] .button,
++[data-theme="dark"] a.button,
++[data-theme="dark"] .tag,
++[data-theme="dark"] .tags,
++[data-theme="dark"] small,
++[data-theme="dark"] .copyright,
++[data-theme="dark"] .major h2,
++[data-theme="dark"] .major h1,
++[data-theme="dark"] header.major h2 {
++    color: #ffffff !important;
++    opacity: 1 !important;
++    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
++}
++
++[data-theme="dark"] .featured-post,
++[data-theme="dark"] .featured-post h2,
++[data-theme="dark"] .featured-post header h3,
++[data-theme="dark"] .featured-post header p,
++[data-theme="dark"] .promo-podcast .box h2,
++[data-theme="dark"] .promo-podcast .box p,
++[data-theme="dark"] .recent-posts h2,
++[data-theme="dark"] .recent-posts .posts article h3,
++[data-theme="dark"] .recent-posts .posts article p {
++    color: #ffffff !important;
++    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+ }
+\ No newline at end of file
+diff --git a/static/css/main.css b/static/css/main.css
+index 359821d..02a5d06 100644
+--- a/static/css/main.css
++++ b/static/css/main.css
+@@ -3413,127 +3413,34 @@ body.is-preload #wrapper.fade-in:before {
+ /* Intro */
+ 
+ #intro {
+-	color: #ffffff;
++	background-color: #ffffff;
++	color: #1e252d;
+ 	padding: 6rem 2rem 3rem 2rem;
+-	-moz-align-items: center;
+-	-webkit-align-items: center;
+-	-ms-align-items: center;
+-	align-items: center;
+-	display: -moz-flex;
+-	display: -webkit-flex;
+-	display: -ms-flex;
+ 	display: flex;
+-	-moz-flex-direction: column;
+-	-webkit-flex-direction: column;
+-	-ms-flex-direction: column;
+ 	flex-direction: column;
+-	-moz-justify-content: -moz-flex-end;
+-	-webkit-justify-content: -webkit-flex-end;
+-	-ms-justify-content: -ms-flex-end;
+-	justify-content: flex-end;
+-	-moz-transition: opacity 1s ease, -moz-transform 1s ease;
+-	-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+-	-ms-transition: opacity 1s ease, -ms-transform 1s ease;
+-	transition: opacity 1s ease, transform 1s ease;
+-	position: relative;
+-	cursor: default;
++	align-items: center;
++	justify-content: center;
++	min-height: 100vh;
+ 	text-align: center;
+-	z-index: 1;
+-	min-height: 85vh;
+-}
+-
+-#intro input,
+-#intro select,
+-#intro textarea {
+-	color: #ffffff;
+-}
+-
+-#intro a {
+-	color: #ffffff;
+-	border-bottom-color: rgba(255, 255, 255, 0.5);
+-}
+-
+-#intro a:hover {
+-	border-bottom-color: transparent;
+-	color: #18bfef !important;
+-}
+-
+-#intro strong,
+-#intro b {
+-	color: #ffffff;
+-}
+-
+-#intro h1,
+-#intro h2,
+-#intro h3,
+-#intro h4,
+-#intro h5,
+-#intro h6 {
+-	color: #ffffff;
+-}
+-
+-#intro blockquote {
+-	border-left-color: #ffffff;
+-}
+-
+-#intro code {
+-	background: rgba(255, 255, 255, 0.075);
+-	border-color: #ffffff;
+-}
+-
+-#intro hr {
+-	border-bottom-color: #ffffff;
+-}
+-
+-#intro input[type="submit"],
+-#intro input[type="reset"],
+-#intro input[type="button"],
+-#intro button,
+-#intro .button {
+-	background-color: transparent;
+-	box-shadow: inset 0 0 0 2px #ffffff;
+-	color: #ffffff !important;
+-}
+-
+-#intro input[type="submit"]:hover,
+-#intro input[type="reset"]:hover,
+-#intro input[type="button"]:hover,
+-#intro button:hover,
+-#intro .button:hover {
+-	box-shadow: inset 0 0 0 2px #18bfef;
+-	color: #18bfef !important;
+-}
+-
+-#intro input[type="submit"].primary,
+-#intro input[type="reset"].primary,
+-#intro input[type="button"].primary,
+-#intro button.primary,
+-#intro .button.primary {
+-	background-color: #ffffff;
+-	box-shadow: none;
+-	color: #1e252d !important;
+-}
+-
+-#intro input[type="submit"].primary:hover,
+-#intro input[type="reset"].primary:hover,
+-#intro input[type="button"].primary:hover,
+-#intro button.primary:hover,
+-#intro .button.primary:hover {
+-	background-color: #18bfef;
+ }
+ 
+ #intro h1 {
+-	font-size: 5rem;
+-	line-height: 1;
++	color: #1e252d;
++	font-size: 4rem;
++	font-weight: 900;
++	text-transform: uppercase;
++	letter-spacing: 0.05em;
++	margin-bottom: 1rem;
+ }
+ 
+ #intro p {
+ 	font-size: 1.25rem;
+-	font-style: italic;
+-	margin-top: -0.25rem;
+-	text-align: center;
++	color: #333333;
++	max-width: 720px;
++	margin-bottom: 2rem;
+ }
+ 
++
+ #intro+#header {
+ 	margin-top: -20rem;
+ }
+@@ -4914,7 +4821,7 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
+ }
+ 
+ #latest-posts {
+-	background-color: #1e252d;
++	background-color: var(--bg-color);
+ }
+ 
+ #latest-posts h2,
+@@ -4923,9 +4830,28 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
+ #latest-posts .posts article h3 a,
+ #latest-posts .posts article p,
+ #latest-posts .posts article small {
+-	color: #ffffff;
++	color: var(--text-color);
+ }
+ 
+ #latest-posts .posts article a:hover {
+ 	color: #18bfef;
++}
++
++/* Dark mode support for #latest-posts section */
++[data-theme="dark"] #latest-posts {
++	background-color: var(--bg-color);
++}
++
++[data-theme="dark"] #latest-posts h2,
++[data-theme="dark"] #latest-posts .posts article,
++[data-theme="dark"] #latest-posts .posts article h3,
++[data-theme="dark"] #latest-posts .posts article h3 a,
++[data-theme="dark"] #latest-posts .posts article p,
++[data-theme="dark"] #latest-posts .posts article small {
++	color: var(--text-color) !important;
++	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
++}
++
++[data-theme="dark"] #latest-posts .posts article a:hover {
++	color: #18bfef !important;
+ }
+\ No newline at end of file

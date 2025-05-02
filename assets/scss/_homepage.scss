@@ -1,0 +1,14 @@
+#latest-posts {
+    background-color: var(--bg-color);
+}
+
+#latest-posts h2,
+#latest-posts .posts article h3,
+#latest-posts .posts article p {
+    color: var(--text-color);
+}
+
+.featured-content .post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

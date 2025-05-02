@@ -3412,127 +3412,35 @@ body.is-preload #wrapper.fade-in:before {
 
 /* Intro */
 
+/* Intro section with theme-aware colors */
 #intro {
-	color: #ffffff;
+	background-color: var(--bg-color);
+	color: var(--text-color);
 	padding: 6rem 2rem 3rem 2rem;
-	-moz-align-items: center;
-	-webkit-align-items: center;
-	-ms-align-items: center;
-	align-items: center;
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: -ms-flex;
 	display: flex;
-	-moz-flex-direction: column;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
 	flex-direction: column;
-	-moz-justify-content: -moz-flex-end;
-	-webkit-justify-content: -webkit-flex-end;
-	-ms-justify-content: -ms-flex-end;
-	justify-content: flex-end;
-	-moz-transition: opacity 1s ease, -moz-transform 1s ease;
-	-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-	-ms-transition: opacity 1s ease, -ms-transform 1s ease;
-	transition: opacity 1s ease, transform 1s ease;
-	position: relative;
-	cursor: default;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
 	text-align: center;
-	z-index: 1;
-	min-height: 85vh;
-}
-
-#intro input,
-#intro select,
-#intro textarea {
-	color: #ffffff;
-}
-
-#intro a {
-	color: #ffffff;
-	border-bottom-color: rgba(255, 255, 255, 0.5);
-}
-
-#intro a:hover {
-	border-bottom-color: transparent;
-	color: #18bfef !important;
-}
-
-#intro strong,
-#intro b {
-	color: #ffffff;
-}
-
-#intro h1,
-#intro h2,
-#intro h3,
-#intro h4,
-#intro h5,
-#intro h6 {
-	color: #ffffff;
-}
-
-#intro blockquote {
-	border-left-color: #ffffff;
-}
-
-#intro code {
-	background: rgba(255, 255, 255, 0.075);
-	border-color: #ffffff;
-}
-
-#intro hr {
-	border-bottom-color: #ffffff;
-}
-
-#intro input[type="submit"],
-#intro input[type="reset"],
-#intro input[type="button"],
-#intro button,
-#intro .button {
-	background-color: transparent;
-	box-shadow: inset 0 0 0 2px #ffffff;
-	color: #ffffff !important;
-}
-
-#intro input[type="submit"]:hover,
-#intro input[type="reset"]:hover,
-#intro input[type="button"]:hover,
-#intro button:hover,
-#intro .button:hover {
-	box-shadow: inset 0 0 0 2px #18bfef;
-	color: #18bfef !important;
-}
-
-#intro input[type="submit"].primary,
-#intro input[type="reset"].primary,
-#intro input[type="button"].primary,
-#intro button.primary,
-#intro .button.primary {
-	background-color: #ffffff;
-	box-shadow: none;
-	color: #1e252d !important;
-}
-
-#intro input[type="submit"].primary:hover,
-#intro input[type="reset"].primary:hover,
-#intro input[type="button"].primary:hover,
-#intro button.primary:hover,
-#intro .button.primary:hover {
-	background-color: #18bfef;
 }
 
 #intro h1 {
-	font-size: 5rem;
-	line-height: 1;
+	color: var(--text-color);
+	font-size: 4rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 1rem;
 }
 
 #intro p {
 	font-size: 1.25rem;
-	font-style: italic;
-	margin-top: -0.25rem;
-	text-align: center;
+	color: var(--text-color);
+	max-width: 720px;
+	margin-bottom: 2rem;
 }
+
 
 #intro+#header {
 	margin-top: -20rem;
@@ -4914,7 +4822,7 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 }
 
 #latest-posts {
-	background-color: #1e252d;
+	background-color: var(--bg-color);
 }
 
 #latest-posts h2,
@@ -4923,9 +4831,28 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 #latest-posts .posts article h3 a,
 #latest-posts .posts article p,
 #latest-posts .posts article small {
-	color: #ffffff;
+	color: var(--text-color);
 }
 
 #latest-posts .posts article a:hover {
 	color: #18bfef;
+}
+
+/* Dark mode support for #latest-posts section */
+[data-theme="dark"] #latest-posts {
+	background-color: var(--bg-color);
+}
+
+[data-theme="dark"] #latest-posts h2,
+[data-theme="dark"] #latest-posts .posts article,
+[data-theme="dark"] #latest-posts .posts article h3,
+[data-theme="dark"] #latest-posts .posts article h3 a,
+[data-theme="dark"] #latest-posts .posts article p,
+[data-theme="dark"] #latest-posts .posts article small {
+	color: var(--text-color) !important;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] #latest-posts .posts article a:hover {
+	color: #18bfef !important;
 }

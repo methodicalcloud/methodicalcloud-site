@@ -1,0 +1,16 @@
+.highlight-quote {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--accent-color);
+    padding: 1rem;
+    font-style: italic;
+}
+
+.diagram {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.diagram-caption {
+    font-size: 0.9rem;
+    opacity: 0.6;
+}

@@ -1,8 +1,20 @@
+/* Fallback to neutralize automatic dark mode styling by browsers */
+html:not([data-theme]) {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Ensure body colors always derive from theme variables */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
 /* Emergency fix for white text on white background */
 body,
 #main {
-    background-color: #1e252d;
-    color: rgba(255, 255, 255, 0.75);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 #main {
@@ -20,9 +32,54 @@ section h3,
 .page-heading,
 .major h1,
 .major h2,
-.title {
-    color: rgba(255, 255, 255, 0.95) !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+.title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#main h1,
+#main h2,
+#main h3,
+#main h4,
+#main h5,
+#main h6,
+#main p,
+#main li,
+#main a,
+#main blockquote,
+#main span,
+#main .date,
+#main header.major h1,
+#main header.major h2,
+article .meta,
+article .posted,
+article .date,
+.post header.major h1,
+.featured article h1,
+#intro h1,
+header.major h1,
+header.major .description,
+header.major p,
+#nav a,
+#header a,
+.button,
+.post-footer,
+.post-nav a,
+.highlight-quote p,
+blockquote p,
+.content p,
+.content li,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content strong,
+.content b {
+    color: var(--text-color) !important;
 }
 
 /* Fix blue backgrounds with dark text */
@@ -337,6 +394,7 @@ hr {
 
 a {
     transition: color 0.2s ease;
+    color: var(--link-color);
 }
 
 img {
@@ -392,4 +450,109 @@ img {
 .content strong,
 .content b {
     color: rgba(255, 255, 255, 0.95) !important;
+}
+
+
+/* Stronger dark theme text overrides for #main and posts */
+[data-theme="dark"] #main h1,
+[data-theme="dark"] #main h2,
+[data-theme="dark"] #main h3,
+[data-theme="dark"] #main h4,
+[data-theme="dark"] #main h5,
+[data-theme="dark"] #main h6,
+[data-theme="dark"] #main p,
+[data-theme="dark"] #main li,
+[data-theme="dark"] #main a,
+[data-theme="dark"] #main blockquote,
+[data-theme="dark"] #main span,
+[data-theme="dark"] #main .date,
+[data-theme="dark"] #main header.major h1,
+[data-theme="dark"] #main header.major h2,
+[data-theme="dark"] .posts article h2,
+[data-theme="dark"] .posts article h3,
+[data-theme="dark"] .posts article h3 a,
+[data-theme="dark"] .posts article .meta,
+[data-theme="dark"] .posts article .date,
+[data-theme="dark"] .posts article p,
+[data-theme="dark"] .posts article .button,
+[data-theme="dark"] .posts article .posted {
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] .major h1,
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .page-heading,
+[data-theme="dark"] .post-title,
+[data-theme="dark"] .posts header h2,
+[data-theme="dark"] .posts header h3,
+[data-theme="dark"] header.major h2 {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .button,
+[data-theme="dark"] a.button {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.7) !important;
+    background: transparent;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .button:hover,
+[data-theme="dark"] a.button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .featured-content .post h2,
+[data-theme="dark"] .post header h2,
+[data-theme="dark"] .post header h3,
+[data-theme="dark"] .post header .description,
+[data-theme="dark"] .featured-content .post header h2,
+[data-theme="dark"] .featured-content .post header h3,
+[data-theme="dark"] .featured-content .post header .description,
+[data-theme="dark"] .post .read-more,
+[data-theme="dark"] .post a.button,
+[data-theme="dark"] .posts article h2,
+[data-theme="dark"] .posts article h2 a,
+[data-theme="dark"] .posts article h3,
+[data-theme="dark"] .posts article h3 a,
+[data-theme="dark"] .posts article .description,
+[data-theme="dark"] .posts article .meta,
+[data-theme="dark"] .posts article .date,
+[data-theme="dark"] .posts article .posted,
+[data-theme="dark"] .reading-time,
+[data-theme="dark"] .button,
+[data-theme="dark"] a.button,
+[data-theme="dark"] .tag,
+[data-theme="dark"] .tags,
+[data-theme="dark"] small,
+[data-theme="dark"] .copyright,
+[data-theme="dark"] .major h2,
+[data-theme="dark"] .major h1,
+[data-theme="dark"] header.major h2 {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .featured-post,
+[data-theme="dark"] .featured-post h2,
+[data-theme="dark"] .featured-post header h3,
+[data-theme="dark"] .featured-post header p,
+[data-theme="dark"] .promo-podcast .box h2,
+[data-theme="dark"] .promo-podcast .box p,
+[data-theme="dark"] .recent-posts h2,
+[data-theme="dark"] .recent-posts .posts article h3,
+[data-theme="dark"] .recent-posts .posts article p {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }

@@ -1,0 +1,27 @@
+p,
+ul,
+ol {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.reading-time {
+    font-size: 0.9rem;
+    opacity: 0.65;
+    margin-bottom: 0.5rem;
+}
+
+.content strong,
+.content b {
+    color: var(--text-color) !important;
+}

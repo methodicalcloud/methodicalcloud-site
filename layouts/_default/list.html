@@ -1,14 +1,16 @@
 {{ define "main" }}
-<section id="main">
-  <div class="inner">
-    <header class="major">
-      <h1>{{ .Title }}</h1>
-    </header>
-    <ul>
-      {{ range .Pages }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-      {{ end }}
-    </ul>
-  </div>
-</section>
+<div class="content-wrapper" style="background-color: var(--bg-color); color: var(--text-color);">
+  <section id="main">
+    <div class="inner">
+      <header class="major">
+        <h1>{{ .Title }}</h1>
+      </header>
+      <ul>
+        {{ range .Pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+</div>
 {{ end }}

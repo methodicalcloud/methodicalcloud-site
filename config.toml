@@ -14,6 +14,9 @@ email = "hello@methodicalcloud.com"
 # Open Graph
 og_image = "/images/og-default.jpg"
 
+[params.theme]
+primary_color = "#1e252d"
+
 [permalinks]
 blog = "/blog/:slug/"
 podcast = "/podcast/:slug/"

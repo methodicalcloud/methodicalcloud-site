@@ -1,9 +1,26 @@
+<script>
+    (function () {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    })();
+</script>
+<style>
+    html:not([data-theme]) {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+</style>
 <meta charset="utf-8" />
 <title>{{ if .Title }}{{ .Title }} | {{ end }}Methodical Cloud</title>
 <meta name="description"
     content="{{ with .Params.description }}{{ . }}{{ else }}Visualizing systems, designing better automation, and building workflows that actually work.{{ end }}" />
 <meta name="author" content="Larry Smith Jr." />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="{{ .Site.Params.theme.primary_color }}">
 
 <!-- Open Graph -->
 <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}Methodical Cloud{{ end }}" />
@@ -20,8 +37,8 @@
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ .Permalink }}" />
 
-<link rel="stylesheet" href="/css/main.css" />
-<link rel="stylesheet" href="/css/custom.css" />
+{{ $style := resources.Get "scss/style.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 <noscript>
     <link rel="stylesheet" href="/css/noscript.css" />
 </noscript>

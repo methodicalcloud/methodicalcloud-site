@@ -1,0 +1,10 @@
+[data-theme="dark"] .button,
+[data-theme="dark"] a.button {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.7);
+    background: transparent;
+}
+
+[data-theme="dark"] .button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
