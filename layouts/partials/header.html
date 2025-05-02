@@ -1,13 +1,23 @@
-<header
-  style="background: #1e252d; color: white; padding: 1rem 2rem; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; display: flex; justify-content: center; gap: 2rem;">
-  <a href="/" style="color: white; text-decoration: none;" class="{{ if eq .RelPermalink " /" }}active{{ end
-    }}">Home</a>
-  <a href="/about/" style="color: white; text-decoration: none;" class="{{ if eq .RelPermalink " /about/" }}active{{ end
-    }}">About</a>
-  <a href="/podcast/" style="color: white; text-decoration: none;" class="{{ if eq .RelPermalink " /podcast/" }}active{{
-    end }}">Podcast</a>
-  <a href="/blog/" style="color: white; text-decoration: none;" class="{{ if eq .RelPermalink " /blog/" }}active{{ end
-    }}">Blog</a>
-  <a href="/contact/" style="color: white; text-decoration: none;" class="{{ if eq .RelPermalink " /contact/" }}active{{
-    end }}">Contact</a>
+<header class="nav-bar">
+  <nav class="nav-container">
+    <a href="/" class="{{ if eq .RelPermalink " /" }}active{{ end }}">Home</a>
+    <a href="/about/" class="{{ if eq .RelPermalink " /about/" }}active{{ end }}">About</a>
+    <div class="dropdown">
+      <button id="more-toggle" class="dropdown-toggle">More</button>
+      <div id="dropdown-content" class="dropdown-content hidden">
+        <a href="/podcast/" class="{{ if eq .RelPermalink " /podcast/" }}active{{ end }}">Podcast</a>
+        <a href="/blog/" class="{{ if eq .RelPermalink " /blog/" }}active{{ end }}">Blog</a>
+        <a href="/contact/" class="{{ if eq .RelPermalink " /contact/" }}active{{ end }}">Contact</a>
+      </div>
+    </div>
+  </nav>
 </header>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('more-toggle');
+    const dropdown = document.getElementById('dropdown-content');
+    toggle.addEventListener('click', function () {
+      dropdown.classList.toggle('hidden');
+    });
+  });
+</script>
