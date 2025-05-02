@@ -12,25 +12,13 @@
   <div class="container">
     <h2>Explore Methodical Cloud</h2>
     <div class="featured-card-grid">
+      {{ range where .Site.Pages "Section" "in" (slice "about" "blog" "podcast") }}
       <div class="featured-card">
-        <h3>About</h3>
-        <p>Get to know what Methodical Cloud is all about — the ideas, the people, and the purpose behind the diagrams.
-        </p>
-        <a href="/about/" class="button">Learn More</a>
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Params.description | default .Summary }}</p>
+        <a href="{{ .RelPermalink }}" class="button">Explore</a>
       </div>
-      <div class="featured-card">
-        <h3>Blog</h3>
-        <p>Read short, focused pieces on automation, systems thinking, and lessons from the field. Real systems, no
-          fluff.
-        </p>
-        <a href="/blog/" class="button">View Posts</a>
-      </div>
-      <div class="featured-card">
-        <h3>Podcast</h3>
-        <p>Each episode is 15 minutes or less and built around a single diagram. Diagram the Damn Thing is coming soon.
-        </p>
-        <a href="/podcast/" class="button">Listen In</a>
-      </div>
+      {{ end }}
     </div>
   </div>
 </section>

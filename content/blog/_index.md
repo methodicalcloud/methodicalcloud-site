@@ -1,15 +1,16 @@
 ---
 title: "Blog"
+description: "Short, visual, and opinionated posts on automation and systems that don’t suck"
 ---
 
-The Methodical Cloud blog is where we share thoughtful insights, diagrams, and stories that bring clarity to automation and system design.
+The Methodical Cloud blog is where we share short, visual, and opinionated takes on automation, architecture, and system design.
 
-We focus on simplifying the complex — making architecture, workflows, and technical strategy easier to understand and apply.
+We simplify the complex — not with buzzwords, but with clarity, diagrams, and lessons learned in the wild.
 
 Here, you’ll find:
 
-- Visuals that explain before we automate
-- Ideas that encourage intentional architecture
-- Practical lessons from the field
+- Visuals that explain before you automate  
+- Architecture ideas that don’t crumble under pressure  
+- Technical stories that actually stick
 
-This blog is for engineers, architects, and builders who want to design systems that actually make sense — and stand the test of time.
+It’s for engineers, architects, and systems thinkers who care about building things that work — and don’t suck.

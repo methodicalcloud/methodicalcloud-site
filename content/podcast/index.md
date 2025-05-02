@@ -1,5 +1,6 @@
 ---
 title: "Podcast"
+description: "The Methodical Cloud podcast for automation, clarity, and systems that don’t suck"
 ---
 
 Welcome to *Diagram the Damn Thing* — the Methodical Cloud podcast where we dig into the messy, the misunderstood, and the overcomplicated world of systems design.
