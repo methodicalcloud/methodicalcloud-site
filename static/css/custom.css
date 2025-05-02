@@ -596,3 +596,36 @@ b {
     background: #0fa4cd;
     color: white;
 }
+
+/* Add styles for section divider and card alignment */
+.section-divider {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 3rem 0;
+}
+
+.featured-blog-card,
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.blog-card-grid h2,
+.blog-card-grid h3 {
+    color: rgba(255, 255, 255, 0.95);
+    margin-top: 0;
+}
+
+.section-divider h2 {
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.section-divider p {
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 70ch;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}

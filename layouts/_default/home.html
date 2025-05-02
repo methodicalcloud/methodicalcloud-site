@@ -25,22 +25,18 @@
 
 <section class="featured-post">
   <h2>Latest from the Blog</h2>
-  {{ range first 1 (where .Site.RegularPages "Section" "blog") }}
-  <article class="post">
-    <header>
-      <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
-      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      <p>{{ .Params.description }}</p>
-    </header>
-    {{ if .Params.featured_image }}
-    <a href="{{ .Permalink }}" class="image"><img src="{{ .Params.featured_image }}" alt="{{ .Title }}" /></a>
+  <div class="blog-card-grid">
+    {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+    <article class="blog-card">
+      <header>
+        <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      </header>
+      <p>{{ .Params.description | default .Summary }}</p>
+      <a href="{{ .Permalink }}" class="button">Read More</a>
+    </article>
     {{ end }}
-    <p>{{ .Summary }}</p>
-    <ul class="actions">
-      <li><a href="{{ .Permalink }}" class="button">Read More</a></li>
-    </ul>
-  </article>
-  {{ end }}
+  </div>
 </section>
 
 <section class="promo-podcast">
