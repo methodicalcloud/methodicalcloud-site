@@ -9,17 +9,15 @@
     <p>We believe in sharing ideas that are methodical, actionable, and sustainable.</p>
 
     <h2>Latest Posts</h2>
-    <section class="posts">
-      {{ range .Pages.ByDate.Reverse }}
-      <article>
+    <section class="blog-card-grid">
+      {{ range .RegularPages.ByDate.Reverse }}
+      <article class="blog-card">
         <header>
-          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-          <p><small>{{ .Date.Format "January 2, 2006" }}</small></p>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="blog-date">{{ .Date.Format "January 2, 2006" }}</p>
         </header>
-        <p>{{ .Summary }}</p>
-        <ul class="actions">
-          <li><a href="{{ .RelPermalink }}" class="button small">Read More</a></li>
-        </ul>
+        <p>{{ .Params.description | default .Summary }}</p>
+        <a href="{{ .RelPermalink }}" class="button small">Read More</a>
       </article>
       {{ end }}
     </section>

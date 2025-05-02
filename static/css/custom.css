@@ -542,3 +542,57 @@ b {
     background: #0fa4cd;
     color: white;
 }
+
+/* Blog card grid layout */
+.blog-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.blog-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.blog-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.blog-card .blog-date {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1rem;
+}
+
+.blog-card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.blog-card .button.small {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    background: #18bfef;
+    color: #1e252d;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.blog-card .button.small:hover {
+    background: #0fa4cd;
+    color: white;
+}
