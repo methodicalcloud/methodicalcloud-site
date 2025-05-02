@@ -1,16 +1,13 @@
-<header id="header" class="alt">
-  <div class="inner">
-    <a href="/" class="logo"><strong>Methodical Cloud</strong></a>
-  </div>
+<header
+  style="background: #1e252d; color: white; padding: 1rem 2rem; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; display: flex; justify-content: center; gap: 2rem;">
+  <a href="/" style="color: white; text-decoration: none;" class="{{ if eq .RelPermalink " /" }}active{{ end
+    }}">Home</a>
+  <a href="/about/" style="color: white; text-decoration: none;" class="{{ if eq .RelPermalink " /about/" }}active{{ end
+    }}">About</a>
+  <a href="/podcast/" style="color: white; text-decoration: none;" class="{{ if eq .RelPermalink " /podcast/" }}active{{
+    end }}">Podcast</a>
+  <a href="/blog/" style="color: white; text-decoration: none;" class="{{ if eq .RelPermalink " /blog/" }}active{{ end
+    }}">Blog</a>
+  <a href="/contact/" style="color: white; text-decoration: none;" class="{{ if eq .RelPermalink " /contact/" }}active{{
+    end }}">Contact</a>
 </header>
-
-<!-- Hidden Menu -->
-<nav id="menu">
-  <ul class="links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about/">About</a></li>
-    <li><a href="/podcast/">Podcast</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/contact/">Contact</a></li>
-  </ul>
-</nav>

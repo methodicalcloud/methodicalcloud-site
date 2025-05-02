@@ -2,11 +2,10 @@
 title: "Podcast"
 ---
 
-Welcome to *Diagram the Damn Thing* — the Methodical Cloud podcast where we unpack the art and practice of designing better systems.
+Welcome to *Diagram the Damn Thing* — the Methodical Cloud podcast where we dig into the messy, the misunderstood, and the overcomplicated world of systems design.
 
-Each episode is short, sharp, and rooted in real-world experience.  
-We explore how visual thinking, thoughtful automation, and intentional architecture can turn chaos into clarity.
+Each short episode is a no-fluff breakdown of how we make automation smarter, diagrams clearer, and tech storytelling suck a lot less.
 
-This podcast is for anyone who builds, breaks, or leads technical systems — from engineers to architects to curious explorers of complex problems.
+If you build, fix, or lead technical systems — and want fewer meetings and more clarity — this one’s for you.
 
-New episodes coming soon.
+Episodes dropping soon.

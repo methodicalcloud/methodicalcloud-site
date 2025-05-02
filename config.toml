@@ -5,7 +5,7 @@ enableRobotsTXT = true
 
 # Add basic site parameters
 [params]
-description = "Clarity in automation, visual system design, and sustainable technical storytelling"
+description = "Clarity in automation, systems that scale, and technical storytelling that doesn’t suck"
 author = "Larry Smith Jr."
 email = "hello@methodicalcloud.com"
 
