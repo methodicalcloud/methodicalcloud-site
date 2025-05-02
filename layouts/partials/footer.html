@@ -1,12 +1,27 @@
 <footer id="footer">
-  <section class="split contact">
-    <section>
-      <h3>Email</h3>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/podcast/">Podcast</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Contact</h3>
       <p><a href="mailto:hello@methodicalcloud.com">hello@methodicalcloud.com</a></p>
-    </section>
-  </section>
+    </div>
+
+    <div class="footer-column">
+      <h3>Methodical Cloud</h3>
+      <p>Diagrams, automation, and systems that don’t suck.</p>
+    </div>
+  </div>
 
   <div class="copyright">
-    <p>&copy; {{ now.Format "2006" }} Methodical Cloud. Diagrams, automation, and systems that don’t suck.</p>
+    <p>&copy; {{ now.Format "2006" }} Methodical Cloud.</p>
   </div>
 </footer>
