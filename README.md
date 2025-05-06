@@ -1,6 +1,6 @@
 # Methodical Cloud Website
 
-This repository contains the source code for the [Methodical Cloud](https://methodicalcloud.com) website, a content-driven platform focused on automation, clarity, and systems thinking.
+This repository contains the configuration and content for the Methodical Cloud site managed via [Vercel v0](https://v0.dev), a content-driven platform focused on automation, clarity, and systems thinking.
 
 ## About Methodical Cloud
 
@@ -8,13 +8,14 @@ Methodical Cloud delivers automation wisdom, deep technical clarity, and archite
 
 ## Project Structure
 
-The website is built using Next.js and follows the App Router structure:
+This site is now powered by Vercel v0, a generative UI editor and site builder.
 
-- `app/` - Contains the main application code and pages
-- `components/` - Reusable React components
-- `content/` - Markdown content for blog posts
-- `lib/` - Utility functions and helpers
-- `public/` - Static assets like images
+The structure is auto-managed by Vercel and changes dynamically based on the site's design and content. Markdown content and static assets are still stored in this repo and synced through GitHub integration.
+
+Content folders:
+
+- `content/` - Markdown content for blog posts and pages
+- `public/` - Static assets like logos and images
 
 ## Content Types
 
@@ -26,34 +27,37 @@ The website features several types of content:
 
 ## Development
 
-### Prerequisites
+### Optional Local Development
+
+If you choose to work locally:
 
 - Node.js 18+
 - npm or yarn
 
-### Getting Started
-
 1. Clone the repository:
-   \`\`\`
+
+   ```bash
    git clone https://github.com/methodicalcloud/methodicalcloud-site.git
    cd methodicalcloud-site
-   \`\`\`
+   ```
 
 2. Install dependencies:
-   \`\`\`
+
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 3. Run the development server:
-   \`\`\`
-   npm run dev
-   \`\`\`
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+   ```bash
+   npm run dev
+   ```
+
+4. Visit [http://localhost:3000](http://localhost:3000)
 
 ## Deployment
 
-The site is deployed using GitHub Pages. The deployment process is automated through GitHub Actions.
+The site is built and deployed through Vercel v0 using GitHub integration. Changes pushed to the main branch trigger a rebuild and deployment automatically.
 
 ## License
 
