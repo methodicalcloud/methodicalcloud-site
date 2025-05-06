@@ -32,7 +32,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="/placeholder.svg?key=s92le"
+                src="/images/methodical-cloud-logo.png"
                 alt="Methodical Cloud Logo"
                 width={400}
                 height={400}

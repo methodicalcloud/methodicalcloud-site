@@ -25,7 +25,7 @@ export default function Header() {
             <span className="sr-only">Methodical Cloud</span>
             <div className="flex items-center">
               <Image
-                src="/placeholder.svg?key=mljst"
+                src="/images/methodical-cloud-logo.png"
                 alt="Methodical Cloud Logo"
                 width={40}
                 height={40}
@@ -76,7 +76,7 @@ export default function Header() {
                 <span className="sr-only">Methodical Cloud</span>
                 <div className="flex items-center">
                   <Image
-                    src="/placeholder.svg?key=g9eny"
+                    src="/images/methodical-cloud-logo.png"
                     alt="Methodical Cloud Logo"
                     width={40}
                     height={40}

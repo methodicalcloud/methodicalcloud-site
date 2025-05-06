@@ -43,7 +43,7 @@ export default function AboutPage() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="/placeholder.svg?key=xgbjt"
+                src="/images/methodical-cloud-logo.png"
                 alt="Methodical Cloud Logo"
                 width={400}
                 height={400}
@@ -60,7 +60,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 flex justify-center">
               <Image
-                src="/placeholder.svg?height=300&width=300&query=professional%20headshot"
+                src="/professional-headshot.png"
                 alt="Larry Smith Jr."
                 width={300}
                 height={300}
