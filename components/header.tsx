@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -61,7 +62,8 @@ export default function Header() {
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="/contact" className="btn-primary">
+          <ThemeToggle />
+          <Link href="/contact" className="btn-primary ml-4">
             Get in Touch
           </Link>
         </div>
@@ -94,6 +96,9 @@ export default function Header() {
                 <span className="sr-only">Close menu</span>
                 <X className="h-6 w-6" aria-hidden="true" />
               </button>
+              <div className="ml-auto">
+                <ThemeToggle />
+              </div>
             </div>
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-navy-700">

@@ -11,7 +11,7 @@ export const metadata = {
   title: "Methodical Cloud | Automation, clarity, and systems that don't suck",
   description:
     "Delivering automation wisdom, deep technical clarity, and architectural insight through diagrams, short-form content, and podcast storytelling.",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} bg-charcoal text-white min-h-screen flex flex-col`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
           <main className="flex-grow">{children}</main>
           <Footer />

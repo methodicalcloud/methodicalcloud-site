@@ -3,33 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --background: 215 28% 17%;
-  --foreground: 0 0% 100%;
+  --background: 0 0% 100%;
+  --foreground: 215 28% 17%;
 
-  --card: 215 28% 17%;
-  --card-foreground: 0 0% 100%;
+  --card: 210 40% 98%;
+  --card-foreground: 215 28% 17%;
 
-  --popover: 215 28% 17%;
-  --popover-foreground: 0 0% 100%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 28% 17%;
 
-  --primary: 214 100% 60%;
+  --primary: 214 100% 50%;
   --primary-foreground: 0 0% 100%;
 
   --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
+  --secondary-foreground: 215 28% 17%;
 
-  --muted: 217 33% 17%;
-  --muted-foreground: 215 20.2% 65.1%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215 20% 45%;
 
-  --accent: 214 100% 60%;
+  --accent: 214 100% 50%;
   --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 217 33% 17%;
-  --input: 217 33% 17%;
-  --ring: 214 100% 60%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 214 100% 50%;
 
   --radius: 0.5rem;
 }
@@ -103,8 +103,16 @@ body {
     @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors;
   }
 
+  .light .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white;
+  }
+
   .btn-secondary {
     @apply bg-transparent hover:bg-blue-900/30 text-white border border-blue-500 font-medium py-2 px-4 rounded-md transition-colors;
+  }
+
+  .light .btn-secondary {
+    @apply bg-transparent hover:bg-blue-100 text-blue-600 border border-blue-500;
   }
 
   .card {
@@ -134,6 +142,39 @@ body {
 
 .bg-navy-700 {
   background-color: #334155;
+}
+
+/* Light mode specific classes */
+.light .bg-charcoal {
+  background-color: #f8fafc;
+}
+
+.light .bg-navy-900 {
+  background-color: #f1f5f9;
+}
+
+.light .bg-navy-800 {
+  background-color: #f8fafc;
+}
+
+.light .bg-navy-700 {
+  background-color: #e2e8f0;
+}
+
+.light .card {
+  @apply bg-white rounded-lg overflow-hidden border border-gray-200;
+}
+
+.light .text-gray-300 {
+  color: #475569;
+}
+
+.light .text-gradient {
+  background: linear-gradient(90deg, #1e40af 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .text-gradient {

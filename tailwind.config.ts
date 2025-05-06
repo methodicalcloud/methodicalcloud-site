@@ -92,6 +92,8 @@ const config: Config = {
     "text-orange-400",
     "bg-red-900/30",
     "text-red-400",
+    "light",
+    "dark",
   ],
 }
 
