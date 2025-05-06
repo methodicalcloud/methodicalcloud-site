@@ -60,7 +60,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 flex justify-center">
               <Image
-                src="/professional-headshot.png"
+                src="/images/larry-smith-headshot.jpeg"
                 alt="Larry Smith Jr."
                 width={300}
                 height={300}
