@@ -1,8 +1,10 @@
 ---
 title: "The Evolution of Everything Should Be Virtual to Methodical Cloud"
-date: 2025-04-28
+date: "2025-04-28"
 excerpt: "From infrastructure roots to automation clarity — how Everything Should Be Virtual evolved into Methodical Cloud."
-slug: "everything-should-be-virtual"
+tags: ["methodical-cloud", "brand", "evolution"]
+author: "Larry Smith Jr."
+authorRole: "Founder, Methodical Cloud"
 ---
 
 Over a decade ago, **Everything Should Be Virtual** was launched to explore infrastructure, virtualization, and the emerging cloud landscape. It became a home for ideas around automation, systems design, and technology evolution.

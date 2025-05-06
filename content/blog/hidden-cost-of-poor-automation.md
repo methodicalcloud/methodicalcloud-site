@@ -1,12 +1,10 @@
 ---
 title: "The Hidden Cost of Poor Automation: Why Clarity Matters"
-date: 2025-05-02
-tags:
-  - automation
-  - clarity
-  - systems-thinking
-description: Automation without clarity isn't efficient—it's dangerous. This post explores why skipping the design phase leads to brittle systems, mounting tech debt, and frustrated teams.
-slug: hidden-cost-of-poor-automation
+date: "2025-05-02"
+excerpt: "Automation without clarity isn't efficient—it's dangerous. This post explores why skipping the design phase leads to brittle systems, mounting tech debt, and frustrated teams."
+tags: ["automation", "clarity", "systems-thinking"]
+author: "Larry Smith Jr."
+authorRole: "Founder, Methodical Cloud"
 ---
 
 Automation is supposed to make things better.

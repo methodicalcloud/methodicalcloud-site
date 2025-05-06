@@ -1,11 +1,11 @@
 ---
 title: "Diagram the Damn Thing: Why Visuals Matter in Automation (and Everything Else)"
-date: 2025-04-29
-tags: [automation, diagrams, podcast, methodical-cloud]
-description: "Introducing the thinking behind Methodical Cloud's podcast and philosophy—why diagramming is central to clarity, systems thinking, and automation."
-slug: diagram-the-damn-thing
+date: "2025-04-29"
+excerpt: "Introducing the thinking behind Methodical Cloud's podcast and philosophy—why diagramming is central to clarity, systems thinking, and automation."
+tags: ["automation", "diagrams", "podcast", "methodical-cloud"]
+author: "Larry Smith Jr."
+authorRole: "Founder, Methodical Cloud"
 ---
-
 
 Have you ever stared at a system diagram and understood what's going on for the first time?
 
