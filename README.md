@@ -1,54 +1,40 @@
 # Methodical Cloud
 
-Welcome to the source repository for [methodicalcloud.com](https://methodicalcloud.com) — a content-driven, visually clean, and automation-focused static site built with [Hugo](https://gohugo.io/).
+Welcome to the repository for [methodicalcloud.com](https://methodicalcloud.com) — a modern, content-driven site designed and managed using [Vercel v0](https://v0.dev). The goal is to deliver automation insights, clear system design, and sustainable technical storytelling through a simple and elegant web experience.
 
 ## 🧠 What is Methodical Cloud?
 
-Methodical Cloud is a platform dedicated to clarity in automation, visual system design, and sustainable technical storytelling.  
-The site hosts blog posts, diagrams, and a podcast — all crafted around simplifying complex systems and workflows.
+Methodical Cloud is a platform focused on clarity in automation, scalable architecture, and practical knowledge sharing.  
+We publish blogs, diagrams, and podcasts that aim to simplify complex technology topics — all with a touch of eccentricity and design.
 
 ## ✨ Key Features
 
-- Hugo static site generator (no JS frameworks, no fluff)
-- Clean, custom styling inspired by HTML5 UP's **Massively** theme
-- Responsive design with mobile support
-- Markdown-powered content (`/blog`, `/about`, `/podcast`, `/contact`)
-- Dark/light visual layering for clarity and flow
-- Deployed on [Netlify](https://www.netlify.com/)
+- Built and deployed with **Vercel v0** (no more Hugo, no build pipeline)
+- Clean UI with support for dark mode and responsive design
+- Markdown-like editing within v0 UI for content updates
+- Integrated GitHub workflows
+- Focused on fast publishing of blog posts, diagrams, and podcast episodes
 
-## 🔧 Project Structure
+## 🛠️ Repository Purpose
+
+This repo (`methodicalcloud-site`) now serves as the GitHub backend for content and structure managed by v0.
+
+### Structure (as it evolves with v0)
 
 ```
-.
-├── config.toml              # Site-wide settings and navigation
-├── content/                 # Markdown content pages
-│   ├── about/
-│   ├── blog/
-│   ├── contact/
-│   └── podcast/
-├── layouts/                 # Hugo templates (baseof, list, single, partials)
-├── static/                  # Static files (CSS, JS, images)
-├── netlify.toml             # Netlify deployment configuration
+/
+├── public/                  # Static assets (logo, images, etc.)
+├── posts/                  # Markdown or structured content (optional)
+├── .v0/                     # Vercel v0 project metadata (auto-managed)
+└── README.md
 ```
-
-## 🧪 Local Development
-
-Install Hugo: <https://gohugo.io/getting-started/install/>
-
-Then:
-
-```bash
-hugo server
-```
-
-Visit: [http://localhost:1313](http://localhost:1313)
 
 ## 🚀 Deployment
 
-Automatic deployment is handled via Netlify.  
-Pushing to the `main` branch will trigger a build and deploy to [methodicalcloud.com](https://methodicalcloud.com).
+This site is fully deployed and managed through [Vercel](https://vercel.com).  
+All commits to the `main` branch automatically trigger updates.
 
 ## 🔗 Credits
 
-Originally styled after [HTML5 UP's Massively](https://html5up.net/massively)  
-Built and maintained by [@mrlesmithjr](https://github.com/mrlesmithjr)
+Branding, voice, and visuals by [@mrlesmithjr](https://github.com/mrlesmithjr)  
+Logo: "Automation, clarity, and systems that don’t suck"

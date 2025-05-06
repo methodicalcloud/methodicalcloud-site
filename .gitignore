@@ -1,6 +1,3 @@
-# Hugo build output
-/public/
-/resources/_gen/
 
 # Backup files
 *.bak
@@ -29,12 +26,7 @@ Icon?
 .vscode/
 .idea/
 
-# Hugo environment files (if used)
-.env
-.env.*
 
-# Netlify deploy previews
-.netlify/
 
 # Node modules (if using JS tooling)
 node_modules/
