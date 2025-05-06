@@ -1,10 +1,53 @@
 {{ define "main" }}
 
 <section class="hero-section">
+  <div class="hero-logo">
+    <img src="/images/logo/logo_hero.png" alt="Methodical Cloud Logo"
+      style="max-width: 240px; height: auto; display: block; margin: 0 auto 2rem;" />
+  </div>
   <div class="hero-content">
     <h1 class="hero-title">Welcome to Methodical Cloud</h1>
     <p class="hero-subtitle">Clarity in automation, systems that scale, and technical storytelling that doesn’t suck.
     </p>
+    <!-- CTA button: Add the following CSS to your static/css/custom.css file (not in this HTML file):
+    <style>
+      .cta-button {
+        text-align: center;
+        margin-top: 2rem;
+      }
+      .button.primary {
+        background-color: #18bfef;
+        color: #1e252d;
+        padding: 0.75rem 1.5rem;
+        font-weight: bold;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+      .button.primary:hover {
+        background-color: #0fa4cd;
+        color: #fff;
+      }
+    </style>
+    -->
+    <div class="cta-button">
+      <a href="/blog" class="button primary">Browse Diagrams</a>
+    </div>
+    <div class="homepage-preview-section">
+      <h2>What's Inside</h2>
+      <div class="homepage-preview-grid">
+        <div class="homepage-preview-card">
+          <h3>Popular Diagrams</h3>
+          <p>Explore visual representations of complex systems explained simply.</p>
+          <a href="/blog" class="button">Browse Diagrams</a>
+        </div>
+        <div class="homepage-preview-card">
+          <h3>Podcast Episodes</h3>
+          <p>Listen to 15-minute episodes built around clarity and system design.</p>
+          <a href="/podcast" class="button">Listen Now</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

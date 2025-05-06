@@ -414,6 +414,15 @@ img {
     justify-content: space-between;
 }
 
+/* Ensure logo image in site header does not stretch and maintains aspect ratio */
+.site-header .logo img {
+    max-height: 48px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    image-rendering: auto;
+}
+
 .site-nav .nav-links {
     list-style: none;
     display: flex;
@@ -728,7 +737,7 @@ b {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
+    gap: 3rem;
     padding: 1rem 2rem;
     background-color: #1e252d;
     font-size: 1rem;
@@ -811,4 +820,61 @@ b {
         border: none;
         padding: 0;
     }
+}
+
+/* Footer logo image styling */
+.footer-logo img {
+    max-width: 240px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Homepage preview section styles */
+.homepage-preview-section {
+    padding: 4rem 2rem;
+    background-color: #1e252d;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.homepage-preview-section h2 {
+    font-size: 1.75rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.homepage-preview-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.homepage-preview-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.homepage-preview-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.homepage-preview-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.homepage-preview-card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
 }
