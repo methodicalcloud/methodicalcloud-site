@@ -1,13 +1,8 @@
 import Link from "next/link"
 import { getBlogPosts } from "@/lib/blog"
 
-export const dynamic = "force-dynamic" // Force dynamic rendering for development
-
 export default function BlogPage() {
   const posts = getBlogPosts()
-
-  // Debug output
-  console.log(`Found ${posts.length} blog posts`)
 
   return (
     <div className="container mx-auto py-12 px-4">
@@ -15,7 +10,7 @@ export default function BlogPage() {
 
       {posts.length === 0 ? (
         <div className="text-center py-12">
-          <p className="text-gray-500">No blog posts found.</p>
+          <p className="text-gray-500">No blog posts found. Check the console for debugging information.</p>
         </div>
       ) : (
         <div className="grid gap-8">
@@ -33,16 +28,6 @@ export default function BlogPage() {
                   month: "long",
                   day: "numeric",
                 })}
-
-                {post.frontmatter.tags && (
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {post.frontmatter.tags.map((tag) => (
-                      <span key={tag} className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-xs">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
               </div>
 
               {post.frontmatter.excerpt && (

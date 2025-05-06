@@ -16,24 +16,31 @@ export interface BlogPost {
 }
 
 export function getBlogPosts(): BlogPost[] {
-  // Use process.cwd() to get the correct path in both dev and production
-  const blogDir = path.join(process.cwd(), "content/blog")
-
-  // Check if directory exists
-  if (!fs.existsSync(blogDir)) {
-    console.warn(`Blog directory not found: ${blogDir}`)
-    return []
-  }
+  console.log("Getting blog posts...")
 
   try {
+    // Use process.cwd() to get the correct path in both dev and production
+    const blogDir = path.join(process.cwd(), "content/blog")
+    console.log(`Looking for blog posts in: ${blogDir}`)
+
+    // Check if directory exists
+    if (!fs.existsSync(blogDir)) {
+      console.error(`Blog directory not found: ${blogDir}`)
+      return []
+    }
+
     const files = fs.readdirSync(blogDir)
+    console.log(`Found ${files.length} files in blog directory:`, files)
 
     const posts = files
       .filter((file) => file.endsWith(".md"))
       .map((file) => {
         const filePath = path.join(blogDir, file)
+        console.log(`Processing file: ${filePath}`)
+
         try {
           const { frontmatter, content } = parseMarkdownFile(filePath)
+          console.log(`Successfully parsed frontmatter for ${file}:`, frontmatter)
 
           // Normalize tags if they exist
           let tags = frontmatter.tags
@@ -57,11 +64,8 @@ export function getBlogPosts(): BlogPost[] {
         }
       })
       .filter(Boolean) // Remove any null entries
-      .sort((a, b) => {
-        // Sort by date (newest first)
-        return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
-      })
 
+    console.log(`Successfully processed ${posts.length} blog posts`)
     return posts
   } catch (err) {
     console.error("Error reading blog directory:", err)
@@ -70,6 +74,7 @@ export function getBlogPosts(): BlogPost[] {
 }
 
 export function getBlogPostBySlug(slug: string): BlogPost | null {
+  console.log(`Looking for blog post with slug: ${slug}`)
   const posts = getBlogPosts()
   return posts.find((post) => post.slug === slug) || null
 }
