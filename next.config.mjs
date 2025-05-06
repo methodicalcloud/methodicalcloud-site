@@ -19,7 +19,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  
+
   // Add rewrites for the blog if needed
   async rewrites() {
     return [
