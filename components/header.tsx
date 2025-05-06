@@ -32,6 +32,7 @@ export default function Header() {
                 width={40}
                 height={40}
                 className="h-10 w-auto"
+                priority
               />
               <span className="ml-3 text-xl font-bold text-white">Methodical Cloud</span>
             </div>
@@ -84,6 +85,7 @@ export default function Header() {
                     width={40}
                     height={40}
                     className="h-8 w-auto"
+                    priority
                   />
                   <span className="ml-3 text-lg font-bold text-white">Methodical Cloud</span>
                 </div>

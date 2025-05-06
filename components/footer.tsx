@@ -9,7 +9,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <Image src="/images/methodical-cloud-logo.png" alt="Methodical Cloud Logo" width={40} height={40} />
+              <Image
+                src="/images/methodical-cloud-logo.png"
+                alt="Methodical Cloud Logo"
+                width={40}
+                height={40}
+                priority
+              />
               <h3 className="text-xl font-bold ml-3">Methodical Cloud</h3>
             </div>
             <p className="mb-4 text-gray-300">

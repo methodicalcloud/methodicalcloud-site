@@ -114,6 +114,7 @@ export default function PodcastPage() {
                 width={400}
                 height={400}
                 className="rounded-lg"
+                priority
               />
             </div>
           </div>
