@@ -246,7 +246,11 @@ export default function PodcastPage() {
           <div className="bg-navy-800 rounded-xl border border-navy-700 p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold mb-6">Stay Updated</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Subscribe to be notified when the first episodes of Diagram the Damn Thing are released.
+              Subscribe to be notified when the first episodes of Diagram the Damn Thing are released. Follow us on{" "}
+              <a href="https://x.com/methodicalcloud" className="text-blue-400 hover:text-blue-300">
+                X (Twitter)
+              </a>{" "}
+              for updates and insights.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="#" className="btn-primary">

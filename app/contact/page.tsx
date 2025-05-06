@@ -63,14 +63,16 @@ export default function ContactPage() {
                   <div className="text-3xl mr-4">🧠</div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Twitter / X</h3>
-                    <p className="text-gray-300 mb-2">Follow for diagram drops, podcast releases, and clarity rants.</p>
+                    <p className="text-gray-300 mb-2">
+                      Follow our official account for diagram drops, podcast releases, and clarity rants.
+                    </p>
                     <a
-                      href="https://twitter.com/mrlesmithjr"
+                      href="https://x.com/methodicalcloud"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:text-blue-300"
                     >
-                      twitter.com/mrlesmithjr
+                      x.com/methodicalcloud
                     </a>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { Github, Twitter, Linkedin, Mail } from "lucide-react"
-import ImageWithFallback from "@/components/image-with-fallback"
+import Image from "next/image"
+import SocialIcons from "@/components/social-icons"
 
 export const metadata = {
   title: "About | Methodical Cloud",
@@ -43,7 +43,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="flex justify-center">
-              <ImageWithFallback
+              <Image
                 src="/images/methodical-cloud-logo.png"
                 alt="Methodical Cloud Logo"
                 width={400}
@@ -111,7 +111,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 flex justify-center">
-              <ImageWithFallback
+              <Image
                 src="/images/larry-smith-headshot.jpeg"
                 alt="Larry Smith Jr."
                 width={300}
@@ -135,41 +135,8 @@ export default function AboutPage() {
                 Methodical Cloud represents Larry's vision for technical content that combines depth with clarity,
                 helping others navigate the complex world of modern infrastructure and automation.
               </p>
-              <div className="flex space-x-4">
-                <a
-                  href="https://github.com/mrlesmithjr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  <Github className="h-6 w-6" />
-                  <span className="sr-only">GitHub</span>
-                </a>
-                <a
-                  href="https://twitter.com/mrlesmithjr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  <Twitter className="h-6 w-6" />
-                  <span className="sr-only">Twitter</span>
-                </a>
-                <a
-                  href="https://linkedin.com/in/mrlesmithjr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  <Linkedin className="h-6 w-6" />
-                  <span className="sr-only">LinkedIn</span>
-                </a>
-                <a
-                  href="mailto:info@methodicalcloud.com"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  <Mail className="h-6 w-6" />
-                  <span className="sr-only">Email</span>
-                </a>
+              <div className="flex items-center space-x-4">
+                <SocialIcons size="lg" showEmail={true} />
               </div>
             </div>
           </div>

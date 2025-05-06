@@ -232,12 +232,12 @@ export default function MerchPage() {
                 <Mail className="mr-2 w-5 h-5" /> Email Your Idea
               </a>
               <a
-                href="https://twitter.com/mrlesmithjr"
+                href="https://x.com/methodicalcloud"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary inline-flex items-center"
               >
-                Tag @MethodicalCloud
+                Tag @methodicalcloud
               </a>
             </div>
           </div>

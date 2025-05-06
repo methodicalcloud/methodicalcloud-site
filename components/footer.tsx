@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Twitter, Linkedin, Github, Rss } from "lucide-react"
+import SocialIcons from "./social-icons"
 
 export default function Footer() {
   return (
@@ -22,27 +22,7 @@ export default function Footer() {
               Automation, clarity, and systems that don't suck. A platform for demystifying automation and promoting
               clarity in systems thinking.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://twitter.com/mrlesmithjr" className="text-gray-300 hover:text-blue-400 transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a
-                href="https://linkedin.com/in/mrlesmithjr"
-                className="text-gray-300 hover:text-blue-400 transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </a>
-              <a href="https://github.com/mrlesmithjr" className="text-gray-300 hover:text-blue-400 transition-colors">
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </a>
-              <a href="/rss.xml" className="text-gray-300 hover:text-blue-400 transition-colors">
-                <Rss className="h-5 w-5" />
-                <span className="sr-only">RSS Feed</span>
-              </a>
-            </div>
+            <SocialIcons size="sm" />
           </div>
 
           <div>

@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowLeft, Calendar, Tag } from "lucide-react"
 import { getAllPostSlugs, getPostData } from "@/lib/blog"
 import type { Metadata } from "next"
+import SocialShare from "@/components/social-share"
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = await getPostData(params.slug)
@@ -71,15 +72,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                   <ArrowLeft className="mr-2 w-4 h-4" /> Back to all posts
                 </Link>
 
-                <div className="mt-4 sm:mt-0 flex space-x-4">
-                  <span className="text-gray-300">Share:</span>
-                  <a href="#" className="text-gray-300 hover:text-blue-400">
-                    Twitter
-                  </a>
-                  <a href="#" className="text-gray-300 hover:text-blue-400">
-                    LinkedIn
-                  </a>
-                </div>
+                <SocialShare title={post.title} url={`/blog/${post.slug}`} />
               </div>
             </div>
           </div>
