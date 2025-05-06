@@ -1,40 +1,64 @@
-# Methodical Cloud
+# Methodical Cloud Website
 
-Welcome to the repository for [methodicalcloud.com](https://methodicalcloud.com) — a modern, content-driven site designed and managed using [Vercel v0](https://v0.dev). The goal is to deliver automation insights, clear system design, and sustainable technical storytelling through a simple and elegant web experience.
+This repository contains the source code for the [Methodical Cloud](https://methodicalcloud.com) website, a content-driven platform focused on automation, clarity, and systems thinking.
 
-## 🧠 What is Methodical Cloud?
+## About Methodical Cloud
 
-Methodical Cloud is a platform focused on clarity in automation, scalable architecture, and practical knowledge sharing.  
-We publish blogs, diagrams, and podcasts that aim to simplify complex technology topics — all with a touch of eccentricity and design.
+Methodical Cloud delivers automation wisdom, deep technical clarity, and architectural insight through diagrams, short-form content, and podcast storytelling—building systems and mindsets that scale.
 
-## ✨ Key Features
+## Project Structure
 
-- Built and deployed with **Vercel v0** (no more Hugo, no build pipeline)
-- Clean UI with support for dark mode and responsive design
-- Markdown-like editing within v0 UI for content updates
-- Integrated GitHub workflows
-- Focused on fast publishing of blog posts, diagrams, and podcast episodes
+The website is built using Next.js and follows the App Router structure:
 
-## 🛠️ Repository Purpose
+- `app/` - Contains the main application code and pages
+- `components/` - Reusable React components
+- `content/` - Markdown content for blog posts
+- `lib/` - Utility functions and helpers
+- `public/` - Static assets like images
 
-This repo (`methodicalcloud-site`) now serves as the GitHub backend for content and structure managed by v0.
+## Content Types
 
-### Structure (as it evolves with v0)
+The website features several types of content:
 
-```
-/
-├── public/                  # Static assets (logo, images, etc.)
-├── posts/                  # Markdown or structured content (optional)
-├── .v0/                     # Vercel v0 project metadata (auto-managed)
-└── README.md
-```
+1. **Blog Posts** - Written content on automation, system design, and DevOps
+2. **Podcast Episodes** - "Diagram the Damn Thing" podcast episodes
+3. **Diagrams** - Visual representations of systems and processes in the "Flow Crimes" archive
 
-## 🚀 Deployment
+## Development
 
-This site is fully deployed and managed through [Vercel](https://vercel.com).  
-All commits to the `main` branch automatically trigger updates.
+### Prerequisites
 
-## 🔗 Credits
+- Node.js 18+
+- npm or yarn
 
-Branding, voice, and visuals by [@mrlesmithjr](https://github.com/mrlesmithjr)  
-Logo: "Automation, clarity, and systems that don’t suck"
+### Getting Started
+
+1. Clone the repository:
+   \`\`\`
+   git clone https://github.com/methodicalcloud/methodicalcloud-site.git
+   cd methodicalcloud-site
+   \`\`\`
+
+2. Install dependencies:
+   \`\`\`
+   npm install
+   \`\`\`
+
+3. Run the development server:
+   \`\`\`
+   npm run dev
+   \`\`\`
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Deployment
+
+The site is deployed using GitHub Pages. The deployment process is automated through GitHub Actions.
+
+## License
+
+All content is copyright © Methodical Cloud. All rights reserved.
+
+## Contact
+
+For questions or inquiries, please contact [info@methodicalcloud.com](mailto:info@methodicalcloud.com).
