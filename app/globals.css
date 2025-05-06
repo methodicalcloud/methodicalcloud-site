@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 215 28% 17%;
+  --foreground: 0 0% 100%;
+
+  --card: 215 28% 17%;
+  --card-foreground: 0 0% 100%;
+
+  --popover: 215 28% 17%;
+  --popover-foreground: 0 0% 100%;
+
+  --primary: 214 100% 60%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 214 100% 60%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217 33% 17%;
+  --input: 217 33% 17%;
+  --ring: 214 100% 60%;
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 215 28% 17%;
+  --foreground: 0 0% 100%;
+
+  --card: 215 28% 17%;
+  --card-foreground: 0 0% 100%;
+
+  --popover: 215 28% 17%;
+  --popover-foreground: 0 0% 100%;
+
+  --primary: 214 100% 60%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 217 33% 17%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 214 100% 60%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217 33% 17%;
+  --input: 217 33% 17%;
+  --ring: 214 100% 60%;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl font-bold tracking-tight md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl font-bold tracking-tight md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl font-bold tracking-tight md:text-2xl;
+  }
+
+  p {
+    @apply leading-relaxed mb-4;
+  }
+
+  a {
+    @apply text-blue-400 hover:text-blue-300 transition-colors;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent hover:bg-blue-900/30 text-white border border-blue-500 font-medium py-2 px-4 rounded-md transition-colors;
+  }
+
+  .card {
+    @apply bg-navy-800 rounded-lg overflow-hidden border border-navy-700;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-white;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-blue-400 mb-12 max-w-3xl mx-auto;
+  }
+}
+
+.bg-charcoal {
+  background-color: #1a202c;
+}
+
+.bg-navy-900 {
+  background-color: #0f172a;
+}
+
+.bg-navy-800 {
+  background-color: #1e293b;
+}
+
+.bg-navy-700 {
+  background-color: #334155;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.diagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.prose-custom {
+  @apply prose prose-lg prose-invert max-w-none;
+}
+
+.prose-custom h1,
+.prose-custom h2,
+.prose-custom h3,
+.prose-custom h4 {
+  @apply text-white;
+}
+
+.prose-custom a {
+  @apply text-blue-400 hover:text-blue-300 no-underline;
+}
+
+.prose-custom code {
+  @apply bg-navy-700 text-blue-300 px-1 py-0.5 rounded;
+}
+
+.prose-custom pre {
+  @apply bg-navy-900 border border-navy-700 rounded-lg;
+}
+
+.prose-custom blockquote {
+  @apply border-l-4 border-blue-500 bg-navy-800 pl-4 py-1 italic;
+}
