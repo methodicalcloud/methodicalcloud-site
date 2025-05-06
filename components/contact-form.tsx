@@ -41,7 +41,7 @@ export default function ContactForm() {
       // Simulate successful submission
       setSubmitResult({
         success: true,
-        message: "Thank you for your message! We will get back to you shortly.",
+        message: "Message received! I'll get back to you as soon as possible.",
       })
 
       // Reset form
@@ -55,7 +55,7 @@ export default function ContactForm() {
     } catch (error) {
       setSubmitResult({
         success: false,
-        message: "There was an error submitting your message. Please try again.",
+        message: "There was an error submitting your message. Please try again or email directly.",
       })
     } finally {
       setIsSubmitting(false)
@@ -92,18 +92,18 @@ export default function ContactForm() {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="interest">Area of Interest</Label>
+        <Label htmlFor="interest">What are you interested in?</Label>
         <Select value={formState.interest} onValueChange={handleInterestChange}>
           <SelectTrigger id="interest" className="bg-navy-900 border-navy-700">
             <SelectValue placeholder="Select an area of interest" />
           </SelectTrigger>
           <SelectContent className="bg-navy-800 border-navy-700">
-            <SelectItem value="blog">Blog Content</SelectItem>
-            <SelectItem value="podcast">Podcast</SelectItem>
-            <SelectItem value="diagrams">Diagrams</SelectItem>
-            <SelectItem value="consulting">Consulting</SelectItem>
-            <SelectItem value="collaboration">Collaboration</SelectItem>
-            <SelectItem value="other">Other</SelectItem>
+            <SelectItem value="automation">Automation Strategies</SelectItem>
+            <SelectItem value="diagrams">System Diagrams</SelectItem>
+            <SelectItem value="podcast">Podcast Topic Suggestion</SelectItem>
+            <SelectItem value="collaboration">Collaboration Opportunity</SelectItem>
+            <SelectItem value="question">General Question</SelectItem>
+            <SelectItem value="other">Something Else</SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -115,7 +115,7 @@ export default function ContactForm() {
           name="subject"
           value={formState.subject}
           onChange={handleChange}
-          placeholder="Subject of your message"
+          placeholder="What's this about?"
           required
           className="bg-navy-900 border-navy-700"
         />
@@ -128,7 +128,7 @@ export default function ContactForm() {
           name="message"
           value={formState.message}
           onChange={handleChange}
-          placeholder="Your message"
+          placeholder="Tell me what's on your mind..."
           rows={5}
           required
           className="bg-navy-900 border-navy-700"
