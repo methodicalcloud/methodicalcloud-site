@@ -1,6 +1,7 @@
 import Link from "next/link"
-import ImageWithFallback from "@/components/image-with-fallback"
 import SocialIcons from "@/components/social-icons"
+import ProfileImage from "@/components/profile-image"
+import ImageWithFallback from "@/components/image-with-fallback"
 
 export const metadata = {
   title: "About | Methodical Cloud",
@@ -112,15 +113,14 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 flex justify-center">
-              <ImageWithFallback
-                src="/images/larry-smith-profile.jpeg"
+              {/* Use direct URL to the image */}
+              <ProfileImage
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8E92B092-92BD-4346-882C-5BF5BE60ED78-cYKmIEVNJqCUvSND80iOnQGPz3Iu54.jpeg"
                 fallbackSrc="/images/placeholder-profile.png"
                 alt="Larry Smith Jr."
                 width={300}
                 height={300}
-                className="rounded-lg"
-                priority
-                unoptimized
+                className="rounded-lg shadow-lg"
               />
             </div>
             <div className="order-1 md:order-2">
