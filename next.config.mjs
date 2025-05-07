@@ -11,6 +11,12 @@ const nextConfig = {
   images: {
     domains: ['v0.blob.com'],
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'v0.blob.com',
+      },
+    ],
   },
 }
 

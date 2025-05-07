@@ -2,9 +2,9 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
+import ImageWithFallback from "@/components/image-with-fallback"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -26,13 +26,15 @@ export default function Header() {
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Methodical Cloud</span>
             <div className="flex items-center">
-              <Image
-                src="/images/methodical-cloud-logo.png"
+              <ImageWithFallback
+                src="/images/methodicalcloud_default_logo.png"
                 alt="Methodical Cloud Logo"
                 width={40}
                 height={40}
                 className="h-10 w-auto"
                 priority
+                isLogo={true}
+                unoptimized={true}
               />
               <span className="ml-3 text-xl font-bold text-white">Methodical Cloud</span>
             </div>
@@ -79,13 +81,15 @@ export default function Header() {
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Methodical Cloud</span>
                 <div className="flex items-center">
-                  <Image
-                    src="/images/methodical-cloud-logo.png"
+                  <ImageWithFallback
+                    src="/images/methodicalcloud_default_logo.png"
                     alt="Methodical Cloud Logo"
                     width={40}
                     height={40}
                     className="h-8 w-auto"
                     priority
+                    isLogo={true}
+                    unoptimized={true}
                   />
                   <span className="ml-3 text-lg font-bold text-white">Methodical Cloud</span>
                 </div>

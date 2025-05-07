@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import ImageWithFallback from "@/components/image-with-fallback"
 import SocialIcons from "@/components/social-icons"
 
 export const metadata = {
@@ -43,13 +43,14 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="flex justify-center">
-              <Image
+              <ImageWithFallback
                 src="/images/methodical-cloud-logo.png"
                 alt="Methodical Cloud Logo"
                 width={400}
                 height={400}
                 className="rounded-lg"
                 priority
+                isLogo={true}
               />
             </div>
           </div>
@@ -111,8 +112,9 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 flex justify-center">
-              <Image
-                src="/images/larry-smith-headshot.jpeg"
+              <ImageWithFallback
+                src="/images/larry-smith-profile.jpeg"
+                fallbackSrc="/images/placeholder-profile.png"
                 alt="Larry Smith Jr."
                 width={300}
                 height={300}
