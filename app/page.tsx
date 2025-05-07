@@ -216,19 +216,19 @@ export default function Home() {
           <div className="bg-navy-800 rounded-xl border border-navy-700 p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="mb-4">Want to Discuss Your Automation Challenges?</h2>
+                <h2 className="mb-4">Interested in Our Content?</h2>
                 <p className="text-lg mb-6 text-gray-300">
-                  Reach out to discuss your infrastructure, automation, or systems design challenges. Let's build
-                  something methodical together.
+                  Reach out with feedback on our blog posts, diagrams, or podcast episodes. We'd love to hear what
+                  topics you'd like to see covered next.
                 </p>
                 <Link href="/contact" className="inline-flex items-center btn-primary">
-                  Get in Touch <ArrowRight className="ml-2 w-4 h-4" />
+                  Share Your Feedback <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </div>
               <div className="flex justify-center">
                 <Image
                   src="/placeholder.svg?key=n99v2"
-                  alt="Automation Illustration"
+                  alt="Content Illustration"
                   width={400}
                   height={300}
                   className="rounded-lg"

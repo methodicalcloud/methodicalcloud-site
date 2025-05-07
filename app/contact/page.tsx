@@ -2,7 +2,7 @@ import ContactForm from "@/components/contact-form"
 
 export const metadata = {
   title: "Contact | Methodical Cloud",
-  description: "Get in touch with Methodical Cloud for questions, collaborations, or consulting inquiries",
+  description: "Get in touch with Methodical Cloud for content feedback, podcast suggestions, or collaboration ideas",
 }
 
 export default function ContactPage() {
@@ -15,10 +15,10 @@ export default function ContactPage() {
             <div className="flex justify-center mb-6">
               <span className="text-4xl">🔧</span>
             </div>
-            <h1 className="mb-4">Let's Build Clarity Together</h1>
+            <h1 className="mb-4">Connect With Methodical Cloud</h1>
             <p className="text-xl text-gray-300">
-              Let's talk diagrams, automation that doesn't suck, or anything that helps make systems clearer. Whether
-              you're here to explore ideas, contribute, or collaborate—we're all about making tech feel methodical.
+              Have feedback on content, podcast topic suggestions, or just want to say hello? I'd love to hear from you
+              about the blog posts, diagrams, or podcast episodes.
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function ContactPage() {
                   <div className="text-3xl mr-4">📬</div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email</h3>
-                    <p className="text-gray-300 mb-2">Questions, ideas, or want to connect?</p>
+                    <p className="text-gray-300 mb-2">Content feedback or podcast suggestions?</p>
                     <a href="mailto:contact@methodicalcloud.com" className="text-blue-400 hover:text-blue-300">
                       contact@methodicalcloud.com
                     </a>
@@ -47,7 +47,7 @@ export default function ContactPage() {
                   <div className="text-3xl mr-4">🛠️</div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">GitHub</h3>
-                    <p className="text-gray-300 mb-2">Browse open-source diagrams and automation experiments.</p>
+                    <p className="text-gray-300 mb-2">Check out open-source diagrams and code examples.</p>
                     <a
                       href="https://github.com/mrlesmithjr"
                       target="_blank"
@@ -64,7 +64,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Twitter / X</h3>
                     <p className="text-gray-300 mb-2">
-                      Follow our official account for diagram drops, podcast releases, and clarity rants.
+                      Follow our official account for content updates and diagram drops.
                     </p>
                     <a
                       href="https://x.com/methodicalcloud"
@@ -81,7 +81,7 @@ export default function ContactPage() {
                   <div className="text-3xl mr-4">🧭</div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">LinkedIn</h3>
-                    <p className="text-gray-300 mb-2">Professional signal. No noise.</p>
+                    <p className="text-gray-300 mb-2">Connect professionally.</p>
                     <a
                       href="https://linkedin.com/in/mrlesmithjr"
                       target="_blank"
@@ -99,7 +99,7 @@ export default function ContactPage() {
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
-                    <span>You want to discuss automation strategies or system design</span>
+                    <span>You have feedback on blog posts or diagrams</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
@@ -107,7 +107,7 @@ export default function ContactPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
-                    <span>You'd like to collaborate on content or projects</span>
+                    <span>You'd like to collaborate on content creation</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
@@ -121,8 +121,8 @@ export default function ContactPage() {
               <div className="bg-navy-800 rounded-lg border border-navy-700 p-8">
                 <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
                 <p className="text-gray-300 mb-6">
-                  Have a specific question or idea? Fill out the form below and I'll get back to you as soon as
-                  possible.
+                  Have feedback on content or a podcast topic suggestion? Fill out the form below and I'll get back to
+                  you as soon as possible.
                 </p>
                 <ContactForm />
               </div>
@@ -137,8 +137,9 @@ export default function ContactPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Let's Make Systems That Don't Suck</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Whether you're looking to improve your automation, clarify your systems, or just chat about tech—I'm here
-              to help make things methodical.
+              Through educational content, diagrams, and podcast episodes, Methodical Cloud aims to share knowledge and
+              insights about building better systems. Explore our content to learn more about automation, clarity, and
+              systems thinking.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="/blog" className="btn-secondary">

@@ -149,9 +149,9 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Current Focus</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Methodical Cloud is currently focused on building a content hub through our blog, podcast, and visual
-              resources. We're taking a methodical approach to growth, focusing on quality content and community
-              building before expanding into other areas.
+              Methodical Cloud is a content-first initiative focused exclusively on building a knowledge hub through our
+              blog, podcast, and visual resources. We're taking a methodical approach to content creation, focusing on
+              quality educational material and community building.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
               <div className="card p-6">
@@ -165,16 +165,24 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold mb-3">Community Building</h3>
                 <p className="text-gray-300">
                   Fostering a community of like-minded professionals interested in automation, clarity, and effective
-                  system design.
+                  system design through educational content.
                 </p>
               </div>
               <div className="card p-6">
                 <h3 className="text-xl font-bold mb-3">Knowledge Sharing</h3>
                 <p className="text-gray-300">
-                  Sharing practical insights and lessons learned from real-world experience in infrastructure,
+                  Sharing practical insights and lessons learned through educational content about infrastructure,
                   automation, and DevOps.
                 </p>
               </div>
+            </div>
+            <div className="mt-8 p-6 bg-navy-800 rounded-lg border border-navy-700 text-left">
+              <h3 className="text-xl font-bold mb-3">Important Note</h3>
+              <p className="text-gray-300">
+                Methodical Cloud is strictly a content platform for sharing knowledge and does not offer consulting
+                services or compete with any professional services organizations. This is a personal educational
+                initiative focused on content creation only.
+              </p>
             </div>
           </div>
         </div>

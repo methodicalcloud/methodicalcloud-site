@@ -41,7 +41,7 @@ export default function ContactForm() {
       // Simulate successful submission
       setSubmitResult({
         success: true,
-        message: "Message received! I'll get back to you as soon as possible.",
+        message: "Message received! I'll get back to you about your content feedback or question.",
       })
 
       // Reset form
@@ -98,10 +98,10 @@ export default function ContactForm() {
             <SelectValue placeholder="Select an area of interest" />
           </SelectTrigger>
           <SelectContent className="bg-navy-800 border-navy-700">
-            <SelectItem value="automation">Automation Strategies</SelectItem>
-            <SelectItem value="diagrams">System Diagrams</SelectItem>
+            <SelectItem value="blog">Blog Content Feedback</SelectItem>
+            <SelectItem value="diagrams">Diagram Feedback</SelectItem>
             <SelectItem value="podcast">Podcast Topic Suggestion</SelectItem>
-            <SelectItem value="collaboration">Collaboration Opportunity</SelectItem>
+            <SelectItem value="content-collab">Content Collaboration</SelectItem>
             <SelectItem value="question">General Question</SelectItem>
             <SelectItem value="other">Something Else</SelectItem>
           </SelectContent>
@@ -128,7 +128,7 @@ export default function ContactForm() {
           name="message"
           value={formState.message}
           onChange={handleChange}
-          placeholder="Tell me what's on your mind..."
+          placeholder="Share your feedback, questions, or content ideas..."
           rows={5}
           required
           className="bg-navy-900 border-navy-700"

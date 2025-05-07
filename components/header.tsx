@@ -65,7 +65,7 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <ThemeToggle />
           <Link href="/contact" className="btn-primary ml-4">
-            Get in Touch
+            Content Feedback
           </Link>
         </div>
       </nav>
@@ -122,7 +122,7 @@ export default function Header() {
                     className="btn-primary w-full text-center block"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Get in Touch
+                    Content Feedback
                   </Link>
                 </div>
               </div>
