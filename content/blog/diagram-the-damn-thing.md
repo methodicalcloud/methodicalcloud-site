@@ -5,7 +5,11 @@ excerpt: "Introducing the thinking behind Methodical Cloud's podcast and philoso
 tags: ["automation", "diagrams", "podcast", "methodical-cloud"]
 author: "Larry Smith Jr."
 authorRole: "Founder, Methodical Cloud"
+slug: "diagram-the-damn-thing"
+description: "Introducing the thinking behind Methodical Cloud's podcast and philosophy—why diagramming is central to clarity, systems thinking, and automation."
 ---
+
+# Diagram the Damn Thing - Why Visuals Matter in Automation (and Everything Else)
 
 Have you ever stared at a system diagram and understood what's going on for the first time?
 
@@ -17,7 +21,7 @@ This whole thing started years ago with _Everything Should Be Virtual_, back whe
 
 Fast forward to now, and _Methodical Cloud_ is the grown-up version of that same idea, with a plan, a mission, and a podcast.
 
-### Why Diagrams Matter
+## Why Diagrams Matter
 
 If you've ever worked in automation, architecture, or operations, you know one truth: it's easy to overcomplicate and even easier to misunderstand.
 
@@ -33,7 +37,7 @@ They:
 
 A good diagram isn't decoration. It's documentation that actually helps.
 
-### What To Expect: The Podcast
+## What To Expect: The Podcast
 
 _Diagram the Damn Thing_ is my next evolution. It's a podcast built around one diagram per episode—15 minutes or less. No fluff, no filler.
 
@@ -41,7 +45,7 @@ Each episode will revolve around a visual that represents a system, a process, o
 
 And yeah, it'll get weird sometimes. But that's part of the fun.
 
-### The Goal
+## The Goal
 
 The goal of _Methodical Cloud_—and this podcast—isn't just to explain things. It's to help you build better systems, avoid the same mistakes, and find the "aha" moments faster. Whether you're a seasoned automation pro or a curious builder trying to tame complexity, I want you to walk away thinking:
 
@@ -52,3 +56,6 @@ The goal of _Methodical Cloud_—and this podcast—isn't just to explain things
 In the meantime, I'll be diagramming the damn thing.
 
 You should, too.
+\`\`\`
+
+Finally, let's update "The Hidden Cost of Poor Automation" post:

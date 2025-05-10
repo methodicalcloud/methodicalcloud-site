@@ -5,7 +5,11 @@ excerpt: "Automation without clarity isn't efficient—it's dangerous. This post
 tags: ["automation", "clarity", "systems-thinking"]
 author: "Larry Smith Jr."
 authorRole: "Founder, Methodical Cloud"
+slug: "hidden-cost-of-poor-automation"
+description: "Automation without clarity isn't efficient—it's dangerous. This post explores why skipping the design phase leads to brittle systems, mounting tech debt, and frustrated teams."
 ---
+
+# The Hidden Cost of Poor Automation - Why Clarity Matters
 
 Automation is supposed to make things better.
 

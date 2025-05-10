@@ -111,7 +111,7 @@ export default function Footer() {
 
         <div className="border-t border-navy-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Methodical Cloud. All rights reserved.
+            &copy; {new Date().getFullYear().toString()} Methodical Cloud. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
             <p className="text-gray-400 text-sm">
