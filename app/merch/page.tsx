@@ -1,45 +1,87 @@
 import Image from "next/image"
-import { Mail, ExternalLink, ShoppingBag, Truck, Calendar, Lightbulb } from "lucide-react"
+import { Mail, ShoppingBag, Truck, Calendar } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export const metadata = {
   title: "Merch | Methodical Cloud",
-  description: "Merchandise for the diagram-obsessed. T-shirts, mugs, and more for automation enthusiasts.",
+  description:
+    "Official Methodical Cloud merchandise. T-shirts, stickers, hats, and sweatshirts for automation enthusiasts.",
 }
 
 export default function MerchPage() {
-  // Example merchandise items (coming soon)
+  // Focused merchandise items
   const merchItems = [
     {
       id: 1,
       name: "Flow Crimes Are Real T-Shirt",
       description: "For those who've seen one too many questionable system diagrams.",
-      imageSrc: "/placeholder.svg?key=7glg1",
+      imageSrc: "/images/merch/flow-crimes-tshirt.png",
       price: "$25",
-      status: "coming-soon",
+      status: "available",
+      type: "t-shirt",
     },
     {
       id: 2,
-      name: "Diagram The Damn Thing Mug",
-      description: "Because some mornings require both caffeine and clarity.",
-      imageSrc: "/placeholder.svg?key=j9nti",
-      price: "$15",
-      status: "coming-soon",
+      name: "Diagram The Damn Thing Sticker Pack",
+      description: "Decorate your laptop with evidence of your good judgment.",
+      imageSrc: "/images/merch/diagram-stickers.png",
+      price: "$10",
+      status: "available",
+      type: "sticker",
     },
     {
       id: 3,
-      name: "Ask Me About Airlock Automation Trucker Hat",
+      name: "Automation Architect Snapback Hat",
       description: "The conversation starter nobody asked for, but everyone needs.",
-      imageSrc: "/placeholder.svg?key=wjp3g",
-      price: "$20",
-      status: "coming-soon",
+      imageSrc: "/images/merch/automation-hat.jpg",
+      price: "$22",
+      status: "available",
+      type: "hat",
     },
     {
       id: 4,
-      name: "Systems Thinker Sticker Pack",
-      description: "Decorate your laptop with evidence of your good judgment.",
-      imageSrc: "/placeholder.svg?key=69m1l",
-      price: "$10",
-      status: "coming-soon",
+      name: "Systems That Don't Suck Sweatshirt",
+      description: "Stay warm while building better systems.",
+      imageSrc: "/images/merch/systems-sweatshirt.png",
+      price: "$45",
+      status: "available",
+      type: "sweatshirt",
+    },
+    {
+      id: 5,
+      name: "Methodical Cloud Logo T-Shirt",
+      description: "Simple, clean, and to the point. Just like good automation.",
+      imageSrc: "/images/merch/logo-tshirt.png",
+      price: "$25",
+      status: "available",
+      type: "t-shirt",
+    },
+    {
+      id: 6,
+      name: "Clarity > Complexity Sticker",
+      description: "A reminder of what matters most in system design.",
+      imageSrc: "/images/merch/clarity-sticker.png",
+      price: "$4",
+      status: "available",
+      type: "sticker",
+    },
+    {
+      id: 7,
+      name: "Automation Clarity Baseball Hat",
+      description: "For those days when you're bringing clarity to chaos.",
+      imageSrc: "/images/merch/clarity-hat.png",
+      price: "$20",
+      status: "available",
+      type: "hat",
+    },
+    {
+      id: 8,
+      name: "Methodical Cloud Zip Hoodie",
+      description: "Premium comfort for those late-night automation sessions.",
+      imageSrc: "/images/merch/logo-hoodie.png",
+      price: "$50",
+      status: "available",
+      type: "sweatshirt",
     },
   ]
 
@@ -51,44 +93,68 @@ export default function MerchPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="mb-4">Merch for the diagram-obsessed.</h1>
             <p className="text-xl text-gray-300">
-              Whether you're automating airlocks or just need a mug that understands YAML pain, this is for you.
+              Whether you're automating airlocks or just need a shirt that understands your YAML pain, we've got you
+              covered.
             </p>
             <div className="mt-8 inline-block bg-blue-900/30 text-blue-300 px-4 py-2 rounded-md">
               <span className="flex items-center">
-                <Calendar className="w-5 h-5 mr-2" />
-                Coming Soon — Join the waitlist below
+                <ShoppingBag className="w-5 h-5 mr-2" />
+                Official Methodical Cloud Merchandise
               </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Products Preview */}
+      {/* Product Categories */}
+      <section className="py-12 bg-navy-800">
+        <div className="container-custom">
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button variant="outline" className="bg-navy-700 hover:bg-navy-600">
+              All Products
+            </Button>
+            <Button variant="outline" className="bg-navy-700 hover:bg-navy-600">
+              T-Shirts
+            </Button>
+            <Button variant="outline" className="bg-navy-700 hover:bg-navy-600">
+              Stickers
+            </Button>
+            <Button variant="outline" className="bg-navy-700 hover:bg-navy-600">
+              Hats
+            </Button>
+            <Button variant="outline" className="bg-navy-700 hover:bg-navy-600">
+              Sweatshirts
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products */}
       <section className="py-16">
         <div className="container-custom">
-          <h2 className="section-title text-center">What's Coming</h2>
-          <p className="section-subtitle text-center">
-            A preview of the merchandise we're working on — all designed to bring a bit of Methodical Cloud into your
-            physical world
-          </p>
+          <h2 className="section-title text-center">Methodical Cloud Merchandise</h2>
+          <p className="section-subtitle text-center">Wear your automation philosophy with pride</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             {merchItems.map((item) => (
               <div key={item.id} className="card overflow-hidden">
                 <div className="relative h-64">
-                  <Image src={item.imageSrc || "/placeholder.svg"} alt={item.name} fill className="object-cover" />
-                  <div className="absolute top-4 right-4 bg-blue-900/80 text-blue-300 px-3 py-1 rounded text-xs uppercase">
-                    Coming Soon
-                  </div>
+                  <Image
+                    src={item.imageSrc || "/placeholder.svg"}
+                    alt={item.name}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{item.name}</h3>
                   <p className="text-gray-300 mb-4">{item.description}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-blue-400 font-bold">{item.price}</span>
-                    <button disabled className="bg-navy-700 text-gray-400 px-3 py-1 rounded text-sm cursor-not-allowed">
-                      Coming Soon
-                    </button>
+                    <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                      Add to Cart
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -97,110 +163,32 @@ export default function MerchPage() {
         </div>
       </section>
 
-      {/* About Our Merch */}
+      {/* How It Works */}
       <section className="py-16 bg-navy-900">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">About Our Merch</h2>
-              <p className="text-gray-300 mb-4">
-                The Methodical Cloud merchandise collection is an extension of our brand, offering physical goods that
-                reflect our voice, humor, and obsession with automation, clarity, and good systems.
-              </p>
-              <p className="text-gray-300 mb-4">
-                It connects our content-driven platform with a tangible way for fans, peers, and nerds alike to show
-                support (and maybe laugh a little).
-              </p>
-              <p className="text-gray-300 mb-4">
-                We're keeping things fun, weird, and unapologetically niche—just like our content.
-              </p>
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/placeholder.svg?key=vd346"
-                alt="Methodical Cloud Merchandise"
-                width={400}
-                height={400}
-                className="rounded-lg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+          <h2 className="section-title text-center">How It Works</h2>
+          <p className="section-subtitle text-center">From order to delivery, here's what to expect</p>
 
-      {/* Fulfillment Details */}
-      <section className="py-16">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">Fulfillment Details</h2>
-            <div className="card p-8">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center mr-4">
-                  <Truck className="w-6 h-6 text-blue-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold">Fulfilled by QuirkyWerks</h3>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-4">
-                All products are designed by Methodical Cloud and fulfilled by QuirkyWerks (my wife's creative business
-                on Etsy). She's the real MVP here—handmade quality with a bit of chaos baked in.
-              </p>
-              <p className="text-gray-300 mb-4">
-                We're starting small with low-friction fulfillment via Etsy, but have plans to expand as demand grows.
-              </p>
-              <div className="mt-6">
-                <a
-                  href="https://www.etsy.com/shop/QuirkyWerks"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300"
-                >
-                  Visit QuirkyWerks on Etsy <ExternalLink className="ml-2 w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What's Next */}
-      <section className="py-16 bg-navy-900">
-        <div className="container-custom">
-          <h2 className="section-title text-center">What's Next</h2>
-          <p className="section-subtitle text-center">
-            This is just the beginning. Here's what we're planning for the future
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            <div className="card p-6">
-              <div className="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center mb-6">
-                <Calendar className="w-6 h-6 text-blue-400" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Limited Drops</h3>
-              <p className="text-gray-300">
-                Special edition merchandise released in limited quantities for the true Methodical Cloud enthusiasts.
-              </p>
-            </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="card p-6">
               <div className="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center mb-6">
                 <ShoppingBag className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Digital Downloads</h3>
+              <h3 className="text-xl font-bold mb-3">1. Place Your Order</h3>
               <p className="text-gray-300">
-                Sticker packs, digital wallpapers, and other downloadable goodies to decorate your digital and physical
-                spaces.
+                Browse our collection and place your order directly on the Methodical Cloud website. All payments are
+                processed securely.
               </p>
             </div>
 
             <div className="card p-6">
               <div className="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center mb-6">
-                <Lightbulb className="w-6 h-6 text-blue-400" />
+                <Calendar className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Guest Collabs</h3>
+              <h3 className="text-xl font-bold mb-3">2. Order Processing</h3>
               <p className="text-gray-300">
-                Collaborations with artists and developers in the community to create unique, limited-edition products.
+                Your order is received and processed by our team. We'll send you a confirmation email with your order
+                details.
               </p>
             </div>
 
@@ -208,10 +196,47 @@ export default function MerchPage() {
               <div className="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center mb-6">
                 <Truck className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Print-on-Demand</h3>
+              <h3 className="text-xl font-bold mb-3">3. Fulfillment & Shipping</h3>
               <p className="text-gray-300">
-                As we scale, we'll partner with print-on-demand services to offer a wider range of products with faster
-                fulfillment.
+                Orders are fulfilled by QuirkyWerks, our trusted fulfillment partner. Your items are carefully packed
+                and shipped directly to you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16">
+        <div className="container-custom">
+          <h2 className="section-title text-center">Frequently Asked Questions</h2>
+          <div className="max-w-3xl mx-auto mt-12">
+            <div className="card p-6 mb-6">
+              <h3 className="text-xl font-bold mb-2">How long does shipping take?</h3>
+              <p className="text-gray-300">
+                Most orders ship within 3-5 business days. Delivery times vary based on your location, typically 5-10
+                business days after shipping.
+              </p>
+            </div>
+            <div className="card p-6 mb-6">
+              <h3 className="text-xl font-bold mb-2">What's your return policy?</h3>
+              <p className="text-gray-300">
+                If you're not satisfied with your purchase, contact us within 14 days of receiving your order. We'll
+                work with you to make it right.
+              </p>
+            </div>
+            <div className="card p-6 mb-6">
+              <h3 className="text-xl font-bold mb-2">Who handles the fulfillment?</h3>
+              <p className="text-gray-300">
+                All orders are fulfilled by QuirkyWerks, our trusted partner. While you place orders on our website, the
+                actual fulfillment and shipping are handled by their team.
+              </p>
+            </div>
+            <div className="card p-6">
+              <h3 className="text-xl font-bold mb-2">Do you ship internationally?</h3>
+              <p className="text-gray-300">
+                Yes, we ship to most countries worldwide. International shipping rates and delivery times vary by
+                location.
               </p>
             </div>
           </div>
@@ -219,7 +244,7 @@ export default function MerchPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16">
+      <section className="py-16 bg-navy-900">
         <div className="container-custom">
           <div className="bg-navy-800 rounded-xl border border-navy-700 p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold mb-6">Got an idea for a product?</h2>
@@ -239,27 +264,6 @@ export default function MerchPage() {
               >
                 Tag @methodicalcloud
               </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Waitlist Section */}
-      <section className="py-16 bg-navy-900">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Join the Waitlist</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Be the first to know when our merchandise is available. Sign up for the waitlist and get early access to
-              new products.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="px-4 py-3 bg-navy-800 border border-navy-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 sm:w-72"
-              />
-              <button className="btn-primary">Join Waitlist</button>
             </div>
           </div>
         </div>

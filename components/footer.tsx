@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <Image
-                src="/images/methodical-cloud-logo.png"
+                src="/images/methodicalcloud_default_logo.png"
                 alt="Methodical Cloud Logo"
                 width={40}
                 height={40}
