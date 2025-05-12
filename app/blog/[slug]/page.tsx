@@ -1,11 +1,16 @@
-import Link from "next/link"
-import { ArrowLeft, Calendar, Tag } from "lucide-react"
-import { getAllPostSlugs, getPostData } from "@/lib/blog"
-import type { Metadata } from "next"
-import SocialShare from "@/components/social-share"
+import Link from 'next/link'
+import { ArrowLeft, Calendar, Tag } from 'lucide-react'
+import { getAllPostSlugs, getPostData } from '@/lib/blog'
+import type { Metadata } from 'next'
+import SocialShare from '@/components/social-share'
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = await getPostData(params.slug)
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  const slug = (await params).slug
+  const post = await getPostData(slug)
   return {
     title: `${post.title} | Methodical Cloud Blog`,
     description: post.excerpt,
@@ -17,8 +22,13 @@ export async function generateStaticParams() {
   return paths
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await getPostData(params.slug)
+export default async function BlogPostPage({
+  params,
+}: {
+  params: { slug: string }
+}) {
+  const slug = (await params).slug
+  const post = await getPostData(slug)
 
   return (
     <div>
@@ -64,11 +74,17 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       <section className="py-16">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
-            <div className="prose-custom" dangerouslySetInnerHTML={{ __html: post.content }} />
+            <div
+              className="prose-custom"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
 
             <div className="mt-12 pt-8 border-t border-navy-700">
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                <Link href="/blog" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
+                >
                   <ArrowLeft className="mr-2 w-4 h-4" /> Back to all posts
                 </Link>
 
