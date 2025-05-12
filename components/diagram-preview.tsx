@@ -1,6 +1,6 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 interface DiagramPreviewProps {
   title: string
@@ -9,12 +9,17 @@ interface DiagramPreviewProps {
   href: string
 }
 
-export default function DiagramPreview({ title, description, imageSrc, href }: DiagramPreviewProps) {
+export default function DiagramPreview({
+  title,
+  description,
+  imageSrc,
+  href,
+}: DiagramPreviewProps) {
   return (
     <div className="card overflow-hidden flex flex-col h-full">
       <div className="relative h-48 overflow-hidden">
         <Image
-          src={imageSrc || "/placeholder.svg?height=300&width=500&query=diagram%20illustration"}
+          src={imageSrc || '/images/placeholders/placeholder.svg'}
           alt={title}
           fill
           className="object-cover"
@@ -23,7 +28,10 @@ export default function DiagramPreview({ title, description, imageSrc, href }: D
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p className="text-gray-300 mb-4 flex-grow">{description}</p>
-        <Link href={href} className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center mt-auto">
+        <Link
+          href={href}
+          className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center mt-auto"
+        >
           View Diagram <ArrowRight className="ml-2 w-4 h-4" />
         </Link>
       </div>

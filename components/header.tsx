@@ -1,19 +1,19 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
-import { ThemeToggle } from "@/components/theme-toggle"
-import Image from "next/image"
+import { useState } from 'react'
+import Link from 'next/link'
+import { Menu, X } from 'lucide-react'
+import { ThemeToggle } from '@/components/theme-toggle'
+import Image from 'next/image'
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Blog", href: "/blog" },
-  { name: "Podcast", href: "/podcast" },
-  { name: "Diagrams", href: "/diagrams" },
-  { name: "Merch", href: "/merch" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: 'Home', href: '/' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Podcast', href: '/podcast' },
+  { name: 'Diagrams', href: '/diagrams' },
+  { name: 'Merch', href: '/merch' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export default function Header() {
@@ -21,18 +21,23 @@ export default function Header() {
 
   return (
     <header className="bg-navy-900 border-b border-navy-700">
-      <nav className="container-custom mx-auto flex items-center justify-between py-4" aria-label="Global">
+      <nav
+        className="container-custom mx-auto flex items-center justify-between py-4"
+        aria-label="Global"
+      >
         <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/images/methodicalcloud_default_logo.png"
+              src="/images/logos/methodicalcloud_default_logo.png"
               alt="Methodical Cloud Logo"
               width={40}
               height={40}
               className="dark:invert"
               priority
             />
-            <span className="font-bold text-xl hidden md:inline-block text-white">Methodical Cloud</span>
+            <span className="font-bold text-xl hidden md:inline-block text-white">
+              Methodical Cloud
+            </span>
           </Link>
         </div>
 
@@ -70,19 +75,24 @@ export default function Header() {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-50">
-          <div className="fixed inset-0 bg-black/20 backdrop-blur-sm" aria-hidden="true" />
+          <div
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm"
+            aria-hidden="true"
+          />
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-navy-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-navy-700">
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center space-x-2">
                 <Image
-                  src="/images/methodicalcloud_default_logo.png"
+                  src="/images/logos/methodicalcloud_default_logo.png"
                   alt="Methodical Cloud Logo"
                   width={40}
                   height={40}
                   className="dark:invert"
                   priority
                 />
-                <span className="font-bold text-xl hidden md:inline-block text-white">Methodical Cloud</span>
+                <span className="font-bold text-xl hidden md:inline-block text-white">
+                  Methodical Cloud
+                </span>
               </Link>
               <button
                 type="button"
