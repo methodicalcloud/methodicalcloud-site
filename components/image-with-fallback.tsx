@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import Image, { type ImageProps } from "next/image"
+import { useState } from 'react'
+import Image, { type ImageProps } from 'next/image'
 
 type ImageWithFallbackProps = ImageProps & {
   fallbackSrc?: string
@@ -11,7 +11,7 @@ type ImageWithFallbackProps = ImageProps & {
 
 export default function ImageWithFallback({
   src,
-  fallbackSrc = "/images/placeholder-profile.png",
+  fallbackSrc = '/images/placeholders/placeholder-profile.png',
   alt,
   isLogo = false,
   isProfile = false,
@@ -20,9 +20,9 @@ export default function ImageWithFallback({
   const [imgSrc, setImgSrc] = useState(src)
 
   // For logos, use a specific fallback
-  const logoFallback = "/images/methodicalcloud_default_logo.png"
+  const logoFallback = '/images/logos/methodicalcloud_default_logo.png'
   // For profile images, use a specific fallback
-  const profileFallback = "/images/placeholder-profile.png"
+  const profileFallback = '/images/placeholders/placeholder-profile.png'
 
   // Determine which fallback to use
   let actualFallback = fallbackSrc

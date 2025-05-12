@@ -1,8 +1,16 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight, Cpu, Lightbulb, BarChart3, Workflow, Podcast, FileText } from "lucide-react"
-import DiagramPreview from "@/components/diagram-preview"
-import { getSortedPostsData } from "@/lib/blog"
+import Image from 'next/image'
+import Link from 'next/link'
+import {
+  ArrowRight,
+  Cpu,
+  Lightbulb,
+  BarChart3,
+  Workflow,
+  Podcast,
+  FileText,
+} from 'lucide-react'
+import DiagramPreview from '@/components/diagram-preview'
+import { getSortedPostsData } from '@/lib/blog'
 
 export default function Home() {
   const latestPosts = getSortedPostsData().slice(0, 3)
@@ -15,11 +23,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="mb-6">
-                <span className="text-gradient">Automation, clarity,</span> and systems that don't suck.
+                <span className="text-gradient">Automation, clarity,</span> and
+                systems that don't suck.
               </h1>
               <p className="text-xl mb-8 text-gray-300">
-                Delivering automation wisdom, deep technical clarity, and architectural insight through diagrams,
-                short-form content, and podcast storytelling—building systems and mindsets that scale.
+                Delivering automation wisdom, deep technical clarity, and
+                architectural insight through diagrams, short-form content, and
+                podcast storytelling—building systems and mindsets that scale.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/blog" className="btn-primary">
@@ -32,7 +42,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="/images/methodical-cloud-logo.png"
+                src="/images/logos/methodical-cloud-logo.png"
                 alt="Methodical Cloud Logo"
                 width={400}
                 height={400}
@@ -49,7 +59,8 @@ export default function Home() {
         <div className="container-custom">
           <h2 className="section-title text-center">Core Themes</h2>
           <p className="section-subtitle text-center">
-            Principles that guide our approach to automation, systems thinking, and technical content
+            Principles that guide our approach to automation, systems thinking,
+            and technical content
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -59,8 +70,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">Clarity</h3>
               <p className="text-gray-300">
-                No buzzwords or fluff—our content simplifies the complex. We believe in clear communication and
-                straightforward explanations.
+                No buzzwords or fluff—our content simplifies the complex. We
+                believe in clear communication and straightforward explanations.
               </p>
             </div>
 
@@ -70,8 +81,9 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">Pragmatism</h3>
               <p className="text-gray-300">
-                Real-world practices over theory. It's not about perfection; it's about making things better and
-                delivering practical solutions.
+                Real-world practices over theory. It's not about perfection;
+                it's about making things better and delivering practical
+                solutions.
               </p>
             </div>
 
@@ -81,8 +93,9 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">Visual Thinking</h3>
               <p className="text-gray-300">
-                Diagrams are foundational—every system, process, or idea is better with a flow. We visualize complexity
-                to make it understandable.
+                Diagrams are foundational—every system, process, or idea is
+                better with a flow. We visualize complexity to make it
+                understandable.
               </p>
             </div>
           </div>
@@ -94,26 +107,27 @@ export default function Home() {
         <div className="container-custom">
           <h2 className="section-title text-center">Featured Diagrams</h2>
           <p className="section-subtitle text-center">
-            Visual representations of complex systems and processes to enhance understanding
+            Visual representations of complex systems and processes to enhance
+            understanding
           </p>
 
           <div className="diagram-grid">
             <DiagramPreview
               title="CI/CD Pipeline Flow"
               description="A comprehensive visualization of a modern CI/CD pipeline with automated testing and deployment stages."
-              imageSrc="/placeholder.svg?key=197qj"
+              imageSrc="/images/placeholders/placeholder.svg"
               href="/blog/hidden-cost-of-poor-automation"
             />
             <DiagramPreview
               title="Kubernetes Architecture"
               description="Breaking down the components of a Kubernetes cluster and how they interact."
-              imageSrc="/placeholder.svg?key=yhavc"
+              imageSrc="/images/placeholders/placeholder.svg"
               href="/blog/diagram-the-damn-thing"
             />
             <DiagramPreview
               title="Event-Driven Systems"
               description="Mapping out event flows in distributed systems and their implications for scalability."
-              imageSrc="/placeholder.svg?key=2bo4n"
+              imageSrc="/images/placeholders/placeholder.svg"
               href="/blog/everything-should-be-virtual"
             />
           </div>
@@ -131,7 +145,8 @@ export default function Home() {
         <div className="container-custom">
           <h2 className="section-title text-center">Content Types</h2>
           <p className="section-subtitle text-center">
-            Multiple formats to explore automation, system design, and technical insights
+            Multiple formats to explore automation, system design, and technical
+            insights
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -141,10 +156,14 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">Blog Posts</h3>
               <p className="text-gray-300 mb-4">
-                Written in Markdown with a focus on automation, system design, infrastructure, and DevOps anti-patterns.
-                Available in short-form clarity or long-form deep dives.
+                Written in Markdown with a focus on automation, system design,
+                infrastructure, and DevOps anti-patterns. Available in
+                short-form clarity or long-form deep dives.
               </p>
-              <Link href="/blog" className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center">
+              <Link
+                href="/blog"
+                className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+              >
                 Read the Blog <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
@@ -155,10 +174,13 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">Podcast Episodes</h3>
               <p className="text-gray-300 mb-4">
-                15 minutes or less, anchored around a diagram or architectural idea. Conversational and insightful,
-                hosted by Larry Smith Jr.
+                15 minutes or less, anchored around a diagram or architectural
+                idea. Conversational and insightful, hosted by Larry Smith Jr.
               </p>
-              <Link href="/podcast" className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center">
+              <Link
+                href="/podcast"
+                className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+              >
                 Listen to Episodes <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
@@ -169,10 +191,14 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">Diagrams</h3>
               <p className="text-gray-300 mb-4">
-                Flowcharts, automation visuals, and layered architecture with clear labels, visual hierarchy, and
-                minimalist design to illustrate complex concepts.
+                Flowcharts, automation visuals, and layered architecture with
+                clear labels, visual hierarchy, and minimalist design to
+                illustrate complex concepts.
               </p>
-              <Link href="/diagrams" className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center">
+              <Link
+                href="/diagrams"
+                className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+              >
                 Explore Diagrams <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
@@ -185,7 +211,10 @@ export default function Home() {
         <div className="container-custom">
           <div className="flex justify-between items-center mb-12">
             <h2 className="text-3xl font-bold">Latest Blog Posts</h2>
-            <Link href="/blog" className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center">
+            <Link
+              href="/blog"
+              className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+            >
               View all posts <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </div>
@@ -218,16 +247,20 @@ export default function Home() {
               <div>
                 <h2 className="mb-4">Interested in Our Content?</h2>
                 <p className="text-lg mb-6 text-gray-300">
-                  Reach out with feedback on our blog posts, diagrams, or podcast episodes. We'd love to hear what
-                  topics you'd like to see covered next.
+                  Reach out with feedback on our blog posts, diagrams, or
+                  podcast episodes. We'd love to hear what topics you'd like to
+                  see covered next.
                 </p>
-                <Link href="/contact" className="inline-flex items-center btn-primary">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center btn-primary"
+                >
                   Share Your Feedback <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </div>
               <div className="flex justify-center">
                 <Image
-                  src="/placeholder.svg?key=n99v2"
+                  src="/images/placeholders/placeholder.svg"
                   alt="Content Illustration"
                   width={400}
                   height={300}

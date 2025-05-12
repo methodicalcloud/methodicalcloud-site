@@ -436,7 +436,7 @@ function ProductCard({ product }: { product: Product }) {
       <div className="relative">
         <div className="aspect-square relative overflow-hidden bg-navy-900">
           <Image
-            src={product.image || '/placeholder.svg'}
+            src={product.image || '/images/placeholders/placeholder.svg'}
             alt={product.name}
             fill
             className="object-cover transition-transform hover:scale-105 duration-300"
