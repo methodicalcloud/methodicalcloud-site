@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
-import ImageWithFallback from "@/components/image-with-fallback"
+import Image from "next/image"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -23,21 +23,16 @@ export default function Header() {
     <header className="bg-navy-900 border-b border-navy-700">
       <nav className="container-custom mx-auto flex items-center justify-between py-4" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Methodical Cloud</span>
-            <div className="flex items-center">
-              <ImageWithFallback
-                src="/images/methodicalcloud_default_logo.png"
-                alt="Methodical Cloud Logo"
-                width={40}
-                height={40}
-                className="h-10 w-auto"
-                priority
-                isLogo={true}
-                unoptimized={true}
-              />
-              <span className="ml-3 text-xl font-bold text-white">Methodical Cloud</span>
-            </div>
+          <Link href="/" className="flex items-center space-x-2">
+            <Image
+              src="/images/methodicalcloud_default_logo.png"
+              alt="Methodical Cloud Logo"
+              width={40}
+              height={40}
+              className="dark:invert"
+              priority
+            />
+            <span className="font-bold text-xl hidden md:inline-block text-white">Methodical Cloud</span>
           </Link>
         </div>
 
@@ -78,21 +73,16 @@ export default function Header() {
           <div className="fixed inset-0 bg-black/20 backdrop-blur-sm" aria-hidden="true" />
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-navy-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-navy-700">
             <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5">
-                <span className="sr-only">Methodical Cloud</span>
-                <div className="flex items-center">
-                  <ImageWithFallback
-                    src="/images/methodicalcloud_default_logo.png"
-                    alt="Methodical Cloud Logo"
-                    width={40}
-                    height={40}
-                    className="h-8 w-auto"
-                    priority
-                    isLogo={true}
-                    unoptimized={true}
-                  />
-                  <span className="ml-3 text-lg font-bold text-white">Methodical Cloud</span>
-                </div>
+              <Link href="/" className="flex items-center space-x-2">
+                <Image
+                  src="/images/methodicalcloud_default_logo.png"
+                  alt="Methodical Cloud Logo"
+                  width={40}
+                  height={40}
+                  className="dark:invert"
+                  priority
+                />
+                <span className="font-bold text-xl hidden md:inline-block text-white">Methodical Cloud</span>
               </Link>
               <button
                 type="button"

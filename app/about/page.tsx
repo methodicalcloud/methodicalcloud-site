@@ -115,7 +115,7 @@ export default function AboutPage() {
             <div className="order-2 md:order-1 flex justify-center">
               {/* Use direct URL to the image */}
               <ProfileImage
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8E92B092-92BD-4346-882C-5BF5BE60ED78-cYKmIEVNJqCUvSND80iOnQGPz3Iu54.jpeg"
+                src="/images/larry-smith-headshot.jpeg"
                 fallbackSrc="/images/placeholder-profile.png"
                 alt="Larry Smith Jr."
                 width={300}
