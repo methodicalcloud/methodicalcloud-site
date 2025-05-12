@@ -1,17 +1,22 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { ShoppingBag } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Badge } from "@/components/ui/badge"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Label } from "@/components/ui/label"
+import { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { ShoppingBag } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Badge } from '@/components/ui/badge'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+import { Label } from '@/components/ui/label'
 
-type Size = "S" | "M" | "L" | "XL" | "XXL"
+type Size = 'S' | 'M' | 'L' | 'XL' | 'XXL'
 
 interface Product {
   id: string
@@ -28,82 +33,85 @@ interface Product {
 export default function MerchClientPage() {
   const products: Product[] = [
     {
-      id: "mug-01",
-      name: "Diagram The Damn Thing Mug",
-      description: "Start your day with a reminder of what matters most.",
-      price: "$15",
-      image: "/images/merch/diagram-mug.png",
-      category: "mugs",
+      id: 'mug-01',
+      name: 'Diagram The Damn Thing Mug',
+      description: 'Start your day with a reminder of what matters most.',
+      price: '$15',
+      image: '/images/merch/mugs/diagram-mug.png',
+      category: 'mugs',
       isNew: true,
       isBestseller: true,
     },
     {
-      id: "mug-02",
-      name: "Context Switching Mug",
+      id: 'mug-02',
+      name: 'Context Switching Mug',
       description:
-        "For those who thrive on multitasking and rapid mental shifts. Perfect for your morning coffee between tasks.",
-      price: "$15",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-0UyWrN6TAdnVRfjKf6RFyhehyjVyfP.png",
-      category: "mugs",
+        'For those who thrive on multitasking and rapid mental shifts. Perfect for your morning coffee between tasks.',
+      price: '$15',
+      image: '/images/merch/mugs/context-switching-mug.png',
+      category: 'mugs',
       isNew: true,
     },
     {
-      id: "mug-03",
-      name: "Automate Like You Give A Damn Mug",
-      description: "A daily reminder to put intention and care into your automation efforts. Quality matters.",
-      price: "$15",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ZJjfJ0JLBqmdKNHN7sB765AhYRw1Tr.png",
-      category: "mugs",
+      id: 'mug-03',
+      name: 'Automate Like You Give A Damn Mug',
+      description:
+        'A daily reminder to put intention and care into your automation efforts. Quality matters.',
+      price: '$15',
+      image: '/images/merch/mugs/automate-like-you-give-a-damn-mug.png',
+      category: 'mugs',
     },
     {
-      id: "tshirt-01",
-      name: "Flow Crimes Flowchart T-Shirt",
-      description: "A humorous take on the automation decision process. Soft cotton blend for all-day comfort.",
-      price: "$28",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/A_digital_photograph_displays_a_heather_black_T-sh-ZcRvKbxil2yeHFhl8tUUd4hk6r59KL.png",
-      category: "tshirts",
-      sizes: ["S", "M", "L", "XL", "XXL"],
+      id: 'tshirt-01',
+      name: 'Flow Crimes Flowchart T-Shirt',
+      description:
+        'A humorous take on the automation decision process. Soft cotton blend for all-day comfort.',
+      price: '$28',
+      image: '/images/merch/tshirts/flow-crimes-flowchart-tshirt.png',
+      category: 'tshirts',
+      sizes: ['S', 'M', 'L', 'XL', 'XXL'],
       isNew: true,
     },
     {
-      id: "tshirt-02",
-      name: "Flow Crimes Are Real T-Shirt",
-      description: "Spread awareness about the reality of flow crimes with this conversation-starting tee.",
-      price: "$28",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/A_digital_photograph_features_a_black_short-sleeve-P7E5QCeBmEYDz7yDtxl0jRpl0wAoxl.png",
-      category: "tshirts",
-      sizes: ["S", "M", "L", "XL", "XXL"],
+      id: 'tshirt-02',
+      name: 'Flow Crimes Are Real T-Shirt',
+      description:
+        'Spread awareness about the reality of flow crimes with this conversation-starting tee.',
+      price: '$28',
+      image: '/images/merch/tshirts/flow-crimes-are-real-tshirt.png',
+      category: 'tshirts',
+      sizes: ['S', 'M', 'L', 'XL', 'XXL'],
       isBestseller: true,
     },
     {
-      id: "tshirt-03",
+      id: 'tshirt-03',
       name: "This Is Fine (It's YAML) T-Shirt",
-      description: "For when your configuration is technically valid but existentially questionable. A dev favorite.",
-      price: "$28",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6Vtdj7UPFBIsNL2dD6lkBtCvViK2PD.png",
-      category: "tshirts",
-      sizes: ["S", "M", "L", "XL", "XXL"],
+      description:
+        'For when your configuration is technically valid but existentially questionable. A dev favorite.',
+      price: '$28',
+      image: '/images/merch/tshirts/this-is-fine-yaml-tshirt.png',
+      category: 'tshirts',
+      sizes: ['S', 'M', 'L', 'XL', 'XXL'],
       isNew: true,
     },
     {
-      id: "tshirt-04",
-      name: "Just Diagram It T-Shirt",
-      description: "The simplest solution to most problems: just diagram it. Spread the visual thinking philosophy.",
-      price: "$28",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FFXIyp5yuLPadjrrOam1QuJ5xgbR1p.png",
-      category: "tshirts",
-      sizes: ["S", "M", "L", "XL", "XXL"],
+      id: 'tshirt-04',
+      name: 'Just Diagram It T-Shirt',
+      description:
+        'The simplest solution to most problems: just diagram it. Spread the visual thinking philosophy.',
+      price: '$28',
+      image: '/images/merch/tshirts/just-diagram-it-tshirt.png',
+      category: 'tshirts',
+      sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     },
     {
-      id: "hat-01",
-      name: "Airlock Automation Trucker Hat",
-      description: "Start conversations about your favorite automation pattern with this stylish trucker hat.",
-      price: "$25",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/A_digital_photograph_features_a_black_trucker-styl-keq6aqduqmI6NvJmRJrKbAo3l9Tmeq.png",
-      category: "hats",
+      id: 'hat-01',
+      name: 'Airlock Automation Trucker Hat',
+      description:
+        'Start conversations about your favorite automation pattern with this stylish trucker hat.',
+      price: '$25',
+      image: '/images/merch/hats/airlock-automation-hat.png',
+      category: 'hats',
       isNew: true,
     },
   ]
@@ -116,8 +124,8 @@ export default function MerchClientPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="mb-6">Methodical Merch</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Wear your automation philosophy with pride. Our merchandise speaks the language of clarity and systems
-              that don't suck.
+              Wear your automation philosophy with pride. Our merchandise speaks
+              the language of clarity and systems that don't suck.
             </p>
             <div className="inline-flex items-center bg-blue-900/30 text-blue-300 px-4 py-2 rounded-md">
               <ShoppingBag className="w-5 h-5 mr-2" />
@@ -130,13 +138,15 @@ export default function MerchClientPage() {
       {/* Featured Product */}
       <section className="py-12 bg-navy-800">
         <div className="container-custom">
-          <h2 className="text-2xl font-bold mb-8 text-center">Featured Product</h2>
+          <h2 className="text-2xl font-bold mb-8 text-center">
+            Featured Product
+          </h2>
           <div className="max-w-md mx-auto">
             <div className="bg-navy-700 rounded-lg border border-navy-600 overflow-hidden flex flex-col h-full transform transition-transform hover:scale-105 duration-300">
               <div className="relative">
                 <div className="aspect-square relative overflow-hidden">
                   <Image
-                    src="/images/merch/diagram-mug.png"
+                    src="/images/merch/mugs/diagram-mug.png"
                     alt="Diagram The Damn Thing Mug"
                     fill
                     className="object-cover"
@@ -144,21 +154,28 @@ export default function MerchClientPage() {
                 </div>
                 <div className="absolute top-2 left-2 flex flex-col gap-2">
                   <Badge className="bg-blue-600 hover:bg-blue-600">New</Badge>
-                  <Badge className="bg-amber-600 hover:bg-amber-600">Bestseller</Badge>
+                  <Badge className="bg-amber-600 hover:bg-amber-600">
+                    Bestseller
+                  </Badge>
                 </div>
               </div>
               <div className="p-6 flex-grow flex flex-col">
-                <h3 className="font-bold text-xl mb-2">Diagram The Damn Thing Mug</h3>
+                <h3 className="font-bold text-xl mb-2">
+                  Diagram The Damn Thing Mug
+                </h3>
                 <p className="text-gray-300 mb-4 flex-grow">
-                  Start your day with a reminder of what matters most. The perfect companion for your morning coffee or
-                  afternoon tea.
+                  Start your day with a reminder of what matters most. The
+                  perfect companion for your morning coffee or afternoon tea.
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="font-bold text-xl">$15</span>
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                        <Button
+                          size="lg"
+                          className="bg-blue-600 hover:bg-blue-700"
+                        >
                           Add to Cart <ShoppingBag className="ml-2 h-4 w-4" />
                         </Button>
                       </TooltipTrigger>
@@ -198,7 +215,7 @@ export default function MerchClientPage() {
             <TabsContent value="tshirts" className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {products
-                  .filter((product) => product.category === "tshirts")
+                  .filter((product) => product.category === 'tshirts')
                   .map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}
@@ -208,7 +225,7 @@ export default function MerchClientPage() {
             <TabsContent value="hats" className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {products
-                  .filter((product) => product.category === "hats")
+                  .filter((product) => product.category === 'hats')
                   .map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}
@@ -218,7 +235,7 @@ export default function MerchClientPage() {
             <TabsContent value="mugs" className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {products
-                  .filter((product) => product.category === "mugs")
+                  .filter((product) => product.category === 'mugs')
                   .map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}
@@ -232,10 +249,13 @@ export default function MerchClientPage() {
       <section className="py-12 bg-navy-800">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-4">More Products Coming Soon</h2>
+            <h2 className="text-2xl font-bold mb-4">
+              More Products Coming Soon
+            </h2>
             <p className="text-gray-300 mb-6">
-              We're working on expanding our merchandise collection with t-shirts, hats, sweatshirts, and stickers.
-              Check back soon for more automation-themed gear!
+              We're working on expanding our merchandise collection with
+              t-shirts, hats, sweatshirts, and stickers. Check back soon for
+              more automation-themed gear!
             </p>
           </div>
         </div>
@@ -246,11 +266,14 @@ export default function MerchClientPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="bg-navy-800 rounded-lg border border-navy-700 p-8">
-              <h2 className="text-2xl font-bold mb-4 text-center">How It Works</h2>
+              <h2 className="text-2xl font-bold mb-4 text-center">
+                How It Works
+              </h2>
               <p className="text-gray-300 mb-6 text-center">
-                All orders are processed directly through Methodical Cloud but fulfilled by our trusted partner,
-                Quirkywerks. When you place an order on our site, it's carefully crafted and shipped to you by the
-                Quirkywerks team.
+                All orders are processed directly through Methodical Cloud but
+                fulfilled by our trusted partner, Quirkywerks. When you place an
+                order on our site, it's carefully crafted and shipped to you by
+                the Quirkywerks team.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
@@ -258,7 +281,9 @@ export default function MerchClientPage() {
                     <ShoppingBag className="w-6 h-6 text-blue-400" />
                   </div>
                   <h3 className="font-bold mb-2">1. Order</h3>
-                  <p className="text-sm text-gray-300">Place your order through our website</p>
+                  <p className="text-sm text-gray-300">
+                    Place your order through our website
+                  </p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -279,7 +304,9 @@ export default function MerchClientPage() {
                     </svg>
                   </div>
                   <h3 className="font-bold mb-2">2. Processing</h3>
-                  <p className="text-sm text-gray-300">QuirkyWerks processes your order</p>
+                  <p className="text-sm text-gray-300">
+                    QuirkyWerks processes your order
+                  </p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -300,7 +327,9 @@ export default function MerchClientPage() {
                     </svg>
                   </div>
                   <h3 className="font-bold mb-2">3. Delivery</h3>
-                  <p className="text-sm text-gray-300">Your items are shipped directly to you</p>
+                  <p className="text-sm text-gray-300">
+                    Your items are shipped directly to you
+                  </p>
                 </div>
               </div>
             </div>
@@ -332,11 +361,15 @@ export default function MerchClientPage() {
                   </svg>
                 </div>
                 <div className="flex-grow text-center md:text-left">
-                  <h2 className="text-2xl font-bold mb-2">Meet Our Fulfillment Partner: Quirkywerks</h2>
+                  <h2 className="text-2xl font-bold mb-2">
+                    Meet Our Fulfillment Partner: Quirkywerks
+                  </h2>
                   <p className="text-gray-300 mb-4">
-                    Quirkywerks is a small, family-owned Etsy shop specializing in custom-made merchandise with a
-                    personal touch. Every Methodical Cloud product is carefully crafted by the talented team at
-                    Quirkywerks, ensuring high-quality items that perfectly represent our brand's philosophy of clarity
+                    Quirkywerks is a small, family-owned Etsy shop specializing
+                    in custom-made merchandise with a personal touch. Every
+                    Methodical Cloud product is carefully crafted by the
+                    talented team at Quirkywerks, ensuring high-quality items
+                    that perfectly represent our brand's philosophy of clarity
                     and thoughtful design.
                   </p>
                   <a
@@ -373,11 +406,17 @@ export default function MerchClientPage() {
       <section className="py-12">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-4">Looking for something specific?</h2>
+            <h2 className="text-2xl font-bold mb-4">
+              Looking for something specific?
+            </h2>
             <p className="text-gray-300 mb-6">
-              Have an idea for a custom design or bulk order for your team? We'd love to hear from you.
+              Have an idea for a custom design or bulk order for your team? We'd
+              love to hear from you.
             </p>
-            <Link href="/contact" className="btn-primary inline-flex items-center">
+            <Link
+              href="/contact"
+              className="btn-primary inline-flex items-center"
+            >
               Contact Us
             </Link>
           </div>
@@ -388,27 +427,37 @@ export default function MerchClientPage() {
 }
 
 function ProductCard({ product }: { product: Product }) {
-  const [selectedSize, setSelectedSize] = useState<Size | null>(product.sizes ? product.sizes[2] : null) // Default to L if sizes exist
+  const [selectedSize, setSelectedSize] = useState<Size | null>(
+    product.sizes ? product.sizes[2] : null
+  ) // Default to L if sizes exist
 
   return (
     <div className="bg-navy-800 rounded-lg border border-navy-700 overflow-hidden flex flex-col h-full">
       <div className="relative">
         <div className="aspect-square relative overflow-hidden bg-navy-900">
           <Image
-            src={product.image || "/placeholder.svg"}
+            src={product.image || '/placeholder.svg'}
             alt={product.name}
             fill
             className="object-cover transition-transform hover:scale-105 duration-300"
           />
         </div>
         <div className="absolute top-2 left-2 flex flex-col gap-2">
-          {product.isNew && <Badge className="bg-blue-600 hover:bg-blue-600">New</Badge>}
-          {product.isBestseller && <Badge className="bg-amber-600 hover:bg-amber-600">Bestseller</Badge>}
+          {product.isNew && (
+            <Badge className="bg-blue-600 hover:bg-blue-600">New</Badge>
+          )}
+          {product.isBestseller && (
+            <Badge className="bg-amber-600 hover:bg-amber-600">
+              Bestseller
+            </Badge>
+          )}
         </div>
       </div>
       <div className="p-4 flex-grow flex flex-col">
         <h3 className="font-bold text-lg mb-1">{product.name}</h3>
-        <p className="text-gray-300 text-sm mb-4 flex-grow">{product.description}</p>
+        <p className="text-gray-300 text-sm mb-4 flex-grow">
+          {product.description}
+        </p>
 
         {product.sizes && (
           <div className="mb-4">
@@ -420,13 +469,17 @@ function ProductCard({ product }: { product: Product }) {
             >
               {product.sizes.map((size) => (
                 <div key={size} className="flex items-center space-x-1">
-                  <RadioGroupItem value={size} id={`${product.id}-size-${size}`} className="sr-only" />
+                  <RadioGroupItem
+                    value={size}
+                    id={`${product.id}-size-${size}`}
+                    className="sr-only"
+                  />
                   <Label
                     htmlFor={`${product.id}-size-${size}`}
                     className={`px-2 py-1 rounded-md cursor-pointer text-xs font-medium border ${
                       selectedSize === size
-                        ? "bg-blue-600 text-white border-blue-600"
-                        : "bg-navy-700 text-gray-300 border-navy-600 hover:bg-navy-600"
+                        ? 'bg-blue-600 text-white border-blue-600'
+                        : 'bg-navy-700 text-gray-300 border-navy-600 hover:bg-navy-600'
                     }`}
                   >
                     {size}
@@ -442,7 +495,10 @@ function ProductCard({ product }: { product: Product }) {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button className="bg-blue-600 hover:bg-blue-700" disabled={product.sizes && !selectedSize}>
+                <Button
+                  className="bg-blue-600 hover:bg-blue-700"
+                  disabled={product.sizes && !selectedSize}
+                >
                   Add to Cart <ShoppingBag className="ml-2 h-4 w-4" />
                 </Button>
               </TooltipTrigger>
