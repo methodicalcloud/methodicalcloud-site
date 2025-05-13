@@ -259,13 +259,19 @@ export default function Home() {
                 </Link>
               </div>
               <div className="flex justify-center">
-                <Image
-                  src="/images/placeholders/placeholder.svg"
-                  alt="Content Illustration"
-                  width={400}
-                  height={300}
-                  className="rounded-lg"
-                />
+                <div className="overflow-auto">
+                  <Image
+                    src="/images/illustrations/the-methodical-transformation-loop.png"
+                    alt="The Methodical Transformation Loop diagram showing how Methodical Cloud turns confusion into clarity"
+                    width={800}
+                    height={600}
+                    className="rounded-lg"
+                  />
+                </div>
+                <p className="text-sm text-gray-400 mt-2 text-center">
+                  The Methodical Transformation Loop: How we go from confusion
+                  to clarity through diagrams, writing, and conversation.
+                </p>
               </div>
             </div>
           </div>

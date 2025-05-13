@@ -31,10 +31,13 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
               <p className="text-gray-300 mb-4">
-                Methodical Cloud was created to deliver automation wisdom, deep
-                technical clarity, and architectural insight through diagrams,
-                short-form content, and podcast storytelling—building systems
-                and mindsets that scale.
+                Methodical Cloud was created to deliver{' '}
+                <strong>automation wisdom</strong>,{' '}
+                <strong>deep technical clarity</strong>, and{' '}
+                <strong>architectural insight</strong> through{' '}
+                <strong>diagrams</strong>, <strong>short-form content</strong>,
+                and <strong>podcast storytelling</strong>—building systems and
+                mindsets that scale.
               </p>
               <p className="text-gray-300 mb-4">
                 We believe in demystifying automation, promoting clarity in
@@ -45,6 +48,10 @@ export default function AboutPage() {
                 Our approach is technical yet personable, eccentric yet
                 grounded—where pragmatic engineering meets creative
                 storytelling.
+              </p>
+              <p className="text-gray-300 mt-4 italic">
+                We translate chaos into clarity one diagram at a time—and we do
+                it without boring anyone to death.
               </p>
             </div>
             <div className="flex justify-center">
@@ -66,6 +73,9 @@ export default function AboutPage() {
       <section className="py-16 bg-navy-900">
         <div className="container-custom">
           <h2 className="text-3xl font-bold mb-6 text-center">The Evolution</h2>
+          <p className="text-center text-gray-400 mb-8">
+            A visual journey through our evolution
+          </p>
           <div className="max-w-3xl mx-auto">
             <div className="relative pl-8 pb-8 border-l border-blue-500">
               <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-2 top-0"></div>
@@ -149,6 +159,13 @@ export default function AboutPage() {
                 maintainable systems and sharing his knowledge through
                 open-source contributions, technical writing, and community
                 engagement.
+              </p>
+              <p className="text-gray-300 mb-4">
+                Larry’s work has been featured in open-source communities,
+                podcasts, and engineering teams across industries. His
+                down-to-earth, opinionated style resonates with those who
+                appreciate honest takes and real-world guidance over buzzwords
+                and fluff.
               </p>
               <p className="text-gray-300 mb-6">
                 Methodical Cloud represents Larry's vision for technical content

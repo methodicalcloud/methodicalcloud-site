@@ -1,8 +1,9 @@
-import ContactForm from "@/components/contact-form"
+import ContactForm from '@/components/contact-form'
 
 export const metadata = {
-  title: "Contact | Methodical Cloud",
-  description: "Get in touch with Methodical Cloud for content feedback, podcast suggestions, or collaboration ideas",
+  title: 'Contact | Methodical Cloud',
+  description:
+    'Get in touch with Methodical Cloud for content feedback, podcast suggestions, or collaboration ideas',
 }
 
 export default function ContactPage() {
@@ -17,8 +18,9 @@ export default function ContactPage() {
             </div>
             <h1 className="mb-4">Connect With Methodical Cloud</h1>
             <p className="text-xl text-gray-300">
-              Have feedback on content, podcast topic suggestions, or just want to say hello? I'd love to hear from you
-              about the blog posts, diagrams, or podcast episodes.
+              Have feedback on content, podcast topic suggestions, or just want
+              to say hello? I'd love to hear from you about the blog posts,
+              diagrams, or podcast episodes.
             </p>
           </div>
         </div>
@@ -36,8 +38,14 @@ export default function ContactPage() {
                   <div className="text-3xl mr-4">📬</div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email</h3>
-                    <p className="text-gray-300 mb-2">Content feedback or podcast suggestions?</p>
-                    <a href="mailto:contact@methodicalcloud.com" className="text-blue-400 hover:text-blue-300">
+                    <p className="text-gray-300 mb-2">
+                      Got thoughts, critiques, or a spark of genius? Fire it off
+                      to our inbox.
+                    </p>
+                    <a
+                      href="mailto:contact@methodicalcloud.com"
+                      className="text-blue-400 hover:text-blue-300"
+                    >
                       contact@methodicalcloud.com
                     </a>
                   </div>
@@ -47,14 +55,17 @@ export default function ContactPage() {
                   <div className="text-3xl mr-4">🛠️</div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">GitHub</h3>
-                    <p className="text-gray-300 mb-2">Check out open-source diagrams and code examples.</p>
+                    <p className="text-gray-300 mb-2">
+                      Browse the diagram graveyard, code experiments, and
+                      weirdly specific automations.
+                    </p>
                     <a
-                      href="https://github.com/mrlesmithjr"
+                      href="https://github.com/methodicalcloud"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:text-blue-300"
                     >
-                      github.com/mrlesmithjr
+                      github.com/methodicalcloud
                     </a>
                   </div>
                 </div>
@@ -64,7 +75,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Twitter / X</h3>
                     <p className="text-gray-300 mb-2">
-                      Follow our official account for content updates and diagram drops.
+                      Follow our official account for content updates and
+                      diagram drops.
                     </p>
                     <a
                       href="https://x.com/methodicalcloud"
@@ -81,7 +93,9 @@ export default function ContactPage() {
                   <div className="text-3xl mr-4">🧭</div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">LinkedIn</h3>
-                    <p className="text-gray-300 mb-2">Connect professionally.</p>
+                    <p className="text-gray-300 mb-2">
+                      Connect professionally.
+                    </p>
                     <a
                       href="https://linkedin.com/in/mrlesmithjr"
                       target="_blank"
@@ -111,7 +125,10 @@ export default function ContactPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
-                    <span>You found something interesting in the diagrams or blog posts</span>
+                    <span>
+                      You found something interesting in the diagrams or blog
+                      posts
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -121,8 +138,9 @@ export default function ContactPage() {
               <div className="bg-navy-800 rounded-lg border border-navy-700 p-8">
                 <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
                 <p className="text-gray-300 mb-6">
-                  Have feedback on content or a podcast topic suggestion? Fill out the form below and I'll get back to
-                  you as soon as possible.
+                  Have feedback on content or a podcast topic suggestion? Fill
+                  out the form below and I'll get back to you as soon as
+                  possible.
                 </p>
                 <ContactForm />
               </div>
@@ -135,11 +153,14 @@ export default function ContactPage() {
       <section className="py-16 bg-navy-900">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Let's Make Systems That Don't Suck</h2>
+            <h2 className="text-3xl font-bold mb-6">
+              Let's Make Systems That Don't Suck
+            </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Through educational content, diagrams, and podcast episodes, Methodical Cloud aims to share knowledge and
-              insights about building better systems. Explore our content to learn more about automation, clarity, and
-              systems thinking.
+              Through educational content, diagrams, and podcast episodes,
+              Methodical Cloud aims to share knowledge and insights about
+              building better systems. Explore our content to learn more about
+              automation, clarity, and systems thinking.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="/blog" className="btn-secondary">
