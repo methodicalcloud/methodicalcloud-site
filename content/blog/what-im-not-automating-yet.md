@@ -5,8 +5,8 @@ excerpt: "Automation is powerful—but knowing when to wait is even more importa
 tags: [automation, systems, strategy, intentionality]
 author: "Larry Smith Jr."
 authorRole: "Founder, Methodical Cloud"
-description: Everyone talks about what they’re automating. Here’s a look at what I’m deliberately not automating—and why that matters more than you think.
-slug: what-im-not-automating-yet
+description: "Everyone talks about what they’re automating. Here’s a look at what I’m deliberately not automating—and why that matters more than you think."
+slug: "what-im-not-automating-yet"
 revision: "1.0"
 purpose: "Explain the rationale behind deliberately delaying automation in specific contexts"
 ---
