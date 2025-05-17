@@ -5,8 +5,8 @@ excerpt: "Perfection is the enemy of progress—especially in systems work. Lear
 tags: [automation, delivery, systems, mindset]
 author: "Larry Smith Jr."
 authorRole: "Founder, Methodical Cloud"
-description: Perfect systems don’t exist. But done systems—ones that actually ship and evolve—are where real progress happens. Here’s why I favor clarity over polish.
-slug: done-is-better-than-perfect
+description: "Perfect systems don’t exist. But done systems—ones that actually ship and evolve—are where real progress happens. Here’s why I favor clarity over polish."
+slug: "done-is-better-than-perfect"
 revision: "1.0"
 purpose: "Encourage a bias for action over polish in systems work and automation delivery"
 ---
