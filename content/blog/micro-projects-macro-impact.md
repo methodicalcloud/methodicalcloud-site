@@ -1,7 +1,10 @@
 ---
 title: "Micro-Projects, Macro Impact"
 date: "2025-05-16"
+excerpt: "Why small, focused efforts often lead to the biggest breakthroughs—and how to use them to drive clarity and momentum."
 tags: ["systems", "strategy", "momentum"]
+author: "Larry Smith Jr."
+authorRole: "Founder, Methodical Cloud"
 description: "Why small, focused projects are the secret weapon behind big strategic change."
 slug: "micro-projects-macro-impact"
 revision: "1.0"

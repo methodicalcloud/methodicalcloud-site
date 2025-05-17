@@ -1,7 +1,10 @@
 ---
 title: "What I'm Not Automating (Yet) — And Why That's Intentional"
 date: "2025-05-14"
+excerpt: "Automation is powerful—but knowing when to wait is even more important. Here's why I’m intentionally holding back."
 tags: [automation, systems, strategy, intentionality]
+author: "Larry Smith Jr."
+authorRole: "Founder, Methodical Cloud"
 description: Everyone talks about what they’re automating. Here’s a look at what I’m deliberately not automating—and why that matters more than you think.
 slug: what-im-not-automating-yet
 revision: "1.0"
