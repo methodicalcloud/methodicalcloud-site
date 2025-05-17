@@ -1,6 +1,6 @@
 ---
 title: "What I'm Not Automating (Yet) — And Why That's Intentional"
-date: 2025-05-14
+date: "2025-05-14"
 tags: [automation, systems, strategy, intentionality]
 description: Everyone talks about what they’re automating. Here’s a look at what I’m deliberately not automating—and why that matters more than you think.
 slug: what-im-not-automating-yet

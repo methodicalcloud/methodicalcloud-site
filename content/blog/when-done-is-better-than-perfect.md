@@ -1,6 +1,6 @@
 ---
 title: "When Done Is Better Than Perfect (Especially in Systems Work)"
-date: 2025-05-14
+date: "2025-05-14"
 tags: [automation, delivery, systems, mindset]
 description: Perfect systems don’t exist. But done systems—ones that actually ship and evolve—are where real progress happens. Here’s why I favor clarity over polish.
 slug: done-is-better-than-perfect
