@@ -16,21 +16,21 @@ Everyone loves showing off what they’ve automated.
 
 CI/CD pipelines. Air-gapped backups. Coffee makers. You name it.
 
-But I want to talk about something different: what I’m _not_ automating.
+But I want to discuss something different: what I’m _not_ automating.
 
-Not because it’s hard. Not because I can’t. But because it’s not ready—yet.
+Not because it’s hard. Not because I can’t. But because it’s not ready yet.
 Knowing when _not_ to automate is just as important as knowing how.
 
 ## Why I Hold Back Sometimes
 
-Automation isn’t just about saving time—it’s about **understanding** a system deeply enough to make good decisions. That takes:
+Automation isn’t just about saving time, it’s about **understanding** a system deeply enough to make good decisions. That takes:
 
 - Friction
 - Repetition
 - Manual observation
-- And sometimes, living with the mess for a bit
+- And, sometimes, living with the mess for a bit
 
-If you automate too soon, you risk encoding assumptions into scripts that outlive their usefulness—or worse, silently fail in ways no one sees coming.
+If you automate too soon, you risk encoding assumptions into scripts that outlive their usefulness, or worse, silently fail in ways no one sees coming.
 
 ## Here’s What I’m Holding Off On
 
@@ -42,7 +42,7 @@ And honestly? Sometimes flipping a switch is exactly the feedback I need.
 
 ### 2. CyberVault Code Sync & Pipelines
 
-The urge to wire it all up is strong—but that doesn’t mean it’s wise. This environment is highly sensitive, with hardware not even fully deployed. Instead of overengineering a brittle pipeline, I’m focusing on:
+The urge to wire it all up is strong, but that doesn’t mean it’s wise. This environment is highly sensitive, with hardware not even fully deployed. Instead of overengineering a brittle pipeline, I’m focusing on:
 
 - Modular code
 - Manual transfers where needed
@@ -52,18 +52,18 @@ This keeps things nimble and reduces rework as constraints shift.
 
 ### 3. My Own Publishing Workflow
 
-Yes, this blog could be fully automated—from Obsidian to GitHub to production.
+Yes, this blog could be fully automated, from Obsidian to GitHub to production.
 
-But that friction? I choose it—on purpose.
+But that friction? I choose it, on purpose.
 
 It forces me to look at the post one more time. To push it with intention. To stay involved in the act of shipping.
-That pause lets me refine the subtle stuff—the tone, the timing, the intention.
+That pause lets me refine the subtle stuff, the tone, the timing, the intention.
 
 ## Wrapping It Up
 
 The goal of automation is **not** to remove every ounce of effort. It’s to reduce the _right_ friction.
 
-Sometimes you have to live with the pain before you know what’s worth relieving.
+Occasionally you have to live with the pain before you know what’s worth relieving.
 
 Automation isn’t the destination. It’s a privilege you earn by knowing what matters.
 
@@ -72,4 +72,4 @@ Automation isn’t the destination. It’s a privilege you earn by knowing what 
 Will I automate this someday? Probably.
 But right now, I’m paying attention.
 
-Methodical beats mechanical—at least until the system is ready to carry the weight.
+Methodical beats mechanical, at least until the system is ready to carry the weight.

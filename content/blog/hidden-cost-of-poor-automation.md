@@ -19,7 +19,7 @@ But if you've ever inherited a janky script with five layers of fragile dependen
 
 ## Why It Matters
 
-Too often, teams rush into automation thinking it's a shortcut. A way to save time. But skipping straight to code—without diagramming, without mapping dependencies, without **understanding the system**—is like paving over a pothole without fixing the road underneath.
+Too often, teams rush into automation thinking it's a shortcut. A way to save time. But skipping straight to code, without diagramming, without mapping dependencies, without **understanding the system** is like paving over a pothole without fixing the road underneath.
 
 The result? Systems that:
 
@@ -34,7 +34,7 @@ What you save in the short term, you pay back tenfold in confusion, outages, or 
 
 ### 1. Speed Without Structure Is a Liability
 
-It's tempting to automate the manual thing right away. And sometimes, yes, quick wins matter. But without a clear understanding of the process flow and business logic, you're not automating a solution—you're encoding a guess.
+It's tempting to automate the manual thing right away. And sometimes, yes, quick wins matter. But without a clear understanding of the process flow and business logic, you're not automating a solution, you're encoding a guess.
 
 ### 2. Diagrams Are Not Optional
 
@@ -44,7 +44,7 @@ Visualizing a system before automating it isn't just for architects. Diagrams fo
 - Who owns each piece?
 - What happens when things fail?
 
-Without a diagram, assumptions thrive—and assumptions break systems.
+Without a diagram, assumptions thrive, and assumptions break systems.
 
 ### 3. The Real Cost Is Downstream
 
@@ -58,7 +58,7 @@ Suddenly, your brittle automation is:
 
 And no one wants to touch it, because it “just barely works.”
 
-> I've seen a 15-line Bash script quietly become the backbone of a production deployment—and nobody knew how it worked after the original dev left.
+> I've seen a 15-line Bash script quietly become the backbone of a production deployment, and nobody knew how it worked after the original dev left.
 
 ### **Wrapping It Up**
 
@@ -68,9 +68,9 @@ If you're serious about automation, be serious about **clarity**.
 - **Ask better questions**
 - **Name the system before you script the fix**
 
-Because clarity isn't just good hygiene—it's a safeguard for your time, your team, and your sanity.
+Because clarity isn't just good hygiene, it's a safeguard for your time, your team, and your sanity.
 
-> At Methodical Cloud, we don't chase complexity. We untangle it—one weird little diagram at a time.
+> At Methodical Cloud, we don't chase complexity. We untangle it, one weird little diagram at a time.
 
 ---
 

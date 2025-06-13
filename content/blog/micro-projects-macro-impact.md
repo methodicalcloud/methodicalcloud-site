@@ -10,7 +10,7 @@ slug: "micro-projects-macro-impact"
 revision: "1.0"
 ---
 
-Ever look back at your week wondering where the time went—only to realize you actually moved the needle?
+Ever look back at your week, wondering where the time went, only to realize you actually moved the needle?
 
 That’s been me lately. Every week. And that’s the power of micro-projects: momentum without the mayhem.
 
@@ -18,9 +18,9 @@ At Methodical Cloud, I’ve learned that sharp, self-contained projects often ou
 
 ## Why It Matters
 
-We love to romanticize big vision work. Multi-phase. Cross-functional. Diagrams with too many arrows.
+We love to romanticize big vision work. Multiphase. Cross-functional. Diagrams with too many arrows.
 
-But real change—the kind people notice and rally around—often starts from:
+But real change, the kind people notice and rally around, often starts from:
 
 - Fixing a nagging inefficiency
 - Documenting a previously tribal process
@@ -64,14 +64,14 @@ You become the person who:
 - Clarifies
 - Makes it better
 
-*Over time, this turns into influence—not the polished kind, but the kind that gets things unstuck and makes systems suck less.*
+*Over time, this turns into influence, not the polished kind, but the kind that gets things unstuck and makes systems suck less.*
 
 ## Wrapping It Up
 
-Systems evolve through small, intentional moves—not sweeping overhauls.
+Systems evolve through small, intentional moves, not sweeping overhauls.
 
 Micro-projects aren’t the warm-up. They *are* the work.
 
 Build something small. Make it useful. Make it better. Then keep moving.
 
-> Methodical moves. Eccentric energy. That’s how the cloud gets weird—in a good way.
+> Methodical moves. Eccentric energy. That’s how the cloud gets weird, in a good way.

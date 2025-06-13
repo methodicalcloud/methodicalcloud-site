@@ -13,9 +13,9 @@ Ever feel like your brain is tabbed out like a Chrome window with 84 open tabs?
 
 Same.
 
-For folks with ADD (like me), context switching isn't just an inconvenience—it's the natural state of things. I bounce between problems, people, systems, and ideas constantly. And somehow, I mostly remember everything. I don't take notes for myself—I take them for *other people*.
+For folks with ADD (like me), context switching isn't just an inconvenience, it's the natural state of things. I bounce between problems, people, systems, and ideas constantly. And somehow, I mostly remember everything. I don't take notes for myself, I take them for *other people*.
 
-So no, I don't have some perfect “system.” But I do have a few things that help me manage the chaos without losing momentum—or losing my mind.
+So no, I don't have some perfect “system.” But I do have a few things that help me manage the chaos without losing momentum, or losing my mind.
 
 ## Why It Matters
 
@@ -34,22 +34,22 @@ And if you're wired like I am, that can be fuel *or* fire.
 
 ## What Helps
 
-### 1. Trust Your Brain—But Reset It
+### 1. Trust Your Brain, But Reset It
 
 I don't rely on notes, but I do rely on *rhythm*.
 
 - Morning focus ritual (sometimes just sitting in silence with coffee)
-- End-of-day recalibration (not a checklist—just asking myself, “Did I finish what mattered today?”)
+- End-of-day recalibration (not a checklist, just asking myself, “Did I finish what mattered today?”)
 - White space between tasks. Even 3–5 minutes helps reset my brain for the next jump.
 
 ### 2. Define What's “Now”
 
-With so much flying at me, I have to define what's *now*—the one thing I'll snap back to when things get chaotic.
+With so much flying at me, I have to define what's *now*, the one thing I'll snap back to when things get chaotic.
 
 That might be:
 > “This hour is for solving X. Interruptions go on the shelf.”
 
-This isn't rigid planning—it's intentional anchoring.
+This isn't rigid planning, it's intentional anchoring.
 
 ### 3. Externalize for Others, Not Me
 
@@ -67,7 +67,7 @@ I don't beat context switching. I *work with it*.
 
 > The goal isn't perfect focus. The goal is sustainable flow.
 
-At Methodical Cloud, we embrace weird workflows. Whatever helps you move through complexity without collapsing under it—that's the real system.
+At Methodical Cloud, we embrace weird workflows. Whatever helps you move through complexity without collapsing under it, that's the real system.
 
 ## Related Links & Resources
 

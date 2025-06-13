@@ -17,7 +17,7 @@ I don't take notes because I forget things.
 
 I take notes because I'm surrounded by people who *will*.
 
-If you've ever worked with me, you know I can keep a lot of context in my head. I switch between systems, teams, and priorities all day. It's chaotic—but it works. Mostly.
+If you've ever worked with me, you know I can keep a lot of context in my head. I switch between systems, teams, and priorities all day. It's chaotic, but it works. Mostly.
 
 What doesn't work is expecting other people to live inside my brain.
 
@@ -67,7 +67,7 @@ Not because I need them, but because they make it easier to hand off clarity to 
 
 Obsidian isn't my second brain. It's my **external translator**.
 
-It helps me go from abstract to actionable, from intuition to alignment. And that's not just valuable for me—it's critical for anyone working with me.
+It helps me go from abstract to actionable, from intuition to alignment. And that's not just valuable for me, it's critical for anyone working with me.
 
 > **Thinking isn't the hard part. Making that thinking useful to others is.**
 
