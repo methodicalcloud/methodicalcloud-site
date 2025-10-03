@@ -1,16 +1,15 @@
 ---
 title: "What I'm Not Automating (Yet) — And Why That's Intentional"
-date: "2025-05-14"
+date: '2025-05-14'
 excerpt: "Automation is powerful—but knowing when to wait is even more important. Here's why I’m intentionally holding back."
 tags: [automation, systems, strategy, intentionality]
-author: "Larry Smith Jr."
-authorRole: "Founder, Methodical Cloud"
-description: "Everyone talks about what they’re automating. Here’s a look at what I’m deliberately not automating—and why that matters more than you think."
-slug: "what-im-not-automating-yet"
-revision: "1.0"
-purpose: "Explain the rationale behind deliberately delaying automation in specific contexts"
+author: 'Larry Smith Jr.'
+authorRole: 'Founder, Methodical Cloud'
+description: 'Everyone talks about what they’re automating. Here’s a look at what I’m deliberately not automating—and why that matters more than you think.'
+slug: 'what-im-not-automating-yet'
+revision: '1.0'
+purpose: 'Explain the rationale behind deliberately delaying automation in specific contexts'
 ---
-
 
 Everyone loves showing off what they’ve automated.
 
@@ -34,23 +33,23 @@ If you automate too soon, you risk encoding assumptions into scripts that outliv
 
 ## Here’s What I’m Holding Off On
 
-### 1. Parts of My Home Assistant Setup
+### 1. Early Product Features & User Flows
 
-Could I automate more lights, fans, or even daily schedules? Sure. But I’m still learning how the house _feels_ in different seasons and times of day. Until I get that rhythm, I’d rather keep the control manual.
+Could I automate every onboarding step, error handler, and notification? Sure. But I'm still learning how users actually interact with the product in real scenarios. Until I see those patterns clearly, I'd rather keep certain touchpoints manual.
 
-And honestly? Sometimes flipping a switch is exactly the feedback I need.
+And honestly? Sometimes clicking through a flow yourself is exactly the feedback you need.
 
-### 2. CyberVault Code Sync & Pipelines
+### 2. Internal Development Pipelines
 
-The urge to wire it all up is strong, but that doesn’t mean it’s wise. This environment is highly sensitive, with hardware not even fully deployed. Instead of overengineering a brittle pipeline, I’m focusing on:
+The urge to wire up full CI/CD automation is strong, but that doesn't mean it's wise—especially when requirements are still shifting. Instead of overengineering a brittle pipeline too early, I'm focusing on:
 
-- Modular code
-- Manual transfers where needed
+- Modular, testable code
+- Manual deployments where needed
 - Clarity in every step
 
-This keeps things nimble and reduces rework as constraints shift.
+This keeps things nimble and reduces rework as constraints evolve.
 
-### 3. My Own Publishing Workflow
+### 3. Publishing Workflow
 
 Yes, this blog could be fully automated, from Obsidian to GitHub to production.
 

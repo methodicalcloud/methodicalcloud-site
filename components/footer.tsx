@@ -19,8 +19,8 @@ export default function Footer() {
               <h3 className="text-xl font-bold ml-3">Methodical Cloud</h3>
             </div>
             <p className="mb-4 text-gray-300">
-              Automation, clarity, and systems that don't suck. A platform for
-              demystifying automation and promoting clarity in systems thinking.
+              Building AI-powered products that don't suck. Sharing insights on
+              automation, infrastructure, and systems design.
             </p>
             <SocialIcons size="sm" />
           </div>

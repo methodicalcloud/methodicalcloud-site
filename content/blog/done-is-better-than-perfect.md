@@ -1,14 +1,14 @@
 ---
-title: "When Done Is Better Than Perfect (Especially in Systems Work)"
-date: "2025-05-14"
+title: 'When Done Is Better Than Perfect (Especially in Systems Work)'
+date: '2025-05-14'
 excerpt: "Perfection is the enemy of progress—especially in systems work. Learn why shipping 'done' is more valuable than waiting for perfect."
 tags: [automation, delivery, systems, mindset]
-author: "Larry Smith Jr."
-authorRole: "Founder, Methodical Cloud"
-description: "Perfect systems don’t exist. But done systems—ones that actually ship and evolve—are where real progress happens. Here’s why I favor clarity over polish."
-slug: "done-is-better-than-perfect"
-revision: "1.0"
-purpose: "Encourage a bias for action over polish in systems work and automation delivery"
+author: 'Larry Smith Jr.'
+authorRole: 'Founder, Methodical Cloud'
+description: 'Perfect systems don’t exist. But done systems—ones that actually ship and evolve—are where real progress happens. Here’s why I favor clarity over polish.'
+slug: 'done-is-better-than-perfect'
+revision: '1.0'
+purpose: 'Encourage a bias for action over polish in systems work and automation delivery'
 ---
 
 In automation and architecture, there’s one trap worse than shipping bad code: not shipping at all because you’re chasing perfect.
@@ -51,9 +51,9 @@ I’ve learned this lesson the hard way—across years of systems, clients, and 
 
 ### Where I Apply This
 
-#### 1. CyberVault Automation
+#### 1. Product Development
 
-We’re building in an environment where the hardware barely exists. Waiting for perfect here would be project quicksand. Instead, we’re focusing on:
+We're building software products where requirements evolve as we learn more about user needs. Waiting for perfect would be project quicksand. Instead, we focus on:
 
 - Modular, testable pieces
 - Clear documentation
@@ -61,9 +61,8 @@ We’re building in an environment where the hardware barely exists. Waiting for
 
 Ship early. Improve fast. Keep moving.
 
-#### 2. Diagrams, Docs, and Demos
+#### 2. Content and Documentation
 
-Some of my diagrams are ugly at first.
 Some posts feel half-baked when I hit publish.
 
 But done means people can react. And that reaction is what improves it. If I wait for every label, every arrow, every word to be “right,” I’ll miss the window to actually help someone.

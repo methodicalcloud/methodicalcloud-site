@@ -1,11 +1,11 @@
 ---
-title: "The Hidden Cost of Poor Automation: Why Clarity Matters"
-date: "2025-05-02"
+title: 'The Hidden Cost of Poor Automation: Why Clarity Matters'
+date: '2025-05-02'
 excerpt: "Automation without clarity isn't efficient—it's dangerous. This post explores why skipping the design phase leads to brittle systems, mounting tech debt, and frustrated teams."
-tags: ["automation", "clarity", "systems-thinking"]
-author: "Larry Smith Jr."
-authorRole: "Founder, Methodical Cloud"
-slug: "hidden-cost-of-poor-automation"
+tags: ['automation', 'clarity', 'systems-thinking']
+author: 'Larry Smith Jr.'
+authorRole: 'Founder, Methodical Cloud'
+slug: 'hidden-cost-of-poor-automation'
 description: "Rushing automation without proper design creates long-term tech debt and fragile workflows. Here's why clarity must come first."
 ---
 
@@ -71,10 +71,3 @@ If you're serious about automation, be serious about **clarity**.
 Because clarity isn't just good hygiene, it's a safeguard for your time, your team, and your sanity.
 
 > At Methodical Cloud, we don't chase complexity. We untangle it, one weird little diagram at a time.
-
----
-
-## Related Links & Resources
-
-- [Diagram the Damn Thing: Why Visuals Matter in Automation](/blog/diagram-the-damn-thing)
-- [Methodical Cloud](https://methodicalcloud.com)
