@@ -3,7 +3,7 @@ import ContactForm from '@/components/contact-form'
 export const metadata = {
   title: 'Contact | Methodical Cloud',
   description:
-    'Get in touch with Methodical Cloud for content feedback, podcast suggestions, or collaboration ideas',
+    'Get in touch with Methodical Cloud for content feedback, product ideas, or collaboration opportunities',
 }
 
 export default function ContactPage() {
@@ -138,9 +138,8 @@ export default function ContactPage() {
               <div className="bg-navy-800 rounded-lg border border-navy-700 p-8">
                 <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
                 <p className="text-gray-300 mb-6">
-                  Have feedback on content or a podcast topic suggestion? Fill
-                  out the form below and I'll get back to you as soon as
-                  possible.
+                  Have feedback on content or product ideas? Fill out the form
+                  below and I'll get back to you as soon as possible.
                 </p>
                 <ContactForm />
               </div>

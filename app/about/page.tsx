@@ -96,33 +96,17 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="relative pl-8 pb-8 border-l border-blue-500">
+            <div className="relative pl-8">
               <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-2 top-0"></div>
               <h3 className="text-xl font-bold mb-2">Methodical Cloud</h3>
               <p className="text-gray-300 mb-4">
-                Today, that journey continues with Methodical Cloud—a
-                content-driven platform dedicated to automation strategies,
-                scalable system design, and visual workflows. While the name has
-                changed, the core mission remains: bringing clarity to complex
-                systems through thoughtful, intentional design.
-              </p>
-            </div>
-
-            <div className="relative pl-8">
-              <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-2 top-0"></div>
-              <h3 className="text-xl font-bold mb-2">Diagram the Damn Thing</h3>
-              <p className="text-gray-300 mb-4">
-                The newest evolution is our podcast,{' '}
-                <Link
-                  href="/podcast"
-                  className="text-blue-400 hover:text-blue-300"
-                >
-                  Diagram the Damn Thing
-                </Link>
-                , which brings our visual-first approach to automation and
-                systems thinking to an audio format. Each episode is anchored by
-                a diagram and focuses on breaking down complex concepts into
-                clear, actionable insights.
+                Today, that journey continues with Methodical Cloud—building
+                intelligent software products alongside sharing technical
+                knowledge. We've evolved from content-first to product-first,
+                focusing on AI-powered solutions like FinInsights while sharing
+                insights through our blog. The core mission remains: bringing
+                clarity to complex systems through thoughtful, intentional
+                design.
               </p>
             </div>
           </div>
@@ -158,11 +142,10 @@ export default function AboutPage() {
                 engagement.
               </p>
               <p className="text-gray-300 mb-4">
-                Larry’s work has been featured in open-source communities,
-                podcasts, and engineering teams across industries. His
-                down-to-earth, opinionated style resonates with those who
-                appreciate honest takes and real-world guidance over buzzwords
-                and fluff.
+                Larry's work has been featured in open-source communities and
+                engineering teams across industries. His down-to-earth,
+                opinionated style resonates with those who appreciate honest
+                takes and real-world guidance over buzzwords and fluff.
               </p>
               <p className="text-gray-300 mb-6">
                 Methodical Cloud represents Larry's vision for technical content
