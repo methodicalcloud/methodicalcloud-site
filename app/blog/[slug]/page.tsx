@@ -1,99 +1,30 @@
-import Link from 'next/link'
-import { ArrowLeft, Calendar, Tag } from 'lucide-react'
-import { getAllPostSlugs, getPostData } from '@/lib/blog'
-import type { Metadata } from 'next'
-import SocialShare from '@/components/social-share'
+import Link from "next/link";
+import { getAllPostSlugs, getPostBySlug } from "@/lib/blog";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string }
-}): Promise<Metadata> {
-  const slug = (await params).slug
-  const post = await getPostData(slug)
-  return {
-    title: `${post.title} | Methodical Cloud Blog`,
-    description: post.excerpt,
-  }
-}
+export const dynamic = "force-static";
+export async function generateStaticParams() { return getAllPostSlugs(); }
 
-export async function generateStaticParams() {
-  const paths = getAllPostSlugs()
-  return paths
-}
-
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
-  const slug = (await params).slug
-  const post = await getPostData(slug)
-
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = getPostBySlug(params.slug);
+  if (!post) return (
+    <main className="mx-auto max-w-3xl px-4 py-16">
+      <h1 className="text-2xl font-semibold">Not found</h1>
+      <p className="mt-2 text-muted-foreground">We couldn’t find that post. <Link href="/blog" className="underline">Back to blog</Link>.</p>
+    </main>
+  );
   return (
-    <div>
-      {/* Blog Post Header */}
-      <section className="py-16 bg-navy-900">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            <Link
-              href="/blog"
-              className="inline-flex items-center text-gray-300 hover:text-blue-400 mb-6 transition-colors"
-            >
-              <ArrowLeft className="mr-2 w-4 h-4" /> Back to all posts
-            </Link>
-            <h1 className="mb-6">{post.title}</h1>
-            <div className="flex flex-wrap items-center gap-4 text-gray-300">
-              <div className="flex items-center">
-                <Calendar className="w-4 h-4 mr-2" />
-                <span>{post.date}</span>
-              </div>
-              <div className="flex items-center">
-                <span>
-                  By {post.author}, {post.authorRole}
-                </span>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-2 mt-4">
-              {post.tags.map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/topics/${tag}`}
-                  className="text-sm bg-blue-900/30 text-blue-400 px-2 py-1 rounded-md hover:bg-blue-800/30 transition-colors inline-flex items-center"
-                >
-                  <Tag className="w-3 h-3 mr-1" />
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </div>
+    <main className="mx-auto max-w-3xl px-4 py-12">
+      <p className="text-sm text-muted-foreground">{post.date ?? ""}</p>
+      <h1 className="mt-2 text-4xl font-extrabold tracking-tight">{post.title}</h1>
+      {post.tags && post.tags.length > 0 && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {post.tags.map((t) => <Link key={t} href={`/topics/${t}`} className="rounded-full border px-2.5 py-0.5 text-xs text-muted-foreground hover:bg-accent">{t}</Link>)}
         </div>
-      </section>
-
-      {/* Blog Post Content */}
-      <section className="py-16">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            <div
-              className="prose-custom"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
-
-            <div className="mt-12 pt-8 border-t border-navy-700">
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                <Link
-                  href="/blog"
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
-                >
-                  <ArrowLeft className="mr-2 w-4 h-4" /> Back to all posts
-                </Link>
-
-                <SocialShare title={post.title} url={`/blog/${post.slug}`} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
+      )}
+      <div className="mt-8 prose prose-invert max-w-none">
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </div>
+      <div className="mt-12"><Link href="/blog" className="text-primary hover:underline">← Back to blog</Link></div>
+    </main>
+  );
 }

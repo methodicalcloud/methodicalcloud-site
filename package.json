@@ -6,10 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "prebuild": "node scripts/build-posts-manifest.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
+    "@opennextjs/cloudflare": "^1.6.5",
     "@radix-ui/react-accordion": "latest",
     "@radix-ui/react-alert-dialog": "latest",
     "@radix-ui/react-aspect-ratio": "latest",
@@ -44,21 +49,16 @@
     "cmdk": "latest",
     "date-fns": "4.1.0",
     "embla-carousel-react": "latest",
-    "fs": "latest",
-    "gray-matter": "latest",
     "input-otp": "latest",
     "lucide-react": "^0.454.0",
     "next": "15.2.4",
     "next-themes": "latest",
-    "path": "latest",
     "react": "^19",
     "react-day-picker": "latest",
     "react-dom": "^19",
     "react-hook-form": "latest",
     "react-resizable-panels": "latest",
     "recharts": "latest",
-    "remark": "latest",
-    "remark-html": "latest",
     "sonner": "latest",
     "tailwind-merge": "^2.5.5",
     "vaul": "latest",
@@ -71,10 +71,17 @@
     "eslint": "^9.26.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.0",
+    "gray-matter": "^4.0.3",
     "postcss": "^8",
     "prettier": "^3.5.3",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.31.0"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }

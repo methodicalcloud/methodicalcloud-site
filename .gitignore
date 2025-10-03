@@ -30,3 +30,6 @@ next-env.d.ts
 methodicalcloud-site.zip
 
 .vscode/
+
+.open-next/
+app/_data/
