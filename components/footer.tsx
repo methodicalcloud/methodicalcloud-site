@@ -52,30 +52,6 @@ export default function Footer() {
                   Blog
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/podcast"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  Podcast
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/diagrams"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  Diagrams
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/archives"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  Archives
-                </Link>
-              </li>
             </ul>
           </div>
 
