@@ -11,7 +11,6 @@ const navigation = [
   { name: 'Blog', href: '/blog' },
   { name: 'Podcast', href: '/podcast' },
   { name: 'Diagrams', href: '/diagrams' },
-  { name: 'Merch', href: '/merch' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ]

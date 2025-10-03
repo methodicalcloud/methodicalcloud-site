@@ -70,14 +70,6 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/merch"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  Merch
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/archives"
                   className="text-gray-300 hover:text-blue-400 transition-colors"
                 >
