@@ -186,11 +186,35 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Current Focus</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Methodical Cloud is a content-first initiative focused exclusively
-              on building a knowledge hub through our blog, podcast, and visual
-              resources. We're taking a methodical approach to content creation,
-              focusing on quality educational material and community building.
+              Methodical Cloud develops intelligent software solutions alongside
+              our content platform. We're building products that empower
+              data-driven decision making while sharing knowledge through our
+              blog, podcast, and visual resources.
             </p>
+            <div className="mb-8 p-6 bg-navy-800 rounded-lg border border-navy-700 text-left">
+              <h3 className="text-xl font-bold mb-3">Product Portfolio</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-blue-400 mb-2">
+                    FinInsights
+                  </h4>
+                  <p className="text-gray-300 mb-2">
+                    Our flagship product - an AI-powered personal finance
+                    intelligence platform that transforms YNAB data into
+                    actionable insights with smart budget optimization and
+                    predictive analytics.
+                  </p>
+                  <a
+                    href="https://fininsights.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 text-sm"
+                  >
+                    Learn more at fininsights.io →
+                  </a>
+                </div>
+              </div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
               <div className="card p-6">
                 <h3 className="text-xl font-bold mb-3">Content Creation</h3>

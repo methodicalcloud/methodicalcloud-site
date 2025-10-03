@@ -54,8 +54,84 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Core Themes Section */}
+      {/* Products Section */}
       <section className="py-20">
+        <div className="container-custom">
+          <h2 className="section-title text-center">Our Products</h2>
+          <p className="section-subtitle text-center">
+            Intelligent software solutions that empower data-driven decision
+            making
+          </p>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="card p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="inline-block px-3 py-1 bg-blue-900/30 rounded-full text-sm font-semibold text-blue-400 mb-4">
+                    Flagship Product
+                  </div>
+                  <h3 className="text-3xl font-bold mb-4">FinInsights</h3>
+                  <p className="text-gray-300 mb-6">
+                    AI-powered personal finance intelligence platform that
+                    transforms your YNAB data into actionable insights. Get
+                    smart budget optimization, anomaly detection, and predictive
+                    analytics to make better financial decisions.
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <a
+                      href="https://fininsights.io"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary"
+                    >
+                      Learn More <ArrowRight className="ml-2 w-4 h-4 inline" />
+                    </a>
+                    <a
+                      href="https://fininsights.io/register"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-secondary"
+                    >
+                      Get Started Free
+                    </a>
+                  </div>
+                </div>
+                <div className="flex justify-center">
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div className="bg-navy-800 p-4 rounded-lg">
+                      <div className="text-3xl mb-2">🤖</div>
+                      <div className="text-sm text-gray-300">
+                        AI-Powered Insights
+                      </div>
+                    </div>
+                    <div className="bg-navy-800 p-4 rounded-lg">
+                      <div className="text-3xl mb-2">📊</div>
+                      <div className="text-sm text-gray-300">
+                        Budget Optimization
+                      </div>
+                    </div>
+                    <div className="bg-navy-800 p-4 rounded-lg">
+                      <div className="text-3xl mb-2">⚠️</div>
+                      <div className="text-sm text-gray-300">
+                        Anomaly Detection
+                      </div>
+                    </div>
+                    <div className="bg-navy-800 p-4 rounded-lg">
+                      <div className="text-3xl mb-2">📈</div>
+                      <div className="text-sm text-gray-300">
+                        Predictive Analytics
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Themes Section */}
+      <section className="py-20 bg-navy-900">
         <div className="container-custom">
           <h2 className="section-title text-center">Core Themes</h2>
           <p className="section-subtitle text-center">
@@ -103,7 +179,7 @@ export default function Home() {
       </section>
 
       {/* Diagrams Section */}
-      <section className="py-20 bg-navy-900">
+      <section className="py-20">
         <div className="container-custom">
           <h2 className="section-title text-center">Featured Diagrams</h2>
           <p className="section-subtitle text-center">

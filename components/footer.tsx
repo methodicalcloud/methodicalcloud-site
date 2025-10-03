@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy-900 border-t border-navy-700">
       <div className="container-custom py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
             <div className="flex items-center mb-4">
               <Image
@@ -23,6 +23,22 @@ export default function Footer() {
               demystifying automation and promoting clarity in systems thinking.
             </p>
             <SocialIcons size="sm" />
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Products</h3>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="https://fininsights.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-blue-400 transition-colors"
+                >
+                  FinInsights
+                </a>
+              </li>
+            </ul>
           </div>
 
           <div>
