@@ -1,15 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import {
-  ArrowRight,
-  Cpu,
-  Lightbulb,
-  BarChart3,
-  Workflow,
-  Podcast,
-  FileText,
-} from 'lucide-react'
-import DiagramPreview from '@/components/diagram-preview'
+import { ArrowRight, Cpu, Lightbulb, BarChart3, FileText } from 'lucide-react'
 import { getSortedPostsData } from '@/lib/blog'
 
 export default function Home() {
@@ -170,115 +161,42 @@ export default function Home() {
               <div className="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center mb-6">
                 <BarChart3 className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Visual Thinking</h3>
+              <h3 className="text-xl font-bold mb-3">Data-Driven</h3>
               <p className="text-gray-300">
-                Diagrams are foundational—every system, process, or idea is
-                better with a flow. We visualize complexity to make it
-                understandable.
+                Build with insights, not guesses. Our products and content focus
+                on turning complex data into clear, actionable intelligence that
+                drives better decisions.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Diagrams Section */}
+      {/* Content Section */}
       <section className="py-20">
         <div className="container-custom">
-          <h2 className="section-title text-center">Featured Diagrams</h2>
+          <h2 className="section-title text-center">Our Content</h2>
           <p className="section-subtitle text-center">
-            Visual representations of complex systems and processes to enhance
-            understanding
+            Technical insights on automation, system design, and building better
+            products
           </p>
 
-          <div className="diagram-grid">
-            <DiagramPreview
-              title="CI/CD Pipeline Flow"
-              description="A comprehensive visualization of a modern CI/CD pipeline with automated testing and deployment stages."
-              imageSrc="/images/placeholders/placeholder.svg"
-              href="/blog/hidden-cost-of-poor-automation"
-            />
-            <DiagramPreview
-              title="Kubernetes Architecture"
-              description="Breaking down the components of a Kubernetes cluster and how they interact."
-              imageSrc="/images/placeholders/placeholder.svg"
-              href="/blog/diagram-the-damn-thing"
-            />
-            <DiagramPreview
-              title="Event-Driven Systems"
-              description="Mapping out event flows in distributed systems and their implications for scalability."
-              imageSrc="/images/placeholders/placeholder.svg"
-              href="/blog/everything-should-be-virtual"
-            />
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/diagrams" className="btn-secondary">
-              View All Diagrams
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Content Types Section */}
-      <section className="py-20">
-        <div className="container-custom">
-          <h2 className="section-title text-center">Content Types</h2>
-          <p className="section-subtitle text-center">
-            Multiple formats to explore automation, system design, and technical
-            insights
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="max-w-2xl mx-auto">
             <div className="card p-8">
               <div className="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center mb-6">
                 <FileText className="w-6 h-6 text-blue-400" />
               </div>
               <h3 className="text-xl font-bold mb-3">Blog Posts</h3>
               <p className="text-gray-300 mb-4">
-                Written in Markdown with a focus on automation, system design,
-                infrastructure, and DevOps anti-patterns. Available in
-                short-form clarity or long-form deep dives.
+                In-depth articles on automation, system design, infrastructure,
+                and DevOps. Clear, practical insights from 20+ years of
+                engineering experience—no buzzwords, just what actually works.
               </p>
               <Link
                 href="/blog"
                 className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
               >
                 Read the Blog <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </div>
-
-            <div className="card p-8">
-              <div className="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center mb-6">
-                <Podcast className="w-6 h-6 text-blue-400" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Podcast Episodes</h3>
-              <p className="text-gray-300 mb-4">
-                15 minutes or less, anchored around a diagram or architectural
-                idea. Conversational and insightful, hosted by Larry Smith Jr.
-              </p>
-              <Link
-                href="/podcast"
-                className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
-              >
-                Listen to Episodes <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </div>
-
-            <div className="card p-8">
-              <div className="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center mb-6">
-                <Workflow className="w-6 h-6 text-blue-400" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Diagrams</h3>
-              <p className="text-gray-300 mb-4">
-                Flowcharts, automation visuals, and layered architecture with
-                clear labels, visual hierarchy, and minimalist design to
-                illustrate complex concepts.
-              </p>
-              <Link
-                href="/diagrams"
-                className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
-              >
-                Explore Diagrams <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -326,9 +244,8 @@ export default function Home() {
               <div>
                 <h2 className="mb-4">Interested in Our Content?</h2>
                 <p className="text-lg mb-6 text-gray-300">
-                  Reach out with feedback on our blog posts, diagrams, or
-                  podcast episodes. We'd love to hear what topics you'd like to
-                  see covered next.
+                  Reach out with feedback on our blog posts or product ideas.
+                  We'd love to hear what topics you'd like to see covered next.
                 </p>
                 <Link
                   href="/contact"
@@ -341,7 +258,7 @@ export default function Home() {
                 <div className="overflow-auto">
                   <Image
                     src="/images/illustrations/the-methodical-transformation-loop.png"
-                    alt="The Methodical Transformation Loop diagram showing how Methodical Cloud turns confusion into clarity"
+                    alt="The Methodical Transformation Loop showing how Methodical Cloud turns confusion into clarity"
                     width={800}
                     height={600}
                     className="rounded-lg"
@@ -349,7 +266,7 @@ export default function Home() {
                 </div>
                 <p className="text-sm text-gray-400 mt-2 text-center">
                   The Methodical Transformation Loop: How we go from confusion
-                  to clarity through diagrams, writing, and conversation.
+                  to clarity through writing, building, and conversation.
                 </p>
               </div>
             </div>

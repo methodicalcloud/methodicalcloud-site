@@ -18,9 +18,9 @@ export default function ContactPage() {
             </div>
             <h1 className="mb-4">Connect With Methodical Cloud</h1>
             <p className="text-xl text-gray-300">
-              Have feedback on content, podcast topic suggestions, or just want
-              to say hello? I'd love to hear from you about the blog posts,
-              diagrams, or podcast episodes.
+              Have feedback on content, product ideas, or just want to say
+              hello? I'd love to hear from you about the blog posts or our
+              products.
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">GitHub</h3>
                     <p className="text-gray-300 mb-2">
-                      Browse the diagram graveyard, code experiments, and
+                      Browse code experiments, open-source contributions, and
                       weirdly specific automations.
                     </p>
                     <a
@@ -75,8 +75,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Twitter / X</h3>
                     <p className="text-gray-300 mb-2">
-                      Follow our official account for content updates and
-                      diagram drops.
+                      Follow our official account for product updates and
+                      content releases.
                     </p>
                     <a
                       href="https://x.com/methodicalcloud"
@@ -113,11 +113,11 @@ export default function ContactPage() {
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
-                    <span>You have feedback on blog posts or diagrams</span>
+                    <span>You have feedback on blog posts or products</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
-                    <span>You have a topic suggestion for the podcast</span>
+                    <span>You have a product idea or feature suggestion</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
@@ -126,8 +126,8 @@ export default function ContactPage() {
                   <li className="flex items-start">
                     <span className="text-blue-400 mr-2">•</span>
                     <span>
-                      You found something interesting in the diagrams or blog
-                      posts
+                      You found something interesting in the blog posts or have
+                      questions about our products
                     </span>
                   </li>
                 </ul>
@@ -154,23 +154,20 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">
-              Let's Make Systems That Don't Suck
+              Let's Build Better Products Together
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Through educational content, diagrams, and podcast episodes,
-              Methodical Cloud aims to share knowledge and insights about
-              building better systems. Explore our content to learn more about
-              automation, clarity, and systems thinking.
+              Through intelligent software products and educational content,
+              Methodical Cloud shares knowledge and insights about building
+              better systems. Explore our products and blog to learn more about
+              automation, data-driven decisions, and pragmatic engineering.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
+              <a href="#products" className="btn-secondary">
+                View Our Products
+              </a>
               <a href="/blog" className="btn-secondary">
                 Read the Blog
-              </a>
-              <a href="/podcast" className="btn-secondary">
-                Listen to the Podcast
-              </a>
-              <a href="/diagrams" className="btn-secondary">
-                Explore Diagrams
               </a>
             </div>
           </div>

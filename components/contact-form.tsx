@@ -1,26 +1,37 @@
-"use client"
+'use client'
 
-import type React from "react"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import type React from 'react'
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Label } from '@/components/ui/label'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 
 export default function ContactForm() {
   const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-    interest: "",
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+    interest: '',
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitResult, setSubmitResult] = useState<{ success: boolean; message: string } | null>(null)
+  const [submitResult, setSubmitResult] = useState<{
+    success: boolean
+    message: string
+  } | null>(null)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target
     setFormState((prev) => ({ ...prev, [name]: value }))
   }
@@ -41,21 +52,23 @@ export default function ContactForm() {
       // Simulate successful submission
       setSubmitResult({
         success: true,
-        message: "Message received! I'll get back to you about your content feedback or question.",
+        message:
+          "Message received! I'll get back to you about your content feedback or question.",
       })
 
       // Reset form
       setFormState({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-        interest: "",
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        interest: '',
       })
     } catch (error) {
       setSubmitResult({
         success: false,
-        message: "There was an error submitting your message. Please try again or email directly.",
+        message:
+          'There was an error submitting your message. Please try again or email directly.',
       })
     } finally {
       setIsSubmitting(false)
@@ -99,9 +112,10 @@ export default function ContactForm() {
           </SelectTrigger>
           <SelectContent className="bg-navy-800 border-navy-700">
             <SelectItem value="blog">Blog Content Feedback</SelectItem>
-            <SelectItem value="diagrams">Diagram Feedback</SelectItem>
-            <SelectItem value="podcast">Podcast Topic Suggestion</SelectItem>
-            <SelectItem value="content-collab">Content Collaboration</SelectItem>
+            <SelectItem value="product">Product Feedback/Ideas</SelectItem>
+            <SelectItem value="content-collab">
+              Content Collaboration
+            </SelectItem>
             <SelectItem value="question">General Question</SelectItem>
             <SelectItem value="other">Something Else</SelectItem>
           </SelectContent>
@@ -135,16 +149,20 @@ export default function ContactForm() {
         />
       </div>
 
-      <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
-        {isSubmitting ? "Sending..." : "Send Message"}
+      <Button
+        type="submit"
+        className="w-full bg-blue-600 hover:bg-blue-700"
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? 'Sending...' : 'Send Message'}
       </Button>
 
       {submitResult && (
         <div
           className={`p-4 rounded-md ${
             submitResult.success
-              ? "bg-green-900/30 text-green-400 border border-green-800"
-              : "bg-red-900/30 text-red-400 border border-red-800"
+              ? 'bg-green-900/30 text-green-400 border border-green-800'
+              : 'bg-red-900/30 text-red-400 border border-red-800'
           }`}
         >
           {submitResult.message}

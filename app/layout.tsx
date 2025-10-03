@@ -8,9 +8,10 @@ import { ThemeProvider } from '@/components/theme-provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "Methodical Cloud | Automation, clarity, and systems that don't suck",
+  title:
+    'Methodical Cloud | Intelligent Software Solutions for Data-Driven Decisions',
   description:
-    'Delivering automation wisdom, deep technical clarity, and architectural insight through diagrams, short-form content, and podcast storytelling.',
+    'Building AI-powered products that transform complex data into actionable insights. Sharing practical knowledge through blog posts on automation, infrastructure, and systems design.',
   generator: 'v0.dev',
 }
 
