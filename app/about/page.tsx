@@ -31,27 +31,24 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
               <p className="text-gray-300 mb-4">
-                Methodical Cloud was created to deliver{' '}
-                <strong>automation wisdom</strong>,{' '}
-                <strong>deep technical clarity</strong>, and{' '}
-                <strong>architectural insight</strong> through{' '}
-                <strong>diagrams</strong>, <strong>short-form content</strong>,
-                and <strong>podcast storytelling</strong>—building systems and
-                mindsets that scale.
+                Methodical Cloud builds intelligent software products that
+                empower individuals and businesses to make better data-driven
+                decisions in personal finance, productivity, and security.
               </p>
               <p className="text-gray-300 mb-4">
-                We believe in demystifying automation, promoting clarity in
-                systems thinking, and offering thought leadership on
-                infrastructure, engineering culture, and DevOps.
+                We combine deep technical expertise in automation,
+                infrastructure, and systems design with a pragmatic, no-nonsense
+                approach to solving real problems. Our products are built on 20+
+                years of engineering experience—where clarity beats buzzwords
+                and useful beats perfect.
               </p>
               <p className="text-gray-300">
                 Our approach is technical yet personable, eccentric yet
-                grounded—where pragmatic engineering meets creative
-                storytelling.
+                grounded—where pragmatic engineering meets thoughtful design.
               </p>
               <p className="text-gray-300 mt-4 italic">
-                We translate chaos into clarity one diagram at a time—and we do
-                it without boring anyone to death.
+                We translate complex data into clarity—and we do it without
+                boring anyone to death.
               </p>
             </div>
             <div className="flex justify-center">
@@ -186,10 +183,11 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Current Focus</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Methodical Cloud develops intelligent software solutions alongside
-              our content platform. We're building products that empower
-              data-driven decision making while sharing knowledge through our
-              blog, podcast, and visual resources.
+              We're building intelligent software products that empower
+              data-driven decision making. Along the way, we share what we learn
+              through blog posts that break down complex automation,
+              infrastructure, and systems design topics—because building in
+              public builds better products.
             </p>
             <div className="mb-8 p-6 bg-navy-800 rounded-lg border border-navy-700 text-left">
               <h3 className="text-xl font-bold mb-3">Product Portfolio</h3>
@@ -217,38 +215,30 @@ export default function AboutPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
               <div className="card p-6">
-                <h3 className="text-xl font-bold mb-3">Content Creation</h3>
+                <h3 className="text-xl font-bold mb-3">Product Development</h3>
                 <p className="text-gray-300">
-                  Developing high-quality blog posts, podcast episodes, and
-                  diagrams that provide clear insights into automation and
-                  systems thinking.
+                  Building AI-powered software products that solve real problems
+                  in personal finance, productivity, and security—starting with
+                  FinInsights, our flagship personal finance intelligence
+                  platform.
                 </p>
               </div>
               <div className="card p-6">
-                <h3 className="text-xl font-bold mb-3">Community Building</h3>
+                <h3 className="text-xl font-bold mb-3">Technical Content</h3>
                 <p className="text-gray-300">
-                  Fostering a community of like-minded professionals interested
-                  in automation, clarity, and effective system design through
-                  educational content.
+                  Sharing insights on automation, infrastructure, and systems
+                  design through blog posts that provide clarity without the
+                  buzzwords—practical lessons from building real products.
                 </p>
               </div>
               <div className="card p-6">
-                <h3 className="text-xl font-bold mb-3">Knowledge Sharing</h3>
+                <h3 className="text-xl font-bold mb-3">Community Engagement</h3>
                 <p className="text-gray-300">
-                  Sharing practical insights and lessons learned through
-                  educational content about infrastructure, automation, and
-                  DevOps.
+                  Fostering a community of engineers and builders who value
+                  pragmatic solutions over hype, and clarity over complexity—one
+                  honest conversation at a time.
                 </p>
               </div>
-            </div>
-            <div className="mt-8 p-6 bg-navy-800 rounded-lg border border-navy-700 text-left">
-              <h3 className="text-xl font-bold mb-3">Important Note</h3>
-              <p className="text-gray-300">
-                Methodical Cloud is strictly a content platform for sharing
-                knowledge and does not offer consulting services or compete with
-                any professional services organizations. This is a personal
-                educational initiative focused on content creation only.
-              </p>
             </div>
           </div>
         </div>

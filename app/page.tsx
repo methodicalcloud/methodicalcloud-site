@@ -23,20 +23,23 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="mb-6">
-                <span className="text-gradient">Automation, clarity,</span> and
-                systems that don't suck.
+                <span className="text-gradient">
+                  Intelligent software solutions
+                </span>{' '}
+                for data-driven decision making.
               </h1>
               <p className="text-xl mb-8 text-gray-300">
-                Delivering automation wisdom, deep technical clarity, and
-                architectural insight through diagrams, short-form content, and
-                podcast storytelling—building systems and mindsets that scale.
+                We build AI-powered products that transform complex data into
+                actionable insights—from personal finance to productivity and
+                security. Backed by real-world expertise in automation, systems
+                thinking, and pragmatic engineering.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/blog" className="btn-primary">
-                  Read the Blog
+                <Link href="#products" className="btn-primary">
+                  Explore Our Products
                 </Link>
-                <Link href="/podcast" className="btn-secondary">
-                  Listen to the Podcast
+                <Link href="/blog" className="btn-secondary">
+                  Read Our Blog
                 </Link>
               </div>
             </div>
@@ -55,7 +58,7 @@ export default function Home() {
       </section>
 
       {/* Products Section */}
-      <section className="py-20">
+      <section id="products" className="py-20">
         <div className="container-custom">
           <h2 className="section-title text-center">Our Products</h2>
           <p className="section-subtitle text-center">
